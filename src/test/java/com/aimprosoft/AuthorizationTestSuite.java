@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = {
-        "src/test/resources/features/000_Precondition.feature",
+//        "src/test/resources/features/000_Precondition.feature",
         "src/test/resources/features/001_Authorization.feature",
         "src/test/resources/features/002_LeftDrawer.feature",
         "src/test/resources/features/003_MessageHistory.feature"

@@ -97,9 +97,9 @@ Feature:  Precondition
     When tap on the "Marketplace" room
     Then the "Marketplace" room is opened
     When tap on the "Join" button
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "Marketplace" room is presented in the left drawer
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    Then the "Marketplace" room is presented in the left drawer
 
   Scenario: 005 Subscribe to the "auto" public room
     When login using the properties file
@@ -113,9 +113,9 @@ Feature:  Precondition
     When tap on the "auto" room
     Then the "auto" room is opened
     When tap on the "Join" button
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "auto" room is presented in the left drawer
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    Then the "auto" room is presented in the left drawer
 
   Scenario: 006 Send message in Marketplace public room as testuser2
     Given the "Sign in to your Team" screen is opened
@@ -187,9 +187,9 @@ Feature:  Precondition
     When tap on the "Alfresco" room
     Then the "Alfresco" room is opened
     When tap on the "Join" button
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "Alfresco" room is presented in the left drawer
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    Then the "Alfresco" room is presented in the left drawer
 
   Scenario: 010 Subscribe to the "random" public room
     When login using the properties file
@@ -206,9 +206,9 @@ Feature:  Precondition
     When tap on the "random" room
     Then the "random" room is opened
     When tap on the "Join" button
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "random" room is presented in the left drawer
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    Then the "random" room is presented in the left drawer
 
   Scenario: 011 Add the direct "a.baiova" in the Recent Direct list
     When login using the properties file
