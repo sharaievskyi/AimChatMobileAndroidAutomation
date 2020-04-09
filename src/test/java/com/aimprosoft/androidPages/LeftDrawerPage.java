@@ -47,6 +47,7 @@ public class LeftDrawerPage extends MobilePageObject {
 
     public boolean theTabIsSelected(String tabName) {
         return androidElementByText(tabName).isSelected();
+//        return androidElementByText(tabName).getAttribute("selected").equals("true");
     }
 
     public void tapOnTheSearchSign() {
