@@ -16,9 +16,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Testing" room is presented in the left drawer
-    And tap on the "Testing" room
-    Then the "Testing" room is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
 
   Scenario: 2.003 Check to open a direct room through the left drawer.
     Given the "General" room is opened
@@ -32,9 +32,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Testing" room is presented in the left drawer
-    And enter "Test" in the "Search" input field
-    Then the "Testing" room appears in the left drawer search result
+    Then the "SpiderMan" room is presented in the left drawer
+    And enter "SpiderMan" in the "Search" input field
+    Then the "SpiderMan" room appears in the left drawer search result
 
   Scenario: 2.005 Check "Search" for public room in the left drawer.
     Given the "General" room is opened
@@ -56,9 +56,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Testing" room is presented in the left drawer
-    And enter "testing" in the "Search" input field
-    Then the "Testing" room appears in the left drawer search result
+    Then the "SpiderMan" room is presented in the left drawer
+    And enter "Spider" in the "Search" input field
+    Then the "SpiderMan" room appears in the left drawer search result
 
   Scenario: 2.008 Check case sensitive in the "Search" input field in the left drawer.
     Given the "General" room is opened
@@ -88,9 +88,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Testing" room is presented in the left drawer
-    And enter "test" in the "Search" input field
-    Then the "Testing" room appears in the left drawer search result
+    Then the "SpiderMan" room is presented in the left drawer
+    And enter "spider" in the "Search" input field
+    Then the "SpiderMan" room appears in the left drawer search result
 
   Scenario: 2.012 Check a partial search in the "Search" input field in the left drawer for direct room.
     Given the "General" room is opened
