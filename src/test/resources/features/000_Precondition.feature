@@ -5,7 +5,23 @@ Feature:  Precondition
 #  3. Должны быть доступны несколько приват комнат (с перепиской, запиненными сообщениями, старед сообщениями, загруженными файлами)
 #  4. Должны быть доступны несколько директов (с перепиской, запиненными сообщениями, старед сообщениями, загруженными файлами)
 
-  Scenario: 001 Send message in Marketplace public room as testuser2
+  Scenario: 001 Subscribe to the "Marketplace" public room
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    When tap on the "Marketplace" room
+    Then the "Marketplace" room is opened
+    When tap on the "Join" button
+    When swipe from left to right
+    Then Left Drawer is opened
+    Then the "Marketplace" room is presented in the left drawer
+
+  Scenario: 002 Send message in Marketplace public room as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -26,7 +42,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message" is present
 
-  Scenario: 002 Create Private room and send message as testuser2
+  Scenario: 003 Create Private room and send message as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -58,7 +74,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message" is present
 
-  Scenario: 003 Send message in direct room as testuser2
+  Scenario: 004 Send message in direct room as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -82,22 +98,6 @@ Feature:  Precondition
     When tap on the "Send" button
     And wait while results are refreshed
     Then message "test message" is present
-
-  Scenario: 004 Subscribe to the "Marketplace" public room
-    When login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Rooms" title
-    Then the "Browse rooms" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Marketplace" room
-    Then the "Marketplace" room is opened
-    When tap on the "Join" button
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "Marketplace" room is presented in the left drawer
 
   Scenario: 005 Subscribe to the "auto" public room
     When login using the properties file
