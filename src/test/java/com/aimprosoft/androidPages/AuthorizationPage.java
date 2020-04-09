@@ -32,6 +32,7 @@ public class AuthorizationPage extends MobilePageObject {
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.id(AndroidFieldLocators.LOGIN)));
         $$(AndroidFieldLocators.LOGIN).sendKeys(loginSecureUtils.getLogin());
         $$(AndroidFieldLocators.PASSWORD).sendKeys(loginSecureUtils.getPassword());
+        getDriver().navigate().back();
         $$(AndroidButtonsLocators.SIGN_IN).click();
         withTimeoutOf(120, TimeUnit.SECONDS)
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.id(AndroidLocators.TOOLBAR_ID)));
