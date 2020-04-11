@@ -5,6 +5,19 @@ Feature: Left Drawer
     Then the user is logged in
 
   Scenario: 2.001 Check to open a public room through the left drawer.
+    Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    When tap on the Search sign
+    When enter "Marketplace" in the "Search rooms" input field
+    And wait while results are refreshed
+    When tap on the "Join" link
+    And wait while results are refreshed
+    When tap on the "Search logo" button
+    When tap on the Back button
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
@@ -24,9 +37,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "a.baiova" room is presented in the left drawer
-    And tap on the "a.baiova" room
-    Then the "a.baiova" direct room is opened
+    Then the "testuser2" room is presented in the left drawer
+    And tap on the "testuser2" room
+    Then the "testuser2" direct room is opened
 
   Scenario: 2.004 Check "Search" for private room in the left drawer.
     Given the "General" room is opened
@@ -48,9 +61,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "a.baiova" room is presented in the left drawer
-    And enter "a.baiova" in the "Search" input field
-    Then the "a.baiova" room appears in the left drawer search result
+    Then the "testuser2" room is presented in the left drawer
+    And enter "testuser2" in the "Search" input field
+    Then the "testuser2" room appears in the left drawer search result
 
   Scenario: 2.007 Check case sensitive in the "Search" input field in the left drawer.
     Given the "General" room is opened
@@ -72,9 +85,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "a.baiova" room is presented in the left drawer
-    And enter "A.BAIOVA" in the "Search" input field
-    Then the "a.baiova" room appears in the left drawer search result
+    Then the "testuser2" room is presented in the left drawer
+    And enter "TESTUSER2" in the "Search" input field
+    Then the "testuser2" room appears in the left drawer search result
 
   Scenario: 2.010 Check a partial search in the "Search" input field in the left drawer for public room.
     Given the "General" room is opened
@@ -96,12 +109,25 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "a.baiova" room is presented in the left drawer
-    And enter "A.BAIO" in the "Search" input field
+    Then the "testuser2" room is presented in the left drawer
+    And enter "TESTUS" in the "Search" input field
     And wait while results are refreshed
-    Then the "a.baiova" room appears in the left drawer search result
+    Then the "testuser2" room appears in the left drawer search result
 
   Scenario: 2.013 Check "Unsubscribe" function for public room.
+    Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    When tap on the Search sign
+    When enter "Alfresco" in the "Search rooms" input field
+    And wait while results are refreshed
+    When tap on the "Join" link
+    And wait while results are refreshed
+    When tap on the "Search logo" button
+    When tap on the Back button
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
@@ -113,6 +139,16 @@ Feature: Left Drawer
     Then the "Alfresco" room is deleted from left drawer
 
   Scenario: 2.014 Check "Hide conversation" function for direct room.
+    Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    When tap on the "Recent directs" title
+    Then the "Start direct" screen is opened
+    When tap on the "a.antonenko" room
+    Then the "a.antonenko" direct room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    When tap on the "General" room
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
@@ -193,30 +229,60 @@ Feature: Left Drawer
     Then the "All" tab is selected
     And tap on the Search sign
     And wait while input field would be presented
-    And enter "a.baiova" in the "Search rooms" input field
+    And enter "tetstuser2" in the "Search rooms" input field
     And wait while results are refreshed
-    Then the "a.baiova" room does not appear in the Browse rooms search result
+    Then the "testuser2" room does not appear in the Browse rooms search result
 
   Scenario: 2.021 Check "Leave" room in the "All" tab to the "Browse rooms" screen.
+    Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    When tap on the Search sign
+    And wait while input field would be presented
+    When enter "Alfresco" in the "Search rooms" input field
+    And wait while results are refreshed
+    When tap on the "Join" link
+    And wait while results are refreshed
+    When tap on the "Search logo" button
+    When tap on the Back button
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
+    Then the "Alfresco" room is presented in the left drawer
     And tap on the "Rooms" title
     Then the "Browse rooms" screen is opened
     Then the "All" tab is selected
     And tap on the Search sign
     And wait while input field would be presented
-    And enter "random" in the "Search rooms" input field
-    Then the "random" room appears in the Browse rooms search result
+    And enter "Alfresco" in the "Search rooms" input field
+    Then the "Alfresco" room appears in the Browse rooms search result
     Then the "Leave" link is presented
     When tap on the "Leave" link
     And wait while results are refreshed
     Then the "Join" link is presented
 
   Scenario: 2.022 Check "Leave" room in the "Joined" tab to the "Browse rooms" screen.
+    Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    When tap on the Search sign
+    And wait while input field would be presented
+    When enter "Alfresco" in the "Search rooms" input field
+    And wait while results are refreshed
+    When tap on the "Join" link
+    And wait while results are refreshed
+    When tap on the "Search logo" button
+    When tap on the Back button
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
+    Then the "Alfresco" room is presented in the left drawer
     And tap on the "Rooms" title
     Then the "Browse rooms" screen is opened
     Then the "All" tab is selected
@@ -224,12 +290,12 @@ Feature: Left Drawer
     Then the "Joined" tab is selected
     And tap on the Search sign
     And wait while input field would be presented
-    And enter "auto" in the "Search rooms" input field
-    Then the "auto" room appears in the Browse rooms search result
+    And enter "Alfresco" in the "Search rooms" input field
+    Then the "Alfresco" room appears in the Browse rooms search result
     Then the "Leave" link is presented
     When tap on the "Leave" link
     And wait while results are refreshed
-    Then the "auto" room does not appear in the Browse rooms search result
+    Then the "Alfresco" room does not appear in the Browse rooms search result
 
   Scenario: 2.023 Checking creates public room in the "All" tab to the "Browse rooms" screen.
     Given the "General" room is opened
@@ -244,9 +310,8 @@ Feature: Left Drawer
     And enter "Hello" in the "Create room description" input field
     And tap on the "Add members" button
     Then the "Invite members" screen is opened
-#    And wait while results are refreshed
-    And enter "a.baiova" in the "search user name" input field
-    And tap on the "a.baiova" "username"
+    And enter "testuser2" in the "search user name" input field
+    And tap on the "testuser2" "username"
     And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "IronMan" room is opened
@@ -286,8 +351,8 @@ Feature: Left Drawer
     And enter "Hello" in the "Create room description" input field
     And tap on the "Add members" button
     Then the "Invite members" screen is opened
-    And enter "a.baiova" in the "search user name" input field
-    And tap on the "a.baiova" "username"
+    And enter "testuser2" in the "search user name" input field
+    And tap on the "testuser2" "username"
     And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "Thor" room is opened
@@ -306,8 +371,8 @@ Feature: Left Drawer
     And enter "Hello" in the "Create room description" input field
     And tap on the "Add members" button
     Then the "Invite members" screen is opened
-    And enter "a.baiova" in the "search user name" input field
-    And tap on the "a.baiova" "username"
+    And enter "testuser2" in the "search user name" input field
+    And tap on the "testuser2" "username"
     And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "Hulk" room is opened
@@ -328,6 +393,7 @@ Feature: Left Drawer
     When tap on the "Recent direct" title
     Then the "Start direct" screen is opened
     And tap on the Search sign
+    And wait while input field would be presented
     And enter "testuser2" in the "Select users" input field
     Then the "testuser2" user appears in the Start direct search result
 
@@ -337,8 +403,8 @@ Feature: Left Drawer
     Then Left Drawer is opened
     When tap on the "Recent direct" title
     Then the "Start direct" screen is opened
-    And tap on the "EvgeniyDisti" user from Start direct list
-    Then the "EvgeniyDisti" direct room is opened
+    And tap on the "a.baiova" user from Start direct list
+    Then the "a.baiova" direct room is opened
 
   Scenario: 2.030 Checking select user from the middle of the "Start direct" list.
     Given the "General" room is opened

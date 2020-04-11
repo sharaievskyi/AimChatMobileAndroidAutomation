@@ -85,39 +85,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message" is present
 
-  Scenario: 004 Subscribe to the "Marketplace" public room
-    When login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Rooms" title
-    Then the "Browse rooms" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Marketplace" room
-    Then the "Marketplace" room is opened
-    When tap on the "Join" button
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Marketplace" room is presented in the left drawer
-
-  Scenario: 005 Subscribe to the "auto" public room
-    When login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Rooms" title
-    Then the "Browse rooms" screen is opened
-    Then the "All" tab is selected
-    When tap on the "auto" room
-    Then the "auto" room is opened
-    When tap on the "Join" button
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "auto" room is presented in the left drawer
-
-  Scenario: 006 Send message in Marketplace public room as testuser2
+  Scenario: 004 Send message in Marketplace public room as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -136,7 +104,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message 2" is present
 
-  Scenario: 007 Send message in Private room and send message as testuser2
+  Scenario: 005 Send message in Private room and send message as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -155,7 +123,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message 2" is present
 
-  Scenario: 008 Send message in direct room as testuser2
+  Scenario: 006 Send message in direct room as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -175,64 +143,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message 2" is present
 
-  Scenario: 009 Subscribe to the "Alfresco" public room
-    When login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Rooms" title
-    Then the "Browse rooms" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Alfresco" room
-    Then the "Alfresco" room is opened
-    When tap on the "Join" button
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Alfresco" room is presented in the left drawer
-
-  Scenario: 010 Subscribe to the "random" public room
-    When login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Rooms" title
-    Then the "Browse rooms" screen is opened
-    Then the "All" tab is selected
-    When tap on the Search sign
-    When enter "rand" in the "Search rooms" input field
-    Then the "random" room appears in the Browse rooms search result
-    When tap on the "random" room
-    Then the "random" room is opened
-    When tap on the "Join" button
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "random" room is presented in the left drawer
-
-  Scenario: 011 Add the direct "a.baiova" in the Recent Direct list
-    When login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Recent directs" title
-    Then the "Start direct" screen is opened
-    When tap on the "a.baiova" room
-    Then the "a.baiova" direct room is opened
-
-  Scenario: 012 Add the direct "a.antonenko" in the Recent Direct list
-    When login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Recent directs" title
-    Then the "Start direct" screen is opened
-    When tap on the "a.antonenko" room
-    Then the "a.antonenko" direct room is opened
-
-  Scenario: 013 Send message in Marketplace public room as testuser2
+  Scenario: 007 Send message in Marketplace public room as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -251,7 +162,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message 3" is present
 
-  Scenario: 014 Send message in Private room and send message as testuser2
+  Scenario: 008 Send message in Private room and send message as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -270,7 +181,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message 3" is present
 
-  Scenario: 015 Send message in direct room as testuser2
+  Scenario: 009 Send message in direct room as testuser2
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -289,7 +200,7 @@ Feature:  Precondition
     And wait while results are refreshed
     Then message "test message 3" is present
 
-  Scenario: 016 Long tap on the Logo and  Mark all as read
+  Scenario: 010 Long tap on the Logo and  Mark all as read
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
