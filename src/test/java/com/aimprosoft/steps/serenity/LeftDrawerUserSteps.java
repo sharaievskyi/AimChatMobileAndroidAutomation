@@ -77,4 +77,8 @@ public class LeftDrawerUserSteps extends ScenarioSteps {
     public void theUserIsPresentedInTheStartDirectSearchResult(String userName) {
         Assert.assertTrue("The " + userName + " user is not presented in the Start direct search result", leftDrawerPage.theUserIsPresentedInTheStartDirectSearchResult(userName));
     }
+    @Step
+    public void theRoomIsNotPresentedInTheLeftDrawer(String roomName) {
+        Assert.assertFalse("The " + roomName + " is presented in the left drawer", leftDrawerPage.theRoomIsNotPresentedInTheLeftDrawer(roomName));
+    }
 }

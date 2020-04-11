@@ -36,7 +36,8 @@ public interface AndroidLocators {
     String PINNED_STARRED_ID = "pinned_starred_desr";
     String SMILE_VIEW = "smile_view";
     String EMOJI_ICON = "emoji_icon";
-    String CONTENT_POP_UP_MENU = "//android.widget.FrameLayout[contains(@resource-id, 'content')]";
+//    String CONTENT_POP_UP_MENU = "//android.widget.FrameLayout[contains(@resource-id, 'content')]";
+    String CONTENT_POP_UP_MENU = "// android.widget.ScrollView";
     String LIST_VIEW_POP_UP = "//android.widget.ListView";
     String USERNAME = "chat_stamp";
     String MESSAGES_TAB = "//android.widget.TextView[@text='MESSAGES']";
@@ -65,4 +66,8 @@ public interface AndroidLocators {
     String USER_FULL_NAME = "userFullName";
     String ROOM_MEMBERS = "room_members_text";
     String PINNED_MESSAGES = "pinned_items_text";
+    String STARRED_MESSAGES = "starred_items_text";
+    String UPLOADED_FILES = "uploaded_items_text";
+    String ROOM_SETTINGS = "settings_text";
+    String DIRECT_SETTINGS = "settings_text";
 }

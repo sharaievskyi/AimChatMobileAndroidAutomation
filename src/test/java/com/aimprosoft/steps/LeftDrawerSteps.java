@@ -91,4 +91,9 @@ public class LeftDrawerSteps {
     public void theUserAppearsInTheStartDirectSearchResult(String userName) {
         steps.theUserIsPresentedInTheStartDirectSearchResult(userName);
     }
+
+    @Then("the {string} room is not presented in the left drawer")
+    public void theRoomIsNotPresentedInTheLeftDrawer(String roomName) {
+        steps.theRoomIsNotPresentedInTheLeftDrawer(roomName);
+    }
 }

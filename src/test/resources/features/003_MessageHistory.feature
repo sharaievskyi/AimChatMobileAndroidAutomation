@@ -57,6 +57,16 @@ Feature: Message history
     When enter "qwerty4" in the "Write a message" input field
     When tap on the "Send" button
     And wait while results are refreshed
+    Then message "qwerty4" is present
+    When tap on "qwerty4" message in chat history
+    Then the "Message" details screen is opened
+    Then message "qwerty4" is present
+    When tap on the "Star sign" button
+    Then message marked as "starred"
+    And tap on the Back button
+    Then the chat history is opened
+    Then message "qwerty4" is present
+    Then message marked as "starred"
     When tap on "qwerty4" message in chat history
     Then the "Message" details screen is opened
     Then message "qwerty4" is present
@@ -343,9 +353,9 @@ Feature: Message history
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
     When enter "qwerty15" in the "Write a message" input field
     When tap on the "Send" button
     And wait while results are refreshed
@@ -381,9 +391,9 @@ Feature: Message history
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
     Then message "qwerty15" is present
     Then message marked as "pinned"
     Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty15" message
@@ -408,7 +418,7 @@ Feature: Message history
   Scenario: 3.027 Check unpin message from "Message details screen" in public room.
     Given the "General" room is opened
     Then message "qwerty14" is present
-    When tap on "qwerty1" message in chat history
+    When tap on "qwerty14" message in chat history
     Then the "Message" details screen is opened
     Then message "qwerty14" is present
     Then message marked as "pinned"
@@ -421,9 +431,9 @@ Feature: Message history
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
     Then message "qwerty15" is present
     When tap on "qwerty15" message in chat history
     Then the "Message" details screen is opened
@@ -480,30 +490,33 @@ Feature: Message history
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
-    Then message "qwerty15" is present
-    And tap on "qwerty15" message in chat history
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
+    When enter "qwerty16" in the "Write a message" input field
+    When tap on the "Send" button
+    And wait while results are refreshed
+    Then message "qwerty16" is present
+    And tap on "qwerty16" message in chat history
     Then the "Message" details screen is opened
-    Then message "qwerty15" is present
+    Then message "qwerty16" is present
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Pin message" link
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty15" message
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
     When tap on the Back button
     Then the chat history is opened
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty15" message
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
     Then the "Message" details screen is opened
-    And tap on "qwerty15" message in chat history
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty15" message
+    And tap on "qwerty16" message in chat history
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Unpin message" link
     Then mark as "pinned" disappears
     When tap on the Back button
     Then the chat history is opened
-    Then message "qwerty15" is present
+    Then message "qwerty16" is present
     Then mark as "pinned" disappears
 
   Scenario: 3.032 Check unpin message from chat history in direct room.
@@ -681,7 +694,7 @@ Feature: Message history
   Scenario: 3.044 Check add "reaction" button near with any added emoji under the message in "Message details screen" in public room.
     Given the "General" room is opened
     Then message "qwerty17" is present
-    And tap on "qwerty1" message in chat history
+    And tap on "qwerty17" message in chat history
     Then the "Message" details screen is opened
     Then message "qwerty17" is present
     Then reaction "😀" is added
@@ -697,7 +710,7 @@ Feature: Message history
   Scenario: 3.045 Check delete "reaction" by tap on the any reactions in "Message details screen" in public room.
     Given the "General" room is opened
     Then message "qwerty17" is present
-    And tap on "qwerty1" message in chat history
+    And tap on "qwerty17" message in chat history
     Then the "Message" details screen is opened
     Then message "qwerty17" is present
     Then reaction "😇" is added
@@ -928,8 +941,8 @@ Feature: Message history
     Then the "Message" details screen is opened
     Then message "test message 2" is present
     When tap on the "Share" button
-    Then the "Share message" screen is opened
-    Then "This message can only be shared in this room" alert is displayed
+    Then the "Message forward" screen is opened
+    Then "This message can be forwarded only within this room" alert is displayed
     When tap on the "Apply select room" button
     Then the "Message" details screen is opened
     When tap on the Back button
@@ -947,8 +960,8 @@ Feature: Message history
     Then the "Message" details screen is opened
     Then message "test message 2" is present
     When tap on the "Share" button
-    Then the "Share message" screen is opened
-    Then "This message can only be shared in this room" alert is displayed
+    Then the "Message forward" screen is opened
+    Then "This message can be forwarded only within this room" alert is displayed
     When tap on the "Apply select room" button
     Then the "Message" details screen is opened
     When tap on the Back button
@@ -1398,12 +1411,12 @@ Feature: Message history
     Then the "Thor" room is presented in the left drawer
     And tap on the "Thor" room
     Then the "Thor" room is opened
-    Then message "qwerty24" is present
-    When long tap on "qwerty24" message in chat history
+    Then message "qwerty21" is present
+    When long tap on "qwerty21" message in chat history
     Then content pop-up menu is opened
     When tap on the "Star message" link
     Then message marked as "starred"
-    Then message marked as "starred" between "d.sharaievskyi" username and "qwerty24" message
+    Then message marked as "starred" between "d.sharaievskyi" username and "qwerty21" message
 
   Scenario: 3.108 Check "Star message" in a direct room using a long tap in chat history.
     Given the "General" room is opened
@@ -1439,10 +1452,10 @@ Feature: Message history
     Then the "Thor" room is presented in the left drawer
     And tap on the "Thor" room
     Then the "Thor" room is opened
-    Then message "qwerty24" is present
+    Then message "qwerty21" is present
     Then message marked as "starred"
-    Then message marked as "starred" between "d.sharaievskyi" username and "qwerty24" message
-    When long tap on "qwerty24" message in chat history
+    Then message marked as "starred" between "d.sharaievskyi" username and "qwerty21" message
+    When long tap on "qwerty21" message in chat history
     Then content pop-up menu is opened
     When tap on the "Unstar message" link
     Then mark as "starred" disappears
@@ -1587,7 +1600,7 @@ Feature: Message history
     Then the "Smile view" panel is present
     When select "😝" "emoji_icon" reaction
     Then reaction "😝" is added
-#
+
   Scenario: 3.122 Check "Add reaction" button in a private room using a long tap in the chat history.
     Given the "General" room is opened
     When swipe from left to right
@@ -1673,7 +1686,7 @@ Feature: Message history
     When long tap on "qwerty35" message in chat history
     Then content pop-up menu is opened
     When tap on the "Forward" link
-    Then the "Share forward" screen is opened
+    Then the "Message forward" screen is opened
     When enter "comment" in the "Add a message" input field
     When enter "Captain" in the "Room name search" input field
     And tap on the "CaptainAmerica" room
@@ -1686,9 +1699,9 @@ Feature: Message history
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
     When enter "qwerty36" in the "Write a message" input field
     When tap on the "Send" button
     And wait while results are refreshed
@@ -1696,11 +1709,11 @@ Feature: Message history
     When long tap on "qwerty36" message in chat history
     Then content pop-up menu is opened
     When tap on the "Forward" link
-    Then the "Share forward" screen is opened
-    Then "This message can only be shared in this room" alert is displayed
+    Then the "Message forward" screen is opened
+    Then "This message can be forwarded only within this room" alert is displayed
     When enter "comment" in the "Add a message" input field
     And tap on the "Apply select room" button
-    Then the "Hulk" room is opened
+    Then the "Thor" room is opened
     Then message "qwerty36" is shared to the room
     Then message "comment" is present
 
@@ -1718,8 +1731,8 @@ Feature: Message history
     When long tap on "qwerty37" message in chat history
     Then content pop-up menu is opened
     When tap on the "Forward" link
-    Then the "Share forward" screen is opened
-    Then "This message can only be shared in this room" alert is displayed
+    Then the "Message forward" screen is opened
+    Then "This message can be forwarded only within this room" alert is displayed
     When enter "comment" in the "Add a message" input field
     And tap on the "Apply select room" button
     Then the "a.baiova" direct room is opened
@@ -1735,7 +1748,7 @@ Feature: Message history
     When long tap on "qwerty38" message in chat history
     Then content pop-up menu is opened
     When tap on the "Forward" link
-    Then the "Share forward" screen is opened
+    Then the "Message forward" screen is opened
     When enter "comment" in the "Add a message" input field
     When enter "Tho" in the "Room name search" input field
     And tap on the "Thor" room
@@ -1753,7 +1766,7 @@ Feature: Message history
     When long tap on "qwerty39" message in chat history
     Then content pop-up menu is opened
     When tap on the "Forward" link
-    Then the "Share forward" screen is opened
+    Then the "Message forward" screen is opened
     When enter "comment" in the "Add a message" input field
     When enter "a.baiov" in the "Room name search" input field
     And tap on the "a.baiova" room
@@ -1797,6 +1810,9 @@ Feature: Message history
     Then the "Thor" room is presented in the left drawer
     And tap on the "Thor" room
     Then the "Thor" room is opened
+    When enter "qwerty42" in the "Write a message" input field
+    When tap on the "Send" button
+    And wait while results are refreshed
     Then message "qwerty42" is present
     When long tap on "qwerty42" message in chat history
     Then content pop-up menu is opened

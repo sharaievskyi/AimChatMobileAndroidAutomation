@@ -16,9 +16,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Thor" room is presented in the left drawer
-    And tap on the "Thor" room
-    Then the "Thor" room is opened
+    Then the "SpiderMan" room is presented in the left drawer
+    And tap on the "SpiderMan" room
+    Then the "SpiderMan" room is opened
 
   Scenario: 2.003 Check to open a direct room through the left drawer.
     Given the "General" room is opened
@@ -355,8 +355,8 @@ Feature: Left Drawer
     Then Left Drawer is opened
     When tap on the "Recent direct" title
     Then the "Start direct" screen is opened
-    And tap on the "y.tiutiunnyk" user from Start direct list
-    Then the "y.tiutiunnyk" direct room is opened
+    And tap on the "v.viter" user from Start direct list
+    Then the "v.viter" direct room is opened
 
   Scenario: 2.032 Check the clickable "Back" button in the "Recent direct" screen.
     Given the "General" room is opened

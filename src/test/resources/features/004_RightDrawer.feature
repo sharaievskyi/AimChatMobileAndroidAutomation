@@ -6,12 +6,55 @@ Feature: Right drawer
 
   Scenario: 4.000 Precondition
     Given the "General" room is opened
+    Then message "qwerty1" is present
+    When long tap on "qwerty1" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
-    When tap on "" message in chat history
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
+    When long tap on "message has been edited (edited)" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "d.sharaievskyi" username and "message has been edited (edited)" message
+    When enter "test1" in the "Write a message" input field
+    When tap on the "Send" button
+    And wait while results are refreshed
+    When enter "test2" in the "Write a message" input field
+    When tap on the "Send" button
+    And wait while results are refreshed
+    When enter "test3" in the "Write a message" input field
+    When tap on the "Send" button
+    And wait while results are refreshed
+    When swipe from left to right
+    Then Left Drawer is opened
+    Then the "a.baiova" room is presented in the left drawer
+    And tap on the "a.baiova" room
+    Then the "a.baiova" direct room is opened
+    And wait while results are refreshed
+    When enter "test1" in the "Write a message" input field
+    When tap on the "Send" button
+    And wait while results are refreshed
+    Then message "test1" is present
+    When enter "test2" in the "Write a message" input field
+    When tap on the "Send" button
+    And wait while results are refreshed
+    Then message "test2" is present
+    When enter "test3" in the "Write a message" input field
+    When tap on the "Send" button
+    And wait while results are refreshed
+    When long tap on "qwerty16" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
+
+
 
 
   Scenario: 4.001 Check transition by a tap on the "three-dots" button on the top right corner in the public room.
@@ -281,130 +324,190 @@ Feature: Right drawer
 
   Scenario: 4.024 Check transition to pinned message in chat history for public room by click on the message in "All" tab.
     Given the "General" room is opened
+    Then message "qwerty1" is present
+    When long tap on "qwerty1" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
+#   **** Указать последнее сообщение чтобы чтобы проскролить ****
+    Then message "" is present
+#   *************************************************************
     When swipe from right to left
     Then the "Room info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
+    Then message "qwerty1" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
+    When tap on the "qwerty1" pinned message
     And wait while results are refreshed
-    And wait while results are refreshed
-    When tap on the "Работа восстановленна" pinned message
-    And wait while results are refreshed
-    Then the pinned message "Работа восстановленна" is open in chat history
+    Then the pinned message "qwerty1" is open in chat history
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
 
-#  *********************** Сделать прекондишен: отправить несколько сообщений в приватную комнату и запинить сообщения ********************************
   Scenario: 4.025 Check transition to pinned message in chat history for private room by click on the message in "All" tab.
+    Given the "General" room is opened
     When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
+#   **** Указать первое сообщение в комнате ****
+    Then message "" is present
+    When long tap on "" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "d.sharaievskyi" username and "" message
+#   **** Указать последнее сообщение чтобы чтобы проскролить ****
+    Then message "" is present
+#   *************************************************************
     When swipe from right to left
-    When tap on the "Pinned messages" list
+    Then the "Room info" screen is opened
+    When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
+    Then message "" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "" message
     When tap on the "" pinned message
     And wait while results are refreshed
     Then the pinned message "" is open in chat history
+    Then message marked as "pinned" between "d.sharaievskyi" username and "" message
 
   Scenario: 4.026 Check transition to pinned message in chat history for direct room by click on the message in "All" tab.
+    Given the "General" room is opened
     When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
+    Then Left Drawer is opened
+    Then the "a.baiova" room is presented in the left drawer
+    And tap on the "a.baiova" room
+    Then the "a.baiova" direct room is opened
     When swipe from right to left
-    When tap on the "Pinned messages" list
+    Then the "Direct info" screen is opened
+    When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
-    When tap on the "" pinned message
+    Then message "qwerty16" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
+    When tap on the "qwerty16" pinned message
     And wait while results are refreshed
-    Then the pinned message "" is open in chat history
+    Then the pinned message "qwerty16" is open in chat history
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
 
   Scenario: 4.027 Check transition to pinned message in chat history for public room by click on the message in "Messages" tab.
+    Given the "General" room is opened
     When swipe from right to left
-    When tap on the "Pinned messages" list
+    Then the "Room info" screen is opened
+    When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    When tap on the "Всем доброе утро!" pinned message
+    Then message "qwerty1" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
+    When tap on the "qwerty1" pinned message
     And wait while results are refreshed
-    Then the pinned message "@room Всем доброе утро! ВАЖНО: С этого момента в компании вводится дополнительная мера контроля распространения заболеваний в офисе" is open in chat history
+    Then the pinned message "qwerty1" is open in chat history
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
 
   Scenario: 4.028 Check transition to pinned message in chat history for private room by click on the message in "Messages" tab.
+    Given the "General" room is opened
     When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
     When swipe from right to left
-    When tap on the "Pinned messages" list
+    Then the "Room info" screen is opened
+    When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    When tap on the "" pinned message
+    Then message "message has been edited (edited)" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "message has been edited (edited)" message
+    When tap on the "message has been edited (edited)" pinned message
     And wait while results are refreshed
-    Then the pinned message "" is open in chat history
+    Then the pinned message "message has been edited (edited)" is open in chat history
+    Then message marked as "pinned" between "d.sharaievskyi" username and "message has been edited (edited)" message
 
   Scenario: 4.029 Check transition to pinned message in chat history for direct room by click on the message in "Messages" tab.
+    Given the "General" room is opened
     When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
+    Then Left Drawer is opened
+    Then the "a.baiova" room is presented in the left drawer
+    And tap on the "a.baiova" room
+    Then the "a.baiova" direct room is opened
     When swipe from right to left
-    When tap on the "Pinned messages" list
+    Then the "Direct info" screen is opened
+    When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    When tap on the "" pinned message
+    Then message "qwerty16" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
+    When tap on the "qwerty16" pinned message
     And wait while results are refreshed
-    Then the pinned message "" is open in chat history
+    Then the pinned message "qwerty16" is open in chat history
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
 
-  Scenario: 4.030 Check transition to pinned message in chat history for public room by click on the message in "Files" tab.
-    When swipe from right to left
-    When tap on the "Pinned messages" list
-    Then the "Pinned messages" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Files" tab
-    Then the "Files" tab is selected
-    When tap on the "" pinned message
-    And wait while results are refreshed
-    Then the pinned message "" is open in chat history
 
-  Scenario: 4.031 Check transition to pinned message in chat history for private room by click on the message in "Files" tab.
-    When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
-    When swipe from right to left
-    When tap on the "Pinned messages" list
-    Then the "Pinned messages" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Files" tab
-    Then the "Files" tab is selected
-    When tap on the "" pinned message
-    And wait while results are refreshed
-    Then the pinned message "" is open in chat history
 
-  Scenario: 4.032 Check transition to pinned message in chat history for direct room by click on the message in "Files" tab.
-    When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
-    When swipe from right to left
-    When tap on the "Pinned messages" list
-    Then the "Pinned messages" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Files" tab
-    Then the "Files" tab is selected
-    When tap on the "" pinned message
-    And wait while results are refreshed
-    Then the pinned message "" is open in chat history
+#  Scenario: 4.030 Check transition to pinned message in chat history for public room by click on the message in "Files" tab.
+#    When swipe from right to left
+#    When tap on the "Pinned messages" list
+#    Then the "Pinned messages" screen is opened
+#    Then the "All" tab is selected
+#    When tap on the "Files" tab
+#    Then the "Files" tab is selected
+#    When tap on the "" pinned message
+#    And wait while results are refreshed
+#    Then the pinned message "" is open in chat history
+
+#  Scenario: 4.031 Check transition to pinned message in chat history for private room by click on the message in "Files" tab.
+#    When swipe from left to right
+#    And tap on the "SharePrivateRoom" room
+#    Then the "SharePrivateRoom" room is opened
+#    When swipe from right to left
+#    When tap on the "Pinned messages" list
+#    Then the "Pinned messages" screen is opened
+#    Then the "All" tab is selected
+#    When tap on the "Files" tab
+#    Then the "Files" tab is selected
+#    When tap on the "" pinned message
+#    And wait while results are refreshed
+#    Then the pinned message "" is open in chat history
+
+#  Scenario: 4.032 Check transition to pinned message in chat history for direct room by click on the message in "Files" tab.
+#    When swipe from left to right
+#    And tap on the "testuser1" room
+#    Then the "testuser1" direct room is opened
+#    When swipe from right to left
+#    When tap on the "Pinned messages" list
+#    Then the "Pinned messages" screen is opened
+#    Then the "All" tab is selected
+#    When tap on the "Files" tab
+#    Then the "Files" tab is selected
+#    When tap on the "" pinned message
+#    And wait while results are refreshed
+#    Then the pinned message "" is open in chat history
+
+
 
 #  ****************************** Сделать прекондишен **************************************
   Scenario: 4.033 Check for clickable "Starred messages" list in the right panel.
+    Given the "General" room is opened
     When swipe from right to left
-    When tap on the "Starred messages" list
+    Then the "Room info" screen is opened
+    When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
 
   Scenario: 4.034 Check transition to starred message in chat history for public room by click on the message in "All" tab.
+    Given the "General" room is opened
     When swipe from right to left
-    When tap on the "Starred messages" list
+    Then the "Room info" screen is opened
+    When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
     When tap on the "" starred message
@@ -412,6 +515,7 @@ Feature: Right drawer
     Then the starred message "" is open in chat history
 
   Scenario: 4.035 Check transition to starred message in chat history for private room by click on the message in "All" tab.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "SharePrivateRoom" room
     Then the "SharePrivateRoom" room is opened
@@ -424,6 +528,7 @@ Feature: Right drawer
     Then the starred message "" is open in chat history
 
   Scenario: 4.036 Check transition to starred message in chat history for direct room by click on the message in "All" tab.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "testuser1" room
     Then the "testuser1" direct room is opened
@@ -436,6 +541,7 @@ Feature: Right drawer
     Then the starred message "" is open in chat history
 
   Scenario: 4.037 Check transition to starred message in chat history for public room by click on the message in "Messages" tab.
+    Given the "General" room is opened
     When swipe from right to left
     When tap on the "Starred messages" list
     Then the "Starred messages" screen is opened
@@ -447,6 +553,7 @@ Feature: Right drawer
     Then the starred message "" is open in chat history
 
   Scenario: 4.038 Check transition to starred message in chat history for private room by click on the message in "Message" tab.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "SharePrivateRoom" room
     Then the "SharePrivateRoom" room is opened
@@ -461,6 +568,7 @@ Feature: Right drawer
     Then the starred message "" is open in chat history
 
   Scenario: 4.039 Check transition to starred message in chat history foe direct room by click on the message in "Message" tab.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "testuser1" room
     Then the "testuser1" direct room is opened
@@ -473,47 +581,54 @@ Feature: Right drawer
     When tap on the "" starred message
     And wait while results are refreshed
     Then the starred message "" is open in chat history
+#    **********************************************************************************************************
 
-  Scenario: 4.040 Check transition to starred message in chat history for public room by click on the file in the "Files" tab.
-    When swipe from right to left
-    When tap on the "Starred messages" list
-    Then the "Starred messages" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Files" tab
-    Then the "Files" tab is selected
-    When tap on the "" pinned message
-    And wait while results are refreshed
-    Then the pinned message "" is open in chat history
 
-  Scenario: 4.041 Check transition to starred message in chat history for private room by click on the message in "Files" tab.
-    When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
-    When swipe from right to left
-    When tap on the "Starred messages" list
-    Then the "Starred messages" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Files" tab
-    Then the "Files" tab is selected
-    When tap on the "" pinned message
-    And wait while results are refreshed
-    Then the pinned message "" is open in chat history
 
-  Scenario: 4.042 Check transition to pinned message in chat history for direct room by click on the message in "Files" tab.
-    When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
-    When swipe from right to left
-    When tap on the "Starred messages" list
-    Then the "Starred messages" screen is opened
-    Then the "All" tab is selected
-    When tap on the "Files" tab
-    Then the "Files" tab is selected
-    When tap on the "" pinned message
-    And wait while results are refreshed
-    Then the pinned message "" is open in chat history
+#  Scenario: 4.040 Check transition to starred message in chat history for public room by click on the file in the "Files" tab.
+#    When swipe from right to left
+#    When tap on the "Starred messages" list
+#    Then the "Starred messages" screen is opened
+#    Then the "All" tab is selected
+#    When tap on the "Files" tab
+#    Then the "Files" tab is selected
+#    When tap on the "" pinned message
+#    And wait while results are refreshed
+#    Then the pinned message "" is open in chat history
+
+#  Scenario: 4.041 Check transition to starred message in chat history for private room by click on the message in "Files" tab.
+#    When swipe from left to right
+#    And tap on the "SharePrivateRoom" room
+#    Then the "SharePrivateRoom" room is opened
+#    When swipe from right to left
+#    When tap on the "Starred messages" list
+#    Then the "Starred messages" screen is opened
+#    Then the "All" tab is selected
+#    When tap on the "Files" tab
+#    Then the "Files" tab is selected
+#    When tap on the "" pinned message
+#    And wait while results are refreshed
+#    Then the pinned message "" is open in chat history
+
+#  Scenario: 4.042 Check transition to pinned message in chat history for direct room by click on the message in "Files" tab.
+#    When swipe from left to right
+#    And tap on the "testuser1" room
+#    Then the "testuser1" direct room is opened
+#    When swipe from right to left
+#    When tap on the "Starred messages" list
+#    Then the "Starred messages" screen is opened
+#    Then the "All" tab is selected
+#    When tap on the "Files" tab
+#    Then the "Files" tab is selected
+#    When tap on the "" pinned message
+#    And wait while results are refreshed
+#    Then the pinned message "" is open in chat history
 
   Scenario: 4.043 Check for clickable "Back" button in the "Starred messages" list.
+    Given the "General" room is opened
+    When swipe from right to left
+    Then the "Room info" screen is opened
+    When tap on the "Starred messages" link in the Right drawer
     When swipe from right to left
     When tap on the "Starred messages" list
     Then the "Starred messages" screen is opened
@@ -522,226 +637,281 @@ Feature: Right drawer
     Then the "General" room is opened
 
   Scenario: 4.044 Check for clickable "Uploaded files" list in the right panel.
+    Given the "General" room is opened
     When swipe from right to left
-    When tap on the "Uploaded files" list
+    Then the "Room info" screen is opened
+    When tap on the "Uploaded files" link in the Right drawer
     Then the "Uploaded files" screen is opened
 
-  Scenario: 4.045 Check transition to uploaded files in chat history for public room by click on the files in the "By all members" tab.
-    When swipe from right to left
-    When tap on the "Uploaded files" list
-    Then the "Uploaded files" screen is opened
-    Then the "By all members" tab is selected
-    When tap on the "" uploaded file
-    And wait while results are refreshed
-    Then the uploaded file "" is open in chat history
+#  Scenario: 4.045 Check transition to uploaded files in chat history for public room by click on the files in the "By all members" tab.
+#    When swipe from right to left
+#    When tap on the "Uploaded files" list
+#    Then the "Uploaded files" screen is opened
+#    Then the "By all members" tab is selected
+#    When tap on the "" uploaded file
+#    And wait while results are refreshed
+#    Then the uploaded file "" is open in chat history
 
-  Scenario: 4.046 Check transition to uploaded files in chat history for private room by click on the files in the "By all members" tab.
-    When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
-    When swipe from right to left
-    When tap on the "Uploaded files" list
-    Then the "Uploaded files" screen is opened
-    Then the "By all members" tab is selected
-    When tap on the "" uploaded file
-    And wait while results are refreshed
-    Then the uploaded file "" is open in chat history
+#  Scenario: 4.046 Check transition to uploaded files in chat history for private room by click on the files in the "By all members" tab.
+#    When swipe from left to right
+#    And tap on the "SharePrivateRoom" room
+#    Then the "SharePrivateRoom" room is opened
+#    When swipe from right to left
+#    When tap on the "Uploaded files" list
+#    Then the "Uploaded files" screen is opened
+#    Then the "By all members" tab is selected
+#    When tap on the "" uploaded file
+#    And wait while results are refreshed
+#    Then the uploaded file "" is open in chat history
 
-  Scenario: 4.047 Check transition to uploaded files in chat history for direct room by click on the files in the "By all members" tab.
-    When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
-    When swipe from right to left
-    When tap on the "Uploaded files" list
-    Then the "Uploaded files" screen is opened
-    Then the "By all members" tab is selected
-    When tap on the "" uploaded file
-    And wait while results are refreshed
-    Then the uploaded file "" is open in chat history
+#  Scenario: 4.047 Check transition to uploaded files in chat history for direct room by click on the files in the "By all members" tab.
+#    When swipe from left to right
+#    And tap on the "testuser1" room
+#    Then the "testuser1" direct room is opened
+#    When swipe from right to left
+#    When tap on the "Uploaded files" list
+#    Then the "Uploaded files" screen is opened
+#    Then the "By all members" tab is selected
+#    When tap on the "" uploaded file
+#    And wait while results are refreshed
+#    Then the uploaded file "" is open in chat history
 
-  Scenario: 4.048 Check transition to uploaded files in chat history for public room by click on the files in the "By me" tab.
-    When swipe from right to left
-    When tap on the "Uploaded files" list
-    Then the "Uploaded files" screen is opened
-    Then the "By all members" tab is selected
-    When tap on the "By me" tab
-    Then the "By me" tab is selected
-    When tap on the "" uploaded file
-    And wait while results are refreshed
-    Then the uploaded file "" is open in chat history
+#  Scenario: 4.048 Check transition to uploaded files in chat history for public room by click on the files in the "By me" tab.
+#    When swipe from right to left
+#    When tap on the "Uploaded files" list
+#    Then the "Uploaded files" screen is opened
+#    Then the "By all members" tab is selected
+#    When tap on the "By me" tab
+#    Then the "By me" tab is selected
+#    When tap on the "" uploaded file
+#    And wait while results are refreshed
+#    Then the uploaded file "" is open in chat history
 
-  Scenario: 4.049 Check transition to uploaded files in chat history for private room by click on the files in the "By me" tab.
-    When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
-    When swipe from right to left
-    When tap on the "Uploaded files" list
-    Then the "Uploaded files" screen is opened
-    Then the "By all members" tab is selected
-    When tap on the "By me" tab
-    Then the "By me" tab is selected
-    When tap on the "" uploaded file
-    And wait while results are refreshed
-    Then the uploaded file "" is open in chat history
+#  Scenario: 4.049 Check transition to uploaded files in chat history for private room by click on the files in the "By me" tab.
+#    When swipe from left to right
+#    And tap on the "SharePrivateRoom" room
+#    Then the "SharePrivateRoom" room is opened
+#    When swipe from right to left
+#    When tap on the "Uploaded files" list
+#    Then the "Uploaded files" screen is opened
+#    Then the "By all members" tab is selected
+#    When tap on the "By me" tab
+#    Then the "By me" tab is selected
+#    When tap on the "" uploaded file
+#    And wait while results are refreshed
+#    Then the uploaded file "" is open in chat history
 
-  Scenario: 4.050 Check transition to uploaded files in chat history for direct room by click on the files in the "By me" tab.
-    When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
-    When swipe from right to left
-    When tap on the "Uploaded files" list
-    Then the "Uploaded files" screen is opened
-    Then the "By all members" tab is selected
-    When tap on the "By me" tab
-    Then the "By me" tab is selected
-    When tap on the "" uploaded file
-    And wait while results are refreshed
-    Then the uploaded file "" is open in chat history
+#  Scenario: 4.050 Check transition to uploaded files in chat history for direct room by click on the files in the "By me" tab.
+#    When swipe from left to right
+#    And tap on the "testuser1" room
+#    Then the "testuser1" direct room is opened
+#    When swipe from right to left
+#    When tap on the "Uploaded files" list
+#    Then the "Uploaded files" screen is opened
+#    Then the "By all members" tab is selected
+#    When tap on the "By me" tab
+#    Then the "By me" tab is selected
+#    When tap on the "" uploaded file
+#    And wait while results are refreshed
+#    Then the uploaded file "" is open in chat history
 
   Scenario: 4.051 Check for clickable "Back" button in the "Uploaded files" list.
+    Given the "General" room is opened
     When swipe from right to left
-    When tap on the "Uploaded files" list
+    Then the "Room info" screen is opened
+    When tap on the "Uploaded files" link in the Right drawer
     Then the "Uploaded files" screen is opened
     When tap on the Back button
     Then the chat history is opened
     Then the "General" room is opened
 
   Scenario: 4.052 Check for clickable "Room settings" list in the right panel.
+    Given the "General" room is opened
     When swipe from right to left
-    When tap on the "Room settings" list
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
 
   Scenario: 4.053 Check "mute room" function for a public room on the "Room settings" in the right panel.
+    Given the "General" room is opened
     When swipe from right to left
-    And tap on the "Room settings" link
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
     Then the "General" room is opened
     And swipe from left to right
-    Then the room "General" is between "Testing" room and "RECENT DIRECTS" section
+    Then Left Drawer is opened
+    Then the room "General" is between "Thor" room and "RECENT DIRECTS" section
 
   Scenario: 4.063 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the public room.
+    Given the "General" room is opened
     When swipe from right to left
-    And tap on the "Room settings" link
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the Back button
     Then the "General" room is opened
     And swipe from left to right
-    Then the room "General" is between "Testing" room and "RECENT DIRECTS" section
+    Then Left Drawer is opened
+    Then the room "General" is between "Thor" room and "RECENT DIRECTS" section
 
   Scenario: 4.059 Check "unmuted room" function for a public room on the "Room settings" in the right panel.
+    Given the "General" room is opened
     When swipe from right to left
-    And tap on the "Room settings" link
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
     Then the "General" room is opened
     And swipe from left to right
-    Then the room "General" is between "ROOMS" section and "Marketplace" room
+    Then Left Drawer is opened
+    Then the room "General" is between "CaptainAmerica" and "Hulk" rooms
 
   Scenario: 4.054 Check "mute room" function for a private room on the "Room settings" in the right panel.
+    Given the "General" room is opened
     When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
+    Then Left Drawer is opened
+    Then the "Hulk" room is presented in the left drawer
+    And tap on the "Hulk" room
+    Then the "Hulk" room is opened
     When swipe from right to left
-    And tap on the "Room settings" link
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
-    Then the "SharePrivateRoom" room is opened
+    Then the "Hulk" room is opened
     And swipe from left to right
-    Then the room "SharePrivateRoom" is between "Testing" room and "RECENT DIRECTS" section
+    Then Left Drawer is opened
+    Then the room "Hulk" is between "Thor" room and "RECENT DIRECTS" section
 
   Scenario: 4.064 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the private room.
+    Given the "General" room is opened
     When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
+    Then Left Drawer is opened
+    Then the "Hulk" room is presented in the left drawer
+    And tap on the "Hulk" room
+    Then the "Hulk" room is opened
     When swipe from right to left
-    And tap on the "Room settings" link
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the Back button
-    Then the "SharePrivateRoom" room is opened
+    Then the "Hulk" room is opened
     And swipe from left to right
-    Then the room "SharePrivateRoom" is between "Testing" room and "RECENT DIRECTS" section
+    Then Left Drawer is opened
+    Then the room "Hulk" is between "Thor" room and "RECENT DIRECTS" section
 
   Scenario: 4.060 Check "unmuted room" function for a private room on the "Room settings" in the right panel.
+    Given the "General" room is opened
     When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
+    Then Left Drawer is opened
+    Then the "Hulk" room is presented in the left drawer
+    And tap on the "Hulk" room
+    Then the "Hulk" room is opened
     When swipe from right to left
-    And tap on the "Room settings" link
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
-    Then the "SharePrivateRoom" room is opened
+    Then the "Hulk" room is opened
     And swipe from left to right
-    Then the room "SharePrivateRoom" is between "" and "" rooms
+    Then Left Drawer is opened
+    Then the room "Hulk" is between "General" and "IronMan" rooms
 
   Scenario: 4.055 Check "mute room" function for a direct room on the "Room settings" in the right panel.
+    Given the "General" room is opened
     When swipe from left to right
+    Then Left Drawer is opened
+    Then the "a.baiova" room is presented in the left drawer
     And tap on the "a.baiova" room
     Then the "a.baiova" direct room is opened
     When swipe from right to left
-    And tap on the "Direct settings" link
+    Then the "Direct info" screen is opened
+    When tap on the "Direct settings" link in the Right drawer
     Then the "Direct settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
     Then the "a.baiova" direct room is opened
     And swipe from left to right
-    Then the room "a.baiova" is presented under the "userTEST" room in the "RECENT DIRECTS" section
+    Then Left Drawer is opened
+    Then the room "a.baiova" is presented under the "testuser2" room in the "RECENT DIRECTS" section
 
   Scenario: 4.065 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the direct room.
+    Given the "General" room is opened
     When swipe from left to right
+    Then Left Drawer is opened
+    Then the "a.baiova" room is presented in the left drawer
     And tap on the "a.baiova" room
     Then the "a.baiova" direct room is opened
     When swipe from right to left
-    And tap on the "Direct settings" link
+    Then the "Direct info" screen is opened
+    When tap on the "Direct settings" link in the Right drawer
     Then the "Direct settings" screen is opened
     When tap on the "mute switch" button
     And tap on the Back button
     Then the "a.baiova" direct room is opened
     And swipe from left to right
-    Then the room "a.baiova" is presented under the "userTEST" room in the "RECENT DIRECTS" section
+    Then Left Drawer is opened
+    Then the room "a.baiova" is presented under the "testuser2" room in the "RECENT DIRECTS" section
 
   Scenario: 4.061 Check "unmuted room" function for a direct room on the "Room settings" in the right panel.
+    Given the "General" room is opened
     When swipe from left to right
+    Then Left Drawer is opened
+    Then the "a.baiova" room is presented in the left drawer
     And tap on the "a.baiova" room
     Then the "a.baiova" direct room is opened
     When swipe from right to left
-    And tap on the "Direct settings" link
+    Then the "Direct info" screen is opened
+    When tap on the "Direct settings" link in the Right drawer
     Then the "Direct settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
     Then the "a.baiova" direct room is opened
     And swipe from left to right
-    Then the room "a.baiova" is between "RECENT DIRECTS" section and "userTEST" room
+    Then Left Drawer is opened
+    Then the room "a.baiova" is between "RECENT DIRECTS" section and "testuser2" room
 
   Scenario: 4.062 Check for clickable "Back" button in the "Room settings" list.
+    Given the "General" room is opened
     When swipe from right to left
-    When tap on the "Room settings" list
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the Back button
     Then the chat history is opened
     Then the "General" room is opened
-
+#+
   Scenario: 4.078 Check "Leave room" function for public room.
+    Then the "General" room is opened
     When swipe from left to right
-    And tap on the "Marketplace" room
-    Then the "Marketplace" room is opened
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    When tap on the "Alfresco" room
+    Then the "Alfresco" room is opened
+    When tap on the "Join" button
+    And wait while results are refreshed
     When swipe from right to left
-    When tap on the "Room settings" list
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Leave room" link
-    And wait while results are refreshed
+    Then "You left public room #Alfresco" alert is displayed
     When tap on the "Ok" link
-    And wait while results are refreshed
     Then the "General" room is opened
 
 #    Сделать прекондишен
   Scenario: 4.079 Check "Leave room" function for private room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "SharePrivateRoom" room
     Then the "SharePrivateRoom" room is opened
@@ -755,20 +925,26 @@ Feature: Right drawer
     Then the "General" room is opened
 
   Scenario: 4.080 Check "Hide conversation" function for direct room.
+    Then the "General" room is opened
     When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
+    Then Left Drawer is opened
+    When tap on the "Recent directs" title
+    Then the "Start direct" screen is opened
+    When tap on the "a.antonenko" room
+    Then the "a.antonenko" direct room is opened
     When swipe from right to left
-    When tap on the "Direct settings" list
+    Then the "Direct info" screen is opened
+    When tap on the "Direct settings" link in the Right drawer
     Then the "Direct settings" screen is opened
     When tap on the "Hide conversation" link
-    And wait while results are refreshed
-    When tap on the "Ok" link
-    And wait while results are refreshed
     Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    Then the "a.antonenko" room is not presented in the left drawer
 
 # ------- Создать паблик руму (быть owner-ом) -----------/////Чекнуть\\\\\-----
   Scenario: 4.081 Checking adds users in the public room as the owner through the right drawer.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "TestAddUsers" room
     Then the "TestAddUsers" room is opened
@@ -787,6 +963,7 @@ Feature: Right drawer
     Then the "testuser2" user appear in the Room members screen
 
   Scenario: 4.083 Check change admin rights to another participant in the public room as the an owner.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "qwdqyd" room
     Then the "qwdqyd" room is opened
@@ -801,6 +978,7 @@ Feature: Right drawer
     Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
 
   Scenario: 4.082 Check change owner's rights to other participant in the public room as the an owner.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "qwdqyd" room
     Then the "qwdqyd" room is opened
@@ -814,6 +992,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.084 Checking remove any user from the public room as an owner.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "TestAddUsers" room
     Then the "TestAddUsers" room is opened
@@ -828,6 +1007,7 @@ Feature: Right drawer
 
 # ------- Создать паблик руму (быть owner-ом) -----------/////Чекнуть\\\\\-----
   Scenario: 4.085 Checking adds users in the public room as the admin through the right drawer.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "TestAddUsers" room
     Then the "TestAddUsers" room is opened
@@ -847,6 +1027,7 @@ Feature: Right drawer
 
 #    Сделать прекондишен и изменить номер проверки
   Scenario: 4.0 Check assign admin rights for other participants.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "qwdqyd" room
     Then the "qwdqyd" room is opened
@@ -862,6 +1043,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.086 Checking remove any user from the public room as an admin.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "TestAddUsers" room
     Then the "TestAddUsers" room is opened
@@ -876,6 +1058,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.087 Checking adds users in the private room as the owner through the right drawer.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "PrivateTestAddUsers" room
     Then the "PrivateTestAddUsers" room is opened
@@ -894,6 +1077,7 @@ Feature: Right drawer
     Then the "testuser2" user appear in the Room members screen
 
   Scenario: 4.089 Check assign admin rights to another member in the private room as the owner.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "qwdqyd" room
     Then the "qwdqyd" room is opened
@@ -908,6 +1092,7 @@ Feature: Right drawer
     Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
 
   Scenario: 4.088 Check change owner's rights to the other members in the private room as the owner.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "PrivateTestAddUsers" room
     Then the "PrivateTestAddUsers" room is opened
@@ -921,6 +1106,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.090 Checking remove any user from the private room as an owner.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "PrivateTestAddUsers" room
     Then the "PrivateTestAddUsers" room is opened
@@ -935,6 +1121,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.091 Checking adds users in the private room as the admin through the right drawer.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "PrivateTestAddUsers" room
     Then the "PrivateTestAddUsers" room is opened
@@ -953,6 +1140,7 @@ Feature: Right drawer
     Then the "testuser2" user appear in the Room members screen
 
   Scenario: 4.092 Check assign admin rights to another participant in the private room as the owner.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "qwdqyd" room
     Then the "qwdqyd" room is opened
@@ -968,6 +1156,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.093 Checking remove any user from the private room as an admin.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "PrivateTestAddUsers" room
     Then the "PrivateTestAddUsers" room is opened
@@ -982,6 +1171,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.094 Check "Edit room" function for the public room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPublicRoom" room
     Then the "MyPublicRoom" room is opened
@@ -1001,6 +1191,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.095 Checking change description of the room in the "Edit room" screen.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPublicRoom" room
     Then the "MyPublicRoom" room is opened
@@ -1016,6 +1207,7 @@ Feature: Right drawer
 
 #    ------ Прекондишен ----------
   Scenario: 4.096 Check delete members from "Edit list of members" in the "Edit Room" screen for public room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPublicRoom" room
     Then the "MyPublicRoom" room is opened
@@ -1033,6 +1225,7 @@ Feature: Right drawer
     Then the "a.baiova" user disappear in the Room members screen
 
   Scenario: 4.097 Check invite members in the "Edit list of members" in the "Edit Room" screen for public room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPublicRoom" room
     Then the "MyPublicRoom" room is opened
@@ -1055,6 +1248,7 @@ Feature: Right drawer
     Then the "testuser2" user appear in the Room members screen
 
   Scenario: 4.098 Checking assign admin rights.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPublicRoom" room
     Then the "MyPublicRoom" room is opened
@@ -1074,6 +1268,7 @@ Feature: Right drawer
 
 #    *********** Поменять местами проверки *****************
   Scenario: 4.099 Check "Delete room" function for public room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPublicRoom" room
     Then the "MyPublicRoom" room is opened
@@ -1090,6 +1285,7 @@ Feature: Right drawer
     Then the "General" room is opened
 
   Scenario: 4.100 Check cancel delete room for public room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPublicRoom" room
     Then the "MyPublicRoom" room is opened
@@ -1106,6 +1302,7 @@ Feature: Right drawer
 
 #    *********** Поменять местами проверки *****************
   Scenario: 4.101 Check "Delete room" function for private room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPrivateRoom" room
     Then the "MyPrivateRoom" room is opened
@@ -1122,6 +1319,7 @@ Feature: Right drawer
     Then the "General" room is opened
 
   Scenario: 4.102 Check cancel delete room for public room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPrivateRoom" room
     Then the "MyPrivateRoom" room is opened
@@ -1138,6 +1336,7 @@ Feature: Right drawer
 
 #  ********** Прекондишен ************************
   Scenario: 4.103 Check the "reassign new owner" function for the public room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPublicRoom" room
     Then the "MyPublicRoom" room is opened
@@ -1157,6 +1356,7 @@ Feature: Right drawer
 
 #  ********** Прекондишен ************************
   Scenario: 4.104 Check the "reassign new owner" function for the private room.
+    Given the "General" room is opened
     When swipe from left to right
     And tap on the "MyPrivateRoom" room
     Then the "MyPrivateRoom" room is opened
