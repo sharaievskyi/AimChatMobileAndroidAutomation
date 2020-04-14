@@ -148,7 +148,8 @@ public class CommonElementsPage extends MobilePageObject {
     }
 
     public boolean messageIsSharedToTheRoom(String messageText) {
-        return $$(AndroidLocators.SHARE_MESSAGE).isDisplayed() && androidElementByText(messageText).isDisplayed();
+//        return $$(AndroidLocators.SHARE_MESSAGE).isDisplayed() && androidElementByText(messageText).isDisplayed();
+        return $(AndroidLocators.SHARE_MESSAGE_CONTAINER_XPATH).isVisible() && $(AndroidLocators.SHARE_MESSAGE_TEXT_XPATH.replace("$1", messageText)).isVisible();
     }
 
     public void tapOnTheRadioButton(String buttonName) {
@@ -171,5 +172,11 @@ public class CommonElementsPage extends MobilePageObject {
 
     public void tapOnTheElementById(String elementId) {
         $$(getAndroidLocator(elementId)).click();
+    }
+
+    public boolean verifyThatTheUserDetailsScreenIsOpened(String userName) {
+        withTimeoutOf(25, TimeUnit.SECONDS)
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.USER_DETAILS_SCREEN_XPATH.replace("$1", userName))));
+        return $(AndroidLocators.USER_DETAILS_SCREEN_XPATH.replace("$1", userName)).isVisible();
     }
 }

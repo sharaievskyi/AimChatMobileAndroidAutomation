@@ -69,6 +69,10 @@ Feature: Message history
 
   Scenario: 3.006 Check for unstarred message in chat history.
     Given the "General" room is opened
+    Then Left Drawer is opened
+    Then the "CaptainAmerica" room is presented in the left drawer
+    When tap on the "CaptainAmerica" room
+    Then the "CaptainAmerica" room is opened
     When enter "qwerty6" in the "Write a message" input field
     When tap on the "Send" button
     Then message "qwerty6" is present
@@ -384,6 +388,7 @@ Feature: Message history
     And tap on the "Message bar edit" button
     And wait while results are refreshed
     Then "edited a few seconds ago" alert is displayed
+    When tap on the Back button
     Then the "a.baiova" direct room is opened
     Then message "qwerty24 (edited)" is present
     Then "edited" alert is displayed
@@ -892,6 +897,7 @@ Feature: Message history
     And tap on the "Delete" link
     Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
     When tap on the Delete button in the pop-up menu
+    And wait while results are refreshed
     Then the chat history is opened
     Then the message "message delete" is deleted
 
@@ -1432,6 +1438,7 @@ Feature: Message history
     When long tap on "qwerty40" message in chat history
     Then content pop-up menu is opened
     When tap on the "Pin message" link
+    And wait while results are refreshed
     Then message marked as "pinned"
     Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty40" message
 
@@ -1491,9 +1498,9 @@ Feature: Message history
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "IronMan" room is presented in the left drawer
-    And tap on the "IronMan" room
-    Then the "IronMan" room is opened
+    Then the "SpiderMan" room is presented in the left drawer
+    And tap on the "SpiderMan" room
+    Then the "SpiderMan" room is opened
     When enter "qwerty44" in the "Write a message" input field
     When tap on the "Send" button
     Then message "qwerty44" is present
@@ -1507,6 +1514,7 @@ Feature: Message history
     When tap on the "Unpin message" link
     Then mark as "pinned" disappears
 
+# Использовать другого пользователя
   Scenario: 3.105 Check "Unpin message" in a direct room using a long tap in chat history.
     Given the "General" room is opened
     When swipe from left to right
@@ -1623,6 +1631,7 @@ Feature: Message history
     When long tap on "qwerty51" message in chat history
     Then content pop-up menu is opened
     When tap on the "Star message" link
+    And wait while results are refreshed
     Then message marked as "starred"
     Then message marked as "starred" between "d.sharaievskyi" username and "qwerty51" message
     When long tap on "qwerty51" message in chat history

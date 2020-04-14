@@ -7,7 +7,7 @@ public interface AndroidLocators {
     String TEXT_INPUT_ERROR = "textinput_error";
     String LOGO = "//android.widget.FrameLayout[contains(@resource-id, '$1')]";
     String ELEMENT_WITH_TEXT_XPATH = "//android.widget.TextView[@text='$1']";
-
+    String TEAM_NAME = "team_name";
     String FINGERPRINT_AUTHORIZATION_ID = "//android.widget.FrameLayout[contains(@resource-id, 'content')]";
     String PROGRESS_BAR_LOAD_DATA = "//android.widget.ProgressBar[contains(@resource-id, 'progressBarLoadData')]";
 
@@ -36,13 +36,18 @@ public interface AndroidLocators {
     String PINNED_STARRED_ID = "pinned_starred_desr";
     String SMILE_VIEW = "smile_view";
     String EMOJI_ICON = "emoji_icon";
-//    String CONTENT_POP_UP_MENU = "//android.widget.FrameLayout[contains(@resource-id, 'content')]";
+    String CONTENT_POP_UP_MENU_XPATH = "//android.widget.FrameLayout[contains(@resource-id, 'content')]";
     String CONTENT_POP_UP_MENU = "// android.widget.ScrollView";
     String LIST_VIEW_POP_UP = "//android.widget.ListView";
     String USERNAME = "chat_stamp";
     String MESSAGES_TAB = "//android.widget.TextView[@text='MESSAGES']";
     String SHARE_MESSAGE = "citationContainer";
+    String SHARE_MESSAGE_CONTAINER_XPATH = "//android.widget.RelativeLayout[contains(@resource-id, 'citationContainer')]";
+    String SHARE_MESSAGE_TEXT_XPATH = "//android.widget.TextView[contains(@resource-id, 'link_description')][@text='$1']";
     String REACTION = "reaction";
+    String NEW_MESSAGE_SEPARATOR_XPATH = "//android.widget.TextView[contains(@resource-id, 'new_message_divider_text')][@text='New messages']";
+    String USER_DETAILS_SCREEN_XPATH = "//android.widget.TextView[contains(@resource-id, 'toolbar_title_view')][@text='$1']";
+    String DATE_SEPARATOR_XPATH = "//android.widget.TextView[contains(@resource-id, 'message_divider_text')][@text='$1']";
 
     // Android message bar
     String MAIN_INPUT = "message_bar_input";

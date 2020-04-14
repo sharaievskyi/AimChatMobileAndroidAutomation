@@ -96,4 +96,14 @@ public class LeftDrawerSteps {
     public void theRoomIsNotPresentedInTheLeftDrawer(String roomName) {
         steps.theRoomIsNotPresentedInTheLeftDrawer(roomName);
     }
+
+    @Then("the {string} radio-button is clickable")
+    public void theRadioButtonIsClickable(String buttonName) {
+        steps.verifyThatTheRadioButtonIsClickable(buttonName);
+    }
+
+    @Then("pop-up menu is opened in the Left drawer")
+    public void popUpMenuIsOpenedInTheLeftDrawer() {
+        steps.verifyThatThePopUpMenuIsOpenedInTheLeftDrawer();
+    }
 }

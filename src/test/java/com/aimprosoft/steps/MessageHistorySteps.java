@@ -1,7 +1,6 @@
 package com.aimprosoft.steps;
 
 import com.aimprosoft.steps.serenity.MessageHistoryUserSteps;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
@@ -59,5 +58,25 @@ public class MessageHistorySteps {
     @Then("{string} alert is not present")
     public void alertIsNotPresent(String textAlert) {
         steps.alertIsNotPresent(textAlert);
+    }
+
+    @Then("the message {string} is visible")
+    public void theMessageIsVisible(String textMessage) {
+        steps.theMessageIsVisible(textMessage);
+    }
+
+    @Then("the New messages separator is presented")
+    public void theNewMessagesSeparatorIsPresented() {
+        steps.verifyThatTheNewMessageSeparatorIsPresent();
+    }
+
+    @Then("the {string} separator is presented")
+    public void theSeparatorIsPresented(String elementName) {
+        steps.verifyThatTheSeparatorWithDateIsPresent(elementName);
+    }
+
+    @Then("the {string} separator is not displayed")
+    public void theSeparatorIsNotDisplayed(String elementName) {
+        steps.verifyThatTheSeparatorWithDateIsNotPresent(elementName);
     }
 }

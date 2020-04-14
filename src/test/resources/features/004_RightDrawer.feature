@@ -4,55 +4,55 @@ Feature: Right drawer
     When login using the properties file
     Then the user is logged in
 
-  Scenario: 4.000 Precondition
-    Given the "General" room is opened
-    Then message "qwerty1" is present
-    When long tap on "qwerty1" message in chat history
-    Then content pop-up menu is opened
-    When tap on the "Pin message" link
-    Then message marked as "pinned"
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "Thor" room is presented in the left drawer
-    And tap on the "Thor" room
-    Then the "Thor" room is opened
-    When long tap on "message has been edited (edited)" message in chat history
-    Then content pop-up menu is opened
-    When tap on the "Pin message" link
-    Then message marked as "pinned"
-    Then message marked as "pinned" between "d.sharaievskyi" username and "message has been edited (edited)" message
-    When enter "test1" in the "Write a message" input field
-    When tap on the "Send" button
-    And wait while results are refreshed
-    When enter "test2" in the "Write a message" input field
-    When tap on the "Send" button
-    And wait while results are refreshed
-    When enter "test3" in the "Write a message" input field
-    When tap on the "Send" button
-    And wait while results are refreshed
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "a.baiova" room is presented in the left drawer
-    And tap on the "a.baiova" room
-    Then the "a.baiova" direct room is opened
-    And wait while results are refreshed
-    When enter "test1" in the "Write a message" input field
-    When tap on the "Send" button
-    And wait while results are refreshed
-    Then message "test1" is present
-    When enter "test2" in the "Write a message" input field
-    When tap on the "Send" button
-    And wait while results are refreshed
-    Then message "test2" is present
-    When enter "test3" in the "Write a message" input field
-    When tap on the "Send" button
-    And wait while results are refreshed
-    When long tap on "qwerty16" message in chat history
-    Then content pop-up menu is opened
-    When tap on the "Pin message" link
-    Then message marked as "pinned"
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
+#  Scenario: 4.000 Precondition
+#    Given the "General" room is opened
+#    Then message "qwerty1" is present
+#    When long tap on "qwerty1" message in chat history
+#    Then content pop-up menu is opened
+#    When tap on the "Pin message" link
+#    Then message marked as "pinned"
+#    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    Then the "Thor" room is presented in the left drawer
+#    And tap on the "Thor" room
+#    Then the "Thor" room is opened
+#    When long tap on "message has been edited (edited)" message in chat history
+#    Then content pop-up menu is opened
+#    When tap on the "Pin message" link
+#    Then message marked as "pinned"
+#    Then message marked as "pinned" between "d.sharaievskyi" username and "message has been edited (edited)" message
+#    When enter "test1" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And wait while results are refreshed
+#    When enter "test2" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And wait while results are refreshed
+#    When enter "test3" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And wait while results are refreshed
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    Then the "a.baiova" room is presented in the left drawer
+#    And tap on the "a.baiova" room
+#    Then the "a.baiova" direct room is opened
+#    And wait while results are refreshed
+#    When enter "test1" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And wait while results are refreshed
+#    Then message "test1" is present
+#    When enter "test2" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And wait while results are refreshed
+#    Then message "test2" is present
+#    When enter "test3" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And wait while results are refreshed
+#    When long tap on "qwerty16" message in chat history
+#    Then content pop-up menu is opened
+#    When tap on the "Pin message" link
+#    Then message marked as "pinned"
+#    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
 
 
 
@@ -324,26 +324,17 @@ Feature: Right drawer
 
   Scenario: 4.024 Check transition to pinned message in chat history for public room by click on the message in "All" tab.
     Given the "General" room is opened
-    Then message "qwerty1" is present
-    When long tap on "qwerty1" message in chat history
-    Then content pop-up menu is opened
-    When tap on the "Pin message" link
-    Then message marked as "pinned"
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
-#   **** Указать последнее сообщение чтобы чтобы проскролить ****
-    Then message "" is present
-#   *************************************************************
     When swipe from right to left
     Then the "Room info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
-    Then message "qwerty1" is present
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
-    When tap on the "qwerty1" pinned message
+    Then message "qwerty29" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty29" message
+    When tap on the "qwerty29" pinned message
     And wait while results are refreshed
-    Then the pinned message "qwerty1" is open in chat history
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
+    Then the pinned message "qwerty29" is open in chat history
+    Then message "qwerty29" marked as "pinned"
 
   Scenario: 4.025 Check transition to pinned message in chat history for private room by click on the message in "All" tab.
     Given the "General" room is opened
@@ -352,27 +343,17 @@ Feature: Right drawer
     Then the "Thor" room is presented in the left drawer
     And tap on the "Thor" room
     Then the "Thor" room is opened
-#   **** Указать первое сообщение в комнате ****
-    Then message "" is present
-    When long tap on "" message in chat history
-    Then content pop-up menu is opened
-    When tap on the "Pin message" link
-    Then message marked as "pinned"
-    Then message marked as "pinned" between "d.sharaievskyi" username and "" message
-#   **** Указать последнее сообщение чтобы чтобы проскролить ****
-    Then message "" is present
-#   *************************************************************
     When swipe from right to left
     Then the "Room info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
-    Then message "" is present
-    Then message marked as "pinned" between "d.sharaievskyi" username and "" message
-    When tap on the "" pinned message
+    Then message "qwerty26" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty26" message
+    When tap on the "qwerty26" pinned message
     And wait while results are refreshed
-    Then the pinned message "" is open in chat history
-    Then message marked as "pinned" between "d.sharaievskyi" username and "" message
+    Then the pinned message "qwerty26" is open in chat history
+    Then message "qwerty26" marked as "pinned"
 
   Scenario: 4.026 Check transition to pinned message in chat history for direct room by click on the message in "All" tab.
     Given the "General" room is opened
@@ -386,12 +367,12 @@ Feature: Right drawer
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
-    Then message "qwerty16" is present
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
-    When tap on the "qwerty16" pinned message
+    Then message "qwerty27" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty27" message
+    When tap on the "qwerty27" pinned message
     And wait while results are refreshed
-    Then the pinned message "qwerty16" is open in chat history
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
+    Then the pinned message "qwerty27" is open in chat history
+    Then message "qwerty27" marked as "pinned"
 
   Scenario: 4.027 Check transition to pinned message in chat history for public room by click on the message in "Messages" tab.
     Given the "General" room is opened
@@ -402,12 +383,12 @@ Feature: Right drawer
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    Then message "qwerty1" is present
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
-    When tap on the "qwerty1" pinned message
+    Then message "qwerty29" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty29" message
+    When tap on the "qwerty29" pinned message
     And wait while results are refreshed
-    Then the pinned message "qwerty1" is open in chat history
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty1" message
+    Then the pinned message "qwerty29" is open in chat history
+    Then message "qwerty29" marked as "pinned"
 
   Scenario: 4.028 Check transition to pinned message in chat history for private room by click on the message in "Messages" tab.
     Given the "General" room is opened
@@ -423,12 +404,12 @@ Feature: Right drawer
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    Then message "message has been edited (edited)" is present
-    Then message marked as "pinned" between "d.sharaievskyi" username and "message has been edited (edited)" message
-    When tap on the "message has been edited (edited)" pinned message
+    Then message "qwerty26" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty26" message
+    When tap on the "qwerty26" pinned message
     And wait while results are refreshed
-    Then the pinned message "message has been edited (edited)" is open in chat history
-    Then message marked as "pinned" between "d.sharaievskyi" username and "message has been edited (edited)" message
+    Then the pinned message "qwerty26" is open in chat history
+    Then message "qwerty26" marked as "pinned"
 
   Scenario: 4.029 Check transition to pinned message in chat history for direct room by click on the message in "Messages" tab.
     Given the "General" room is opened
@@ -444,12 +425,12 @@ Feature: Right drawer
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    Then message "qwerty16" is present
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
-    When tap on the "qwerty16" pinned message
+    Then message "qwerty27" is present
+    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty27" message
+    When tap on the "qwerty27" pinned message
     And wait while results are refreshed
-    Then the pinned message "qwerty16" is open in chat history
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty16" message
+    Then the pinned message "qwerty27" is open in chat history
+    Then message "qwerty27" marked as "pinned"
 
 
 
@@ -493,8 +474,6 @@ Feature: Right drawer
 #    Then the pinned message "" is open in chat history
 
 
-
-#  ****************************** Сделать прекондишен **************************************
   Scenario: 4.033 Check for clickable "Starred messages" list in the right panel.
     Given the "General" room is opened
     When swipe from right to left
@@ -510,35 +489,56 @@ Feature: Right drawer
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
-    When tap on the "" starred message
+    Then message "qwerty3" is present
+    Then message marked as "starred" between "d.sharaievskyi" username and "qwerty3" message
+    When tap on the "qwerty3" starred message
     And wait while results are refreshed
-    Then the starred message "" is open in chat history
+    Then the starred message "qwerty3" is open in chat history
+    Then message "qwerty3" marked as "starred"
 
   Scenario: 4.035 Check transition to starred message in chat history for private room by click on the message in "All" tab.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
+    Then message "qwerty32" is present
+    When long tap on "qwerty32" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Star message" link
+    Then message marked as "starred"
+    Then message marked as "starred" between "d.sharaievskyi" username and "qwerty32" message
+    Then message "qwerty76" is present
     When swipe from right to left
     When tap on the "Starred messages" list
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
-    When tap on the "" starred message
+    Then message "qwerty32" is present
+    Then message marked as "starred" between "d.sharaievskyi" username and "qwerty32" message
+    When tap on the "qwerty32" starred message
     And wait while results are refreshed
-    Then the starred message "" is open in chat history
+    Then the starred message "qwerty32" is open in chat history
+    Then message "qwerty32" marked as "starred"
 
   Scenario: 4.036 Check transition to starred message in chat history for direct room by click on the message in "All" tab.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
+    And tap on the "a.baiova" room
+    Then the "a.baiova" direct room is opened
+    Then message "qwerty33" is present
+    When long tap on "qwerty33" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Star message" link
+    Then message marked as "starred"
+    Then message marked as "starred" between "d.sharaievskyi" username and "qwerty33" message
+    Then message "qwerty79" is present
     When swipe from right to left
     When tap on the "Starred messages" list
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
-    When tap on the "" starred message
+    When tap on the "qwerty33" starred message
     And wait while results are refreshed
-    Then the starred message "" is open in chat history
+    Then the starred message "qwerty33" is open in chat history
+    Then message "qwerty33" marked as "starred"
 
   Scenario: 4.037 Check transition to starred message in chat history for public room by click on the message in "Messages" tab.
     Given the "General" room is opened
@@ -548,39 +548,42 @@ Feature: Right drawer
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    When tap on the "" starred message
+    When tap on the "qwerty3" starred message
     And wait while results are refreshed
-    Then the starred message "" is open in chat history
+    Then the starred message "qwerty3" is open in chat history
+    Then message "qwerty3" marked as "starred"
 
   Scenario: 4.038 Check transition to starred message in chat history for private room by click on the message in "Message" tab.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
     When swipe from right to left
     When tap on the "Starred messages" list
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    When tap on the "" starred message
+    When tap on the "qwerty32" starred message
     And wait while results are refreshed
-    Then the starred message "" is open in chat history
+    Then the starred message "qwerty32" is open in chat history
+    Then message "qwerty32" marked as "starred"
 
   Scenario: 4.039 Check transition to starred message in chat history foe direct room by click on the message in "Message" tab.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
+    And tap on the "a.baiova" room
+    Then the "a.baiova" direct room is opened
     When swipe from right to left
     When tap on the "Starred messages" list
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
     When tap on the Messages tab
     Then the Messages tab is selected
-    When tap on the "" starred message
+    When tap on the "qwerty33" starred message
     And wait while results are refreshed
-    Then the starred message "" is open in chat history
+    Then the starred message "qwerty33" is open in chat history
+    Then message "qwerty33" marked as "starred"
 #    **********************************************************************************************************
 
 
@@ -888,7 +891,7 @@ Feature: Right drawer
     When tap on the Back button
     Then the chat history is opened
     Then the "General" room is opened
-#+
+
   Scenario: 4.078 Check "Leave room" function for public room.
     Then the "General" room is opened
     When swipe from left to right
@@ -942,434 +945,450 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the "a.antonenko" room is not presented in the left drawer
 
-# ------- Создать паблик руму (быть owner-ом) -----------/////Чекнуть\\\\\-----
   Scenario: 4.081 Checking adds users in the public room as the owner through the right drawer.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "TestAddUsers" room
-    Then the "TestAddUsers" room is opened
+    And tap on the "IronMan" room
+    Then the "IronMan" room is opened
     When swipe from right to left
-    When tap on the "Room members" list
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
-    And tap on the "Add members" button
+    And tap on the "Invite members" button
     And wait while results are refreshed
-    And enter "testuser2" in the "Select users" input field
-    And tap on the "testuser2" link
+    And enter "testuser" in the "Search user name" input field
+    And tap on the "testuser1" link
     And tap on the "Apply select users" button
     And wait while results are refreshed
-    When swipe from right to left
-    When tap on the "Room members" list
+    And wait while results are refreshed
     Then the "Room members" screen is opened
-    Then the "testuser2" user appear in the Room members screen
+    Then the "testuser1" user appear in the Room members screen
 
   Scenario: 4.083 Check change admin rights to another participant in the public room as the an owner.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "qwdqyd" room
-    Then the "qwdqyd" room is opened
+    And tap on the "CaptainAmerica" room
+    Then the "CaptainAmerica" room is opened
     When swipe from right to left
-    When tap on the "Room members (2)" list
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     When tap on the "More action" button
     And tap on the "Assign as administrator" link
     Then the "Room members" screen is opened
-#     Узнать должно апдейтиться динамически или только после перехода в другую руму и обратно?
     Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
     Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
 
-  Scenario: 4.082 Check change owner's rights to other participant in the public room as the an owner.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "qwdqyd" room
-    Then the "qwdqyd" room is opened
-    When swipe from right to left
-    When tap on the "Room members (2)" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Reassign owner’s rights" link
-    Then the "a.baiova" user is presented between "Administration" section and "d.sharaievskyi" user
-    Then the "(owner)" role is presented between "a.baiova" username and "Anna Baiova" user full name
+#    Подставить тестового юзера, чтобы можно было удалить комнату после
+#  Scenario: 4.082 Check change owner's rights to other participant in the public room as the an owner.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "qwdqyd" room
+#    Then the "qwdqyd" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room members" link in the Right drawer
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Reassign owner’s rights" link
+#    Then the "a.baiova" user is presented between "Administration" section and "d.sharaievskyi" user
+#    Then the "(owner)" role is presented between "a.baiova" username and "Anna Baiova" user full name
 
-#    ------ Прекондишен ----------
+
   Scenario: 4.084 Checking remove any user from the public room as an owner.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "TestAddUsers" room
-    Then the "TestAddUsers" room is opened
+    And tap on the "IronMan" room
+    Then the "IronMan" room is opened
     When swipe from right to left
-    When tap on the "Room members" list
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
-    Then the "a.baiova" user appear in the Room members screen
+    Then the "testuser1" user appear in the Room members screen
     When tap on the "More action" button
-    And tap on the "Remove from " link
+    And tap on the "Remove from IronMan" link
     And wait while results are refreshed
-    Then the "a.baiova" user disappear in the Room members screen
+    Then the "testuser1" user disappear in the Room members screen
 
 # ------- Создать паблик руму (быть owner-ом) -----------/////Чекнуть\\\\\-----
-  Scenario: 4.085 Checking adds users in the public room as the admin through the right drawer.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "TestAddUsers" room
-    Then the "TestAddUsers" room is opened
-    When swipe from right to left
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    And tap on the "Add members" button
-    And wait while results are refreshed
-    And enter "testuser" in the "Select users" input field
-    And tap on the "testuser2" link
-    And tap on the "Apply select users" button
-    And wait while results are refreshed
-    When swipe from right to left
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    Then the "testuser2" user appear in the Room members screen
+#  Scenario: 4.085 Checking adds users in the public room as the admin through the right drawer.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "TestAddUsers" room
+#    Then the "TestAddUsers" room is opened
+#    When swipe from right to left
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    And tap on the "Add members" button
+#    And wait while results are refreshed
+#    And enter "testuser" in the "Select users" input field
+#    And tap on the "testuser2" link
+#    And tap on the "Apply select users" button
+#    And wait while results are refreshed
+#    When swipe from right to left
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    Then the "testuser2" user appear in the Room members screen
 
 #    Сделать прекондишен и изменить номер проверки
-  Scenario: 4.0 Check assign admin rights for other participants.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "qwdqyd" room
-    Then the "qwdqyd" room is opened
-    When swipe from right to left
-    When tap on the "Room members (2)" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Assign as administrator" link
-    Then the "Room members" screen is opened
-#     Узнать должно апдейтиться динамически или только после перехода в другую руму и обратно?
-    Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
-    Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
+#  Scenario: 4.0 Check assign admin rights for other participants.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "qwdqyd" room
+#    Then the "qwdqyd" room is opened
+#    When swipe from right to left
+#    When tap on the "Room members (2)" list
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Assign as administrator" link
+#    Then the "Room members" screen is opened
+##     Узнать должно апдейтиться динамически или только после перехода в другую руму и обратно?
+#    Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
+#    Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
 
 #    ------ Прекондишен ----------
-  Scenario: 4.086 Checking remove any user from the public room as an admin.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "TestAddUsers" room
-    Then the "TestAddUsers" room is opened
-    When swipe from right to left
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    Then the "a.baiova" user appear in the Room members screen
-    When tap on the "More action" button
-    And tap on the "Remove from " link
-    And wait while results are refreshed
-    Then the "a.baiova" user disappear in the Room members screen
+#  Scenario: 4.086 Checking remove any user from the public room as an admin.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "TestAddUsers" room
+#    Then the "TestAddUsers" room is opened
+#    When swipe from right to left
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    Then the "a.baiova" user appear in the Room members screen
+#    When tap on the "More action" button
+#    And tap on the "Remove from " link
+#    And wait while results are refreshed
+#    Then the "a.baiova" user disappear in the Room members screen
 
-#    ------ Прекондишен ----------
   Scenario: 4.087 Checking adds users in the private room as the owner through the right drawer.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "PrivateTestAddUsers" room
-    Then the "PrivateTestAddUsers" room is opened
+    And tap on the "Hulk" room
+    Then the "Hulk" room is opened
     When swipe from right to left
-    When tap on the "Room members" list
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     And tap on the "Add members" button
     And wait while results are refreshed
-    And enter "testuser2" in the "Select users" input field
-    And tap on the "testuser2" link
+    And enter "testuser" in the "Search user name" input field
+    And tap on the "testuser1" link
     And tap on the "Apply select users" button
     And wait while results are refreshed
-    When swipe from right to left
-    When tap on the "Room members" list
+    And wait while results are refreshed
     Then the "Room members" screen is opened
-    Then the "testuser2" user appear in the Room members screen
+    Then the "testuser1" user appear in the Room members screen
 
-  Scenario: 4.089 Check assign admin rights to another member in the private room as the owner.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "qwdqyd" room
-    Then the "qwdqyd" room is opened
-    When swipe from right to left
-    When tap on the "Room members (2)" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Assign as administrator" link
-    Then the "Room members" screen is opened
-#     Узнать должно апдейтиться динамически или только после перехода в другую руму и обратно?
-    Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
-    Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
+#Сделать прекондишен, вписать название румы
+#  Scenario: 4.089 Check assign admin rights to another member in the private room as the owner.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "" room
+#    Then the "" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room members" link in the Right drawer
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Assign as administrator" link
+#    Then the "Room members" screen is opened
+#    Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
+#    Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
 
-  Scenario: 4.088 Check change owner's rights to the other members in the private room as the owner.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "PrivateTestAddUsers" room
-    Then the "PrivateTestAddUsers" room is opened
-    When swipe from right to left
-    When tap on the "Room members (2)" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Reassign owner’s rights" link
-    Then the "a.baiova" user is presented between "Administration" section and "d.sharaievskyi" user
-    Then the "(owner)" role is presented between "a.baiova" username and "Anna Baiova" user full name
+#  Scenario: 4.088 Check change owner's rights to the other members in the private room as the owner.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "PrivateTestAddUsers" room
+#    Then the "PrivateTestAddUsers" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room members" link in the Right drawer
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Reassign owner’s rights" link
+#    Then the "a.baiova" user is presented between "Administration" section and "d.sharaievskyi" user
+#    Then the "(owner)" role is presented between "a.baiova" username and "Anna Baiova" user full name
 
-#    ------ Прекондишен ----------
+
   Scenario: 4.090 Checking remove any user from the private room as an owner.
     Given the "General" room is opened
     When swipe from left to right
-    And tap on the "PrivateTestAddUsers" room
-    Then the "PrivateTestAddUsers" room is opened
+    And tap on the "Hulk" room
+    Then the "Hulk" room is opened
     When swipe from right to left
-    When tap on the "Room members" list
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
-    Then the "a.baiova" user appear in the Room members screen
+    Then the "testuser1" user appear in the Room members screen
     When tap on the "More action" button
-    And tap on the "Remove from " link
+    And tap on the "Remove from Hulk" link
     And wait while results are refreshed
-    Then the "a.baiova" user disappear in the Room members screen
+    Then the "testuser1" user disappear in the Room members screen
 
 #    ------ Прекондишен ----------
-  Scenario: 4.091 Checking adds users in the private room as the admin through the right drawer.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "PrivateTestAddUsers" room
-    Then the "PrivateTestAddUsers" room is opened
-    When swipe from right to left
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    And tap on the "Add members" button
-    And wait while results are refreshed
-    And enter "testuser2" in the "Select users" input field
-    And tap on the "testuser2" link
-    And tap on the "Apply select users" button
-    And wait while results are refreshed
-    When swipe from right to left
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    Then the "testuser2" user appear in the Room members screen
+#  Scenario: 4.091 Checking adds users in the private room as the admin through the right drawer.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "PrivateTestAddUsers" room
+#    Then the "PrivateTestAddUsers" room is opened
+#    When swipe from right to left
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    And tap on the "Add members" button
+#    And wait while results are refreshed
+#    And enter "testuser2" in the "Select users" input field
+#    And tap on the "testuser2" link
+#    And tap on the "Apply select users" button
+#    And wait while results are refreshed
+#    When swipe from right to left
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    Then the "testuser2" user appear in the Room members screen
 
-  Scenario: 4.092 Check assign admin rights to another participant in the private room as the owner.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "qwdqyd" room
-    Then the "qwdqyd" room is opened
-    When swipe from right to left
-    When tap on the "Room members (2)" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Assign as administrator" link
-    Then the "Room members" screen is opened
-#     Узнать должно апдейтиться динамически или только после перехода в другую руму и обратно?
-    Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
-    Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
-
-#    ------ Прекондишен ----------
-  Scenario: 4.093 Checking remove any user from the private room as an admin.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "PrivateTestAddUsers" room
-    Then the "PrivateTestAddUsers" room is opened
-    When swipe from right to left
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    Then the "a.baiova" user appear in the Room members screen
-    When tap on the "More action" button
-    And tap on the "Remove from " link
-    And wait while results are refreshed
-    Then the "a.baiova" user disappear in the Room members screen
-
-#    ------ Прекондишен ----------
-  Scenario: 4.094 Check "Edit room" function for the public room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPublicRoom" room
-    Then the "MyPublicRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When change room name to "MyChangeRoomName" in the field "Edit room name"
-    And tap on the "Apply edit" button
-    And wait while results are refreshed
-    Then name "MyChangeRoomName" of room is present
-    When tap on the Back button
-    Then the "Room settings" screen is opened
-    When tap on the Back button
-    Then the "MyChangeRoomName" room is opened
-
-#    ------ Прекондишен ----------
-  Scenario: 4.095 Checking change description of the room in the "Edit room" screen.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPublicRoom" room
-    Then the "MyPublicRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When change description to "MyChangeRoomName" in the field "Edit room name"
-    And tap on the "Apply edit" button
-    And wait while results are refreshed
-    Then description "MyChangeRoomName" of room is present
-
-#    ------ Прекондишен ----------
-  Scenario: 4.096 Check delete members from "Edit list of members" in the "Edit Room" screen for public room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPublicRoom" room
-    Then the "MyPublicRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    Then the "a.baiova" user appear in the Room members screen
-    When tap on the "More action" button
-    And tap on the "Remove from " link
-    And wait while results are refreshed
-    Then the "a.baiova" user disappear in the Room members screen
-
-  Scenario: 4.097 Check invite members in the "Edit list of members" in the "Edit Room" screen for public room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPublicRoom" room
-    Then the "MyPublicRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    And tap on the "Add members" button
-    And wait while results are refreshed
-    And enter "testuser2" in the "Select users" input field
-    And tap on the "testuser2" link
-    And tap on the "Apply select users" button
-    And wait while results are refreshed
-    When swipe from right to left
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    Then the "testuser2" user appear in the Room members screen
-
-  Scenario: 4.098 Checking assign admin rights.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPublicRoom" room
-    Then the "MyPublicRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Assign as administrator" link
-    Then the "Room members" screen is opened
-#     Узнать должно апдейтиться динамически или только после перехода в другую руму и обратно?
-    Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
-    Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
-
-#    *********** Поменять местами проверки *****************
-  Scenario: 4.099 Check "Delete room" function for public room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPublicRoom" room
-    Then the "MyPublicRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Delete room" link
-    And wait while results are refreshed
-    When tap on the "Accept" button
-    And wait while results are refreshed
-    Then "The public room #MyPublicRoom has been deleted" alert is displayed
-    When tap on the "Ok button" button
-    And wait while results are refreshed
-    Then the "General" room is opened
-
-  Scenario: 4.100 Check cancel delete room for public room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPublicRoom" room
-    Then the "MyPublicRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Delete room" link
-    And wait while results are refreshed
-    When tap on the "Cancel" button
-    Then the "Room settings" screen is opened
-    When tap on the Back button
-    Then the "MyPublicRoom" room is opened
-#    ********************************************************
-
-#    *********** Поменять местами проверки *****************
-  Scenario: 4.101 Check "Delete room" function for private room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPrivateRoom" room
-    Then the "MyPrivateRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Delete room" link
-    And wait while results are refreshed
-    When tap on the "Accept" button
-    And wait while results are refreshed
-    Then "The private room #MyPrivateRoom has been deleted" alert is displayed
-    When tap on the "Ok button" button
-    And wait while results are refreshed
-    Then the "General" room is opened
-
-  Scenario: 4.102 Check cancel delete room for public room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPrivateRoom" room
-    Then the "MyPrivateRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "Delete room" link
-    And wait while results are refreshed
-    When tap on the "Cancel" button
-    Then the "Room settings" screen is opened
-    When tap on the Back button
-    Then the "MyPrivateRoom" room is opened
-#    *******************************************************
-
-#  ********** Прекондишен ************************
-  Scenario: 4.103 Check the "reassign new owner" function for the public room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPublicRoom" room
-    Then the "MyPublicRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "reassign new owner" link
-    Then the "Room members" screen is opened
-    When tap on the More option button
-    When tap on the "Reassign owner’s rights" link
-    And tap on the Back button
-    When tap on the "Leave room" link
-    Then "You left public room #MyPublicRoom" alert is displayed
-    When tap on the "Ok button" button
-    And wait while results are refreshed
-    Then the "General" room is opened
-
-#  ********** Прекондишен ************************
-  Scenario: 4.104 Check the "reassign new owner" function for the private room.
-    Given the "General" room is opened
-    When swipe from left to right
-    And tap on the "MyPrivateRoom" room
-    Then the "MyPrivateRoom" room is opened
-    When swipe from right to left
-    When tap on the "Room settings" list
-    Then the "Room settings" screen is opened
-    When tap on the "reassign new owner" link
-    Then the "Room members" screen is opened
-    When tap on the More option button
-    When tap on the "Reassign owner’s rights" link
-    And tap on the Back button
-    When tap on the "Leave room" link
-    Then "You left public room #MyPrivateRoom" alert is displayed
-    When tap on the "Ok button" button
-    And wait while results are refreshed
-    Then the "General" room is opened
+#  Scenario: 4.092 Check assign admin rights to another participant in the private room as the owner.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "qwdqyd" room
+#    Then the "qwdqyd" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room members" link in the Right drawer
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Assign as administrator" link
+#    Then the "Room members" screen is opened
+#    Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
+#    Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
+#
+##    ------ Прекондишен ----------
+#  Scenario: 4.093 Checking remove any user from the private room as an admin.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "PrivateTestAddUsers" room
+#    Then the "PrivateTestAddUsers" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room members" link in the Right drawer
+#    Then the "Room members" screen is opened
+#    Then the "a.baiova" user appear in the Room members screen
+#    When tap on the "More action" button
+#    And tap on the "Remove from " link
+#    And wait while results are refreshed
+#    Then the "a.baiova" user disappear in the Room members screen
+#
+##    ------ Прекондишен ----------
+#  Scenario: 4.094 Check "Edit room" function for the public room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPublicRoom" room
+#    Then the "MyPublicRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When change room name to "MyChangeRoomName" in the field "Edit room name"
+#    And tap on the "Apply edit" button
+#    And wait while results are refreshed
+#    Then name "MyChangeRoomName" of room is present
+#    When tap on the Back button
+#    Then the "Room settings" screen is opened
+#    When tap on the Back button
+#    Then the "MyChangeRoomName" room is opened
+#
+##    ------ Прекондишен ----------
+#  Scenario: 4.095 Checking change description of the room in the "Edit room" screen.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPublicRoom" room
+#    Then the "MyPublicRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When change description to "MyChangeRoomName" in the field "Edit room name"
+#    And tap on the "Apply edit" button
+#    And wait while results are refreshed
+#    Then description "MyChangeRoomName" of room is present
+#
+##    ------ Прекондишен ----------
+#  Scenario: 4.096 Check delete members from "Edit list of members" in the "Edit Room" screen for public room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPublicRoom" room
+#    Then the "MyPublicRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    Then the "a.baiova" user appear in the Room members screen
+#    When tap on the "More action" button
+#    And tap on the "Remove from " link
+#    And wait while results are refreshed
+#    Then the "a.baiova" user disappear in the Room members screen
+#
+#  Scenario: 4.097 Check invite members in the "Edit list of members" in the "Edit Room" screen for public room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPublicRoom" room
+#    Then the "MyPublicRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    And tap on the "Add members" button
+#    And wait while results are refreshed
+#    And enter "testuser2" in the "Select users" input field
+#    And tap on the "testuser2" link
+#    And tap on the "Apply select users" button
+#    And wait while results are refreshed
+#    When swipe from right to left
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    Then the "testuser2" user appear in the Room members screen
+#
+#  Scenario: 4.098 Checking assign admin rights.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPublicRoom" room
+#    Then the "MyPublicRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Assign as administrator" link
+#    Then the "Room members" screen is opened
+##     Узнать должно апдейтиться динамически или только после перехода в другую руму и обратно?
+#    Then the "a.baiova" user is presented under "Administration" section and "d.sharaievskyi" user
+#    Then the "(admin)" role is presented between "a.baiova" username and "Anna Baiova" user full name
+#
+##    *********** Поменять местами проверки *****************
+#  Scenario: 4.099 Check "Delete room" function for public room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPublicRoom" room
+#    Then the "MyPublicRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Delete room" link
+#    And wait while results are refreshed
+#    When tap on the "Accept" button
+#    And wait while results are refreshed
+#    Then "The public room #MyPublicRoom has been deleted" alert is displayed
+#    When tap on the "Ok button" button
+#    And wait while results are refreshed
+#    Then the "General" room is opened
+#
+#  Scenario: 4.100 Check cancel delete room for public room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPublicRoom" room
+#    Then the "MyPublicRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Delete room" link
+#    And wait while results are refreshed
+#    When tap on the "Cancel" button
+#    Then the "Room settings" screen is opened
+#    When tap on the Back button
+#    Then the "MyPublicRoom" room is opened
+##    ********************************************************
+#
+##    *********** Поменять местами проверки *****************
+#  Scenario: 4.101 Check "Delete room" function for private room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPrivateRoom" room
+#    Then the "MyPrivateRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Delete room" link
+#    And wait while results are refreshed
+#    When tap on the "Accept" button
+#    And wait while results are refreshed
+#    Then "The private room #MyPrivateRoom has been deleted" alert is displayed
+#    When tap on the "Ok button" button
+#    And wait while results are refreshed
+#    Then the "General" room is opened
+#
+#  Scenario: 4.102 Check cancel delete room for public room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPrivateRoom" room
+#    Then the "MyPrivateRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "Delete room" link
+#    And wait while results are refreshed
+#    When tap on the "Cancel" button
+#    Then the "Room settings" screen is opened
+#    When tap on the Back button
+#    Then the "MyPrivateRoom" room is opened
+##    *******************************************************
+#
+##  ********** Прекондишен ************************
+#  Scenario: 4.103 Check the "reassign new owner" function for the public room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPublicRoom" room
+#    Then the "MyPublicRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "reassign new owner" link
+#    Then the "Room members" screen is opened
+#    When tap on the More option button
+#    When tap on the "Reassign owner’s rights" link
+#    And tap on the Back button
+#    When tap on the "Leave room" link
+#    Then "You left public room #MyPublicRoom" alert is displayed
+#    When tap on the "Ok button" button
+#    And wait while results are refreshed
+#    Then the "General" room is opened
+#
+##  ********** Прекондишен ************************
+#  Scenario: 4.104 Check the "reassign new owner" function for the private room.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    And tap on the "MyPrivateRoom" room
+#    Then the "MyPrivateRoom" room is opened
+#    When swipe from right to left
+#    Then the "Room info" screen is opened
+#    When tap on the "Room settings" link in the Right drawer
+#    Then the "Room settings" screen is opened
+#    When tap on the "reassign new owner" link
+#    Then the "Room members" screen is opened
+#    When tap on the More option button
+#    When tap on the "Reassign owner’s rights" link
+#    And tap on the Back button
+#    When tap on the "Leave room" link
+#    Then "You left public room #MyPrivateRoom" alert is displayed
+#    When tap on the "Ok button" button
+#    And wait while results are refreshed
+#    Then the "General" room is opened

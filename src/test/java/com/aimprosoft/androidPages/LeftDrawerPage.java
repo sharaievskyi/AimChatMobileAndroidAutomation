@@ -126,4 +126,12 @@ public class LeftDrawerPage extends MobilePageObject {
     public boolean theRoomIsNotPresentedInTheLeftDrawer(String roomName) {
         return $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isCurrentlyVisible();
     }
+
+    public boolean verifyThatTheRadioButtonIsClickable(String buttonName) {
+        return $(AndroidButtonsLocators.PUBLIC_OR_PRIVATE_CHANNEL_XPATH.replace("$1", buttonName)).getAttribute("clickable").equals("true");
+    }
+
+    public boolean verifyThatThePopUpMenuIsOpenedInTheLeftDrawer() {
+        return $(AndroidLocators.CONTENT_POP_UP_MENU_XPATH).isDisplayed();
+    }
 }

@@ -1,5 +1,6 @@
 package com.aimprosoft.androidPages;
 
+import com.aimprosoft.locators.AndroidButtonsLocators;
 import com.aimprosoft.locators.AndroidLocators;
 import com.aimprosoft.myDriver.appium.core.MobilePageObject;
 import org.openqa.selenium.By;
@@ -96,5 +97,15 @@ public class RightDrawerPage extends MobilePageObject {
 
     public boolean verifyThatThePinnedMessageIsOpenInChatHistory(String messageText) {
         return $(AndroidLocators.MESSAGE_CONTENT_TEXT).getText().contains(messageText);
+    }
+
+    public boolean messageMarkedAs(String messageText, String element) {
+        int yElement = androidElementByTextAndId(element, AndroidLocators.PINNED_STARRED_ID).getLocation().getY();
+        int yMessage = androidElementByTextAndId(messageText, AndroidLocators.MESSAGE_CONTENT_TEXT).getLocation().getY();
+        return yElement < yMessage;
+    }
+
+    public boolean verifyThatTheRadioButtonByXpathIsSelected(String buttonName) {
+        return $(AndroidButtonsLocators.PUBLIC_OR_PRIVATE_CHANNEL_XPATH.replace("$1", buttonName)).getAttribute("checked").equals("true");
     }
 }

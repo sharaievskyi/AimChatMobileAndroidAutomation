@@ -50,4 +50,20 @@ public class MessageHistoryUserSteps extends ScenarioSteps {
     public void alertIsNotPresent(String textAlert) {
         Assert.assertFalse("Alert is displayed", messageHistoryPage.alertIsNotPresent(textAlert));
     }
+    @Step
+    public void theMessageIsVisible(String textMessage) {
+        Assert.assertTrue("Message is not visible", messageHistoryPage.theMessageIsVisible(textMessage));
+    }
+    @Step
+    public void verifyThatTheNewMessageSeparatorIsPresent() {
+        Assert.assertTrue("New message separator is not present", messageHistoryPage.verifyThatTheNewMessageSeparatorIsPresent());
+    }
+    @Step
+    public void verifyThatTheSeparatorWithDateIsPresent(String elementName) {
+        Assert.assertTrue("Separator with date is not present", messageHistoryPage.verifyThatTheSeparatorWithDateIsPresent(elementName));
+    }
+    @Step
+    public void verifyThatTheSeparatorWithDateIsNotPresent(String elementName) {
+        Assert.assertFalse("Separator with date is present", messageHistoryPage.verifyThatTheSeparatorWithDateIsNotPresent(elementName));
+    }
 }

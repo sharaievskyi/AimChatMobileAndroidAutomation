@@ -1,7 +1,6 @@
 package com.aimprosoft.steps.serenity;
 
 import com.aimprosoft.androidPages.RightDrawerPage;
-import cucumber.api.java.bs.A;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.junit.Assert;
@@ -72,5 +71,13 @@ public class RightDrawerUserSteps extends ScenarioSteps {
 
     public void verifyThatThePinnedMessageIsOpenInChatHistory(String messageText) {
         Assert.assertTrue("",rightDrawerPage.verifyThatThePinnedMessageIsOpenInChatHistory(messageText));
+    }
+    @Step
+    public void verifyThatTheMessageMarkedAsPinnedOrStarred(String messageText, String element) {
+        Assert.assertTrue("The message is not marked as " + element, rightDrawerPage.messageMarkedAs(messageText, element));
+    }
+    @Step
+    public void verifyThatTheRadioButtonByXpathIsSelected(String buttonName) {
+        Assert.assertTrue("Radio-button is not selected", rightDrawerPage.verifyThatTheRadioButtonByXpathIsSelected(buttonName));
     }
 }

@@ -341,4 +341,19 @@ public class CommonSteps {
     public void tapOnTheLinkInTheRightDrawer(String elementId) {
         steps.tapOnTheElementById(elementId);
     }
+
+    @When("long tap on the {string} username")
+    public void longTapOnTheUsername(String elementName) {
+        steps.longTapOnTheElementByText(elementName);
+    }
+
+    @Then("the {string} user details screen is opened")
+    public void theUserDetailsScreenIsOpened(String userName) {
+        steps.verifyThatTheUserDetailsScreenIsOpened(userName);
+    }
+
+    @Then("the {string} link is not presented")
+    public void theLinkIsNotPresented(String buttonName) {
+        steps.verifyThatTheWidgetWithTheTextIsNotPresented(buttonName);
+    }
 }

@@ -63,4 +63,22 @@ public class MessageHistoryPage extends MobilePageObject {
     public boolean alertIsNotPresent(String textAlert) {
         return $(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", textAlert)).isCurrentlyVisible();
     }
+
+    public boolean theMessageIsVisible(String textMessage) {
+        withTimeoutOf(25, TimeUnit.SECONDS)
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", textMessage))));
+        return $(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", textMessage)).isDisplayed();
+    }
+
+    public boolean verifyThatTheNewMessageSeparatorIsPresent() {
+        return $(AndroidLocators.NEW_MESSAGE_SEPARATOR_XPATH).isDisplayed();
+    }
+
+    public boolean verifyThatTheSeparatorWithDateIsPresent(String elementName) {
+        return $(AndroidLocators.DATE_SEPARATOR_XPATH.replace("$1", elementName)).isVisible();
+    }
+
+    public boolean verifyThatTheSeparatorWithDateIsNotPresent(String elementName) {
+        return $(AndroidLocators.DATE_SEPARATOR_XPATH.replace("$1", elementName)).isCurrentlyVisible();
+    }
 }

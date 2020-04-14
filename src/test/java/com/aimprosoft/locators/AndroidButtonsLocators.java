@@ -50,7 +50,7 @@ public interface AndroidButtonsLocators {
     String APPLY_EDIT = "apply_edit_btn";
     String MUTE_SWITCH = "mute_switch";
     String DIALOG_BUTTON = "dialog_btn";
-
+    String PUBLIC_OR_PRIVATE_CHANNEL_XPATH = "//android.widget.RadioButton[contains(@resource-id, '$1')]";
     String ACCEPT = "accept";
     String OK_BUTTON = "ok_button";
     String CANCEL = "cancel";

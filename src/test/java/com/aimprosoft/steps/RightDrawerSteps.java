@@ -85,4 +85,14 @@ public class RightDrawerSteps {
     public void theRoomAppearsInTheRoomMembersSearchResult(String userName) {
         steps.theRoomAppearsInTheRoomMembersSearchResult(userName);
     }
+
+    @Then("message {string} marked as {string}")
+    public void messageMarkedAs(String messageText, String element) {
+        steps.verifyThatTheMessageMarkedAsPinnedOrStarred(messageText, element);
+    }
+
+    @Then("the {string} radio-button is selected")
+    public void theRadioButtonIsSelected(String buttonName) {
+        steps.verifyThatTheRadioButtonByXpathIsSelected(buttonName);
+    }
 }

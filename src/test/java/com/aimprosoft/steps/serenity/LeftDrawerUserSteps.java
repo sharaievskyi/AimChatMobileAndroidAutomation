@@ -81,4 +81,12 @@ public class LeftDrawerUserSteps extends ScenarioSteps {
     public void theRoomIsNotPresentedInTheLeftDrawer(String roomName) {
         Assert.assertFalse("The " + roomName + " is presented in the left drawer", leftDrawerPage.theRoomIsNotPresentedInTheLeftDrawer(roomName));
     }
+    @Step
+    public void verifyThatTheRadioButtonIsClickable(String buttonName) {
+        Assert.assertTrue("Radio-button is not clickable", leftDrawerPage.verifyThatTheRadioButtonIsClickable(buttonName));
+    }
+    @Step
+    public void verifyThatThePopUpMenuIsOpenedInTheLeftDrawer() {
+        Assert.assertTrue("Pop-up menu is not opened in the Left drawer", leftDrawerPage.verifyThatThePopUpMenuIsOpenedInTheLeftDrawer());
+    }
 }
