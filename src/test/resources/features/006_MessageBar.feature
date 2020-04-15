@@ -18,7 +18,7 @@ Feature: Message bar
   Scenario: 6.003 Check send message in "Write a message" input field.
     When enter "qwerty1" in the "Write a message" input field
     When tap on the "Send" button
-    Then the message "qwerty1" is sent
+    Then the message "qwerty1" sent
 
   Scenario: 6.004 Check condition that "Send" button should be disabled until the user enters the first symbol.
     When tap on the "Send" button
@@ -35,28 +35,28 @@ Feature: Message bar
     When tap on the "Send" button
     When hide the keyboard
     Then the chat history is opened
-    Then the message "😬" is sent
+    Then the message "😬" sent
 
   Scenario: 6.010 Check that emoji send  in a chat history from "Android message bar" in private room.
     When swipe from left to right
-    And tap on the "SharePrivateRoom" room
-    Then the "SharePrivateRoom" room is opened
+    And tap on the "Thor" room
+    Then the "Thor" room is opened
     When tap on the "Emoji" button
     Then the "Emoji keyboard" keyboard is opened
     When tap on the "😬" reaction
     When tap on the "Send" button
     When hide the keyboard
     Then the chat history is opened
-    Then the message "😬" is sent
+    Then the message "😬" sent
 
   Scenario: 6.011 Check that emoji send  in a chat history from "Android message bar" in direct room.
     When swipe from left to right
-    And tap on the "testuser1" room
-    Then the "testuser1" direct room is opened
+    And tap on the "androidQA2" room
+    Then the "androidQA2" direct room is opened
     When tap on the "Emoji" button
     Then the "Emoji keyboard" keyboard is opened
     When tap on the "😬" reaction
     When tap on the "Send" button
     When hide the keyboard
     Then the chat history is opened
-    Then the message "😬" is sent
+    Then the message "😬" sent

@@ -29,17 +29,48 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And tap on the "Private room" title
+    And enter "SpiderMan" in the "Create room name" input field
+    And enter "Peter Parker" in the "Create room description" input field
+    And tap on the "Apply create room" button
+    Then the "SpiderMan" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    Then the "General" room is presented in the left drawer
+    And tap on the "General" room
+    Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
     Then the "SpiderMan" room is presented in the left drawer
     And tap on the "SpiderMan" room
     Then the "SpiderMan" room is opened
 
   Scenario: 2.003 Check to open a direct room through the left drawer.
-    Given the "General" room is opened
+    Then the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "testuser2" room is presented in the left drawer
-    And tap on the "testuser2" room
-    Then the "testuser2" direct room is opened
+    When tap on the "Recent directs" title
+    Then the "Start direct" screen is opened
+    When tap on the Search sign
+    And wait while input field would be presented
+    When enter "android" in the "Select users" input field
+    When tap on the "androidQA2" room
+    Then the "androidQA2" direct room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    Then the "General" room is presented in the left drawer
+    And tap on the "General" room
+    Then the "General" room is opened
+    When swipe from left to right
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room
+    Then the "androidQA2" direct room is opened
 
   Scenario: 2.004 Check "Search" for private room in the left drawer.
     Given the "General" room is opened
@@ -61,9 +92,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "testuser2" room is presented in the left drawer
-    And enter "testuser2" in the "Search" input field
-    Then the "testuser2" room appears in the left drawer search result
+    Then the "androidQA2" room is presented in the left drawer
+    And enter "androidQA2" in the "Search" input field
+    Then the "androidQA2" room appears in the left drawer search result
 
   Scenario: 2.007 Check case sensitive in the "Search" input field in the left drawer.
     Given the "General" room is opened
@@ -85,9 +116,9 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "testuser2" room is presented in the left drawer
-    And enter "TESTUSER2" in the "Search" input field
-    Then the "testuser2" room appears in the left drawer search result
+    Then the "androidQA2" room is presented in the left drawer
+    And enter "ANDROIDQA2" in the "Search" input field
+    Then the "androidQA2" room appears in the left drawer search result
 
   Scenario: 2.010 Check a partial search in the "Search" input field in the left drawer for public room.
     Given the "General" room is opened
@@ -109,10 +140,10 @@ Feature: Left Drawer
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "testuser2" room is presented in the left drawer
-    And enter "TESTUS" in the "Search" input field
+    Then the "androidQA2" room is presented in the left drawer
+    And enter "ANDROID" in the "Search" input field
     And wait while results are refreshed
-    Then the "testuser2" room appears in the left drawer search result
+    Then the "androidQA2" room appears in the left drawer search result
 
   Scenario: 2.013 Check "Unsubscribe" function for public room.
     Then the "General" room is opened
@@ -229,9 +260,9 @@ Feature: Left Drawer
     Then the "All" tab is selected
     And tap on the Search sign
     And wait while input field would be presented
-    And enter "tetstuser2" in the "Search rooms" input field
+    And enter "androidQA2" in the "Search rooms" input field
     And wait while results are refreshed
-    Then the "testuser2" room does not appear in the Browse rooms search result
+    Then the "androidQA2" room does not appear in the Browse rooms search result
 
   Scenario: 2.021 Check "Leave" room in the "All" tab to the "Browse rooms" screen.
     Then the "General" room is opened
@@ -307,11 +338,11 @@ Feature: Left Drawer
     And tap on the "Create room" button
     Then the "Create room" screen is opened
     And enter "IronMan" in the "Create room name" input field
-    And enter "Hello" in the "Create room description" input field
+    And enter "Tony Stark" in the "Create room description" input field
     And tap on the "Add members" button
     Then the "Invite members" screen is opened
-    And enter "testuser2" in the "search user name" input field
-    And tap on the "testuser2" "username"
+    And enter "androidQA2" in the "search user name" input field
+    And tap on the "androidQA2" "username"
     And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "IronMan" room is opened
@@ -327,11 +358,11 @@ Feature: Left Drawer
     And tap on the "Create room" button
     Then the "Create room" screen is opened
     And enter "CaptainAmerica" in the "Create room name" input field
-    And enter "Hello" in the "Create room description" input field
+    And enter "Steven Rogers" in the "Create room description" input field
     And tap on the "Add members" button
     Then the "Invite members" screen is opened
-    And enter "a.baiova" in the "search user name" input field
-    And tap on the "a.baiova" "username"
+    And enter "androidQA2" in the "search user name" input field
+    And tap on the "androidQA2" "username"
     And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "CaptainAmerica" room is opened
@@ -348,11 +379,11 @@ Feature: Left Drawer
     Then the "Create room" screen is opened
     And tap on the "Private room" title
     And enter "Thor" in the "Create room name" input field
-    And enter "Hello" in the "Create room description" input field
+    And enter "King of Asgard" in the "Create room description" input field
     And tap on the "Add members" button
     Then the "Invite members" screen is opened
-    And enter "testuser2" in the "search user name" input field
-    And tap on the "testuser2" "username"
+    And enter "androidQA2" in the "search user name" input field
+    And tap on the "androidQA2" "username"
     And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "Thor" room is opened
@@ -368,11 +399,11 @@ Feature: Left Drawer
     Then the "Create room" screen is opened
     And tap on the "Private room" title
     And enter "Hulk" in the "Create room name" input field
-    And enter "Hello" in the "Create room description" input field
+    And enter "Dr. Robert Bruce Banner" in the "Create room description" input field
     And tap on the "Add members" button
     Then the "Invite members" screen is opened
-    And enter "testuser2" in the "search user name" input field
-    And tap on the "testuser2" "username"
+    And enter "androidQA2" in the "search user name" input field
+    And tap on the "androidQA2" "username"
     And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "Hulk" room is opened
@@ -394,8 +425,8 @@ Feature: Left Drawer
     Then the "Start direct" screen is opened
     And tap on the Search sign
     And wait while input field would be presented
-    And enter "testuser2" in the "Select users" input field
-    Then the "testuser2" user appears in the Start direct search result
+    And enter "androidQA2" in the "Select users" input field
+    Then the "androidQA2" user appears in the Start direct search result
 
   Scenario: 2.029 Check select first user from the "Start direct" list.
     Given the "General" room is opened
@@ -403,8 +434,8 @@ Feature: Left Drawer
     Then Left Drawer is opened
     When tap on the "Recent direct" title
     Then the "Start direct" screen is opened
-    And tap on the "a.baiova" user from Start direct list
-    Then the "a.baiova" direct room is opened
+    And tap on the "a.antonenko" user from Start direct list
+    Then the "a.antonenko" direct room is opened
 
   Scenario: 2.030 Checking select user from the middle of the "Start direct" list.
     Given the "General" room is opened

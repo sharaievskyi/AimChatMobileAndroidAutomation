@@ -127,9 +127,9 @@ public class CommonSteps {
         steps.tapOnTheElementByText(elementName);
     }
 
-    @Then("the message {string} is sent")
+    @Then("the message {string} sent")
     public void theMessageIsSent(String messageText) {
-        steps.verifyThatTheWidgetWithTheTextIsPresented(messageText);
+        steps.verifyThatTheTheMessageWasSent(messageText);
     }
 
     @And("tap on the {string} quantity")

@@ -104,7 +104,9 @@ public class LeftDrawerPage extends MobilePageObject {
     }
 
     public boolean theRoomIsPresentedInTheLeftDrawer(String roomName) {
-        return androidElementByText(roomName).isDisplayed() && $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isDisplayed();
+        withTimeoutOf(25, TimeUnit.SECONDS)
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName))));
+        return $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isDisplayed();
     }
 
     public boolean theRoomIsPresentedInTheBrowseRoomsSearchResult(String roomName) {

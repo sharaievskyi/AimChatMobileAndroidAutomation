@@ -179,4 +179,10 @@ public class CommonElementsPage extends MobilePageObject {
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.USER_DETAILS_SCREEN_XPATH.replace("$1", userName))));
         return $(AndroidLocators.USER_DETAILS_SCREEN_XPATH.replace("$1", userName)).isVisible();
     }
+
+    public boolean verifyThatTheTheMessageWasSent(String messageText) {
+        withTimeoutOf(25, TimeUnit.SECONDS)
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText))));
+        return $(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText)).isDisplayed();
+    }
 }

@@ -147,4 +147,8 @@ public class CommonUserSteps extends ScenarioSteps {
     public void verifyThatTheUserDetailsScreenIsOpened(String userName) {
         Assert.assertTrue("The user details screen is not opened", commonElementsPage.verifyThatTheUserDetailsScreenIsOpened(userName));
     }
+    @Step
+    public void verifyThatTheTheMessageWasSent(String messageText) {
+        Assert.assertTrue("The message was not sent", commonElementsPage.verifyThatTheTheMessageWasSent(messageText));
+    }
 }
