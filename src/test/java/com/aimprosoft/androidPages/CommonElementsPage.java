@@ -181,7 +181,7 @@ public class CommonElementsPage extends MobilePageObject {
     }
 
     public boolean verifyThatTheTheMessageWasSent(String messageText) {
-        withTimeoutOf(25, TimeUnit.SECONDS)
+        withTimeoutOf(60, TimeUnit.SECONDS)
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText))));
         return $(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText)).isVisible();
     }
