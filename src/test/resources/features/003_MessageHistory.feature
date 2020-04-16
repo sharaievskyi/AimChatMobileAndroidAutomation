@@ -1186,197 +1186,341 @@ Feature: Message history
 #    When tap on the "🤑" reaction
 #    Then reaction "🤑" is deleted
 #
-  Scenario: 3.048 Check cancel deleting message from public room in "Message details screen".
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "IronMan" room is presented in the left drawer
-    When tap on the "IronMan" room in the left drawer
-    Then the "IronMan" room is opened
-    When enter "qwerty46" in the "Write a message" input field
-    When tap on the "Send" button
-    And hide the keyboard
-    Then the message "qwerty46" sent
-    And tap on "qwerty46" message in chat history
-    Then the "Message" details screen is opened
-    Then message "qwerty46" is present
-    When tap on the More option button
-    Then the pop-up menu is opened in the message details screen
-    And tap on the "Delete" link
-    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
-    When tap on the Cancel button in the pop-up menu
-    Then the "Message" details screen is opened
-    Then message "qwerty46" is present
+#  Scenario: 3.048 Check cancel deleting message from public room in "Message details screen".
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "IronMan" room is presented in the left drawer
+#    When tap on the "IronMan" room in the left drawer
+#    Then the "IronMan" room is opened
+#    When enter "qwerty46" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "qwerty46" sent
+#    And tap on "qwerty46" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "qwerty46" is present
+#    When tap on the More option button
+#    Then the pop-up menu is opened in the message details screen
+#    And tap on the "Delete" link
+#    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
+#    When tap on the Cancel button in the pop-up menu
+#    Then the "Message" details screen is opened
+#    Then message "qwerty46" is present
+#
+#  Scenario: 3.049 Check delete message from public room in "Message details screen".
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "IronMan" room is presented in the left drawer
+#    When tap on the "IronMan" room in the left drawer
+#    Then the "IronMan" room is opened
+#    When enter "qwerty47" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "qwerty47" sent
+#    And tap on "qwerty47" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "qwerty47" is present
+#    When tap on the More option button
+#    Then the pop-up menu is opened in the message details screen
+#    And tap on the "Delete" link
+#    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
+#    When tap on the Delete button in the pop-up menu
+#    And wait while results are refreshed
+#    Then the chat history is opened
+#    Then the "IronMan" room is opened
+#    Then the message "qwerty47" is deleted
+#
+#  Scenario: 3.050 Check cancel deleting message from private room in "Message details screen".
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "Hulk" room is presented in the left drawer
+#    And tap on the "Hulk" room in the left drawer
+#    Then the "Hulk" room is opened
+#    When enter "qwerty48" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "qwerty48" sent
+#    And tap on "qwerty48" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "qwerty48" is present
+#    When tap on the More option button
+#    Then the pop-up menu is opened in the message details screen
+#    And tap on the "Delete" link
+#    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
+#    When tap on the Cancel button in the pop-up menu
+#    Then the "Message" details screen is opened
+#    Then message "qwerty48" is present
+#
+#  Scenario: 3.051 Check delete message from private room in "Message details screen".
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "Hulk" room is presented in the left drawer
+#    And tap on the "Hulk" room in the left drawer
+#    Then the "Hulk" room is opened
+#    When enter "qwerty49" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "qwerty49" sent
+#    And tap on "qwerty49" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "qwerty49" is present
+#    When tap on the More option button
+#    Then the pop-up menu is opened in the message details screen
+#    And tap on the "Delete" link
+#    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
+#    When tap on the Delete button in the pop-up menu
+#    Then the chat history is opened
+#    Then the "Hulk" room is opened
+#    Then the message "qwerty49" is deleted
+#
+#  Scenario: 3.052 Check cancel deleting message from direct room in "Message details screen".
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "androidQA2" room is presented in the left drawer
+#    And tap on the "androidQA2" room in the left drawer
+#    Then the "androidQA2" direct room is opened
+#    When enter "qwerty50" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "qwerty50" sent
+#    And tap on "qwerty50" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "qwerty50" is present
+#    When tap on the More option button
+#    Then the pop-up menu is opened in the message details screen
+#    And tap on the "Delete" link
+#    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
+#    When tap on the Cancel button in the pop-up menu
+#    Then the "Message" details screen is opened
+#    Then message "qwerty50" is present
+#
+#  Scenario: 3.053 Check delete message from direct room in "Message details screen".
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "androidQA2" room is presented in the left drawer
+#    And tap on the "androidQA2" room in the left drawer
+#    Then the "androidQA2" direct room is opened
+#    When enter "qwerty51" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "qwerty51" sent
+#    And tap on "qwerty51" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "qwerty51" is present
+#    When tap on the More option button
+#    Then the pop-up menu is opened in the message details screen
+#    And tap on the "Delete" link
+#    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
+#    When tap on the Delete button in the pop-up menu
+#    Then the chat history is opened
+#    Then the "androidQA2" direct room is opened
+#    Then the message "qwerty51" is deleted
+#
+#  Scenario: 3.054 Check for "starred" message in "Message details screen" for message of another user in public room.
+#    Given the "Sign in to your Team" screen is opened
+#    When enter "chat-demo" in the "Your team url" input field
+#    When tap on the "CONTINUE" button
+#    Then the "Sign in to Aimprosoft" screen is opened
+#    When enter "androidQA2" in the "Login" input field
+#    When enter "qwerty123" in the "Password" input field
+#    And tap on the "SIGN IN" button
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "IronMan" room is presented in the left drawer
+#    And tap on the "IronMan" room in the left drawer
+#    Then the "IronMan" room is opened
+#    When enter "test message 2" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "test message 2" sent
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    When tap on the "Aimprosoft" link
+#    Then pop-up menu is opened in the Left drawer
+#    When tap on the "Sign out" link
+#    Then the "Sign in to Aimprosoft" screen is opened
+#    When tap on the "Back" button
+#    Then the "Sign in to your Team" screen is opened
+#    When login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "IronMan" room is presented in the left drawer
+#    And tap on the "IronMan" room in the left drawer
+#    Then the "IronMan" room is opened
+#    Then message "test message 2" is present
+#    When tap on "test message 2" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "test message 2" is present
+#    When tap on the "Star sign" button
+#    Then message marked as "starred"
+#    Then message marked as "starred" between "androidQA2" username and "test message 2" message
+#
+#  Scenario: 3.055 Check for "starred" message in "Message details screen" for message of another user in private room.
+#    Given the "Sign in to your Team" screen is opened
+#    When enter "chat-demo" in the "Your team url" input field
+#    When tap on the "CONTINUE" button
+#    Then the "Sign in to Aimprosoft" screen is opened
+#    When enter "androidQA2" in the "Login" input field
+#    When enter "qwerty123" in the "Password" input field
+#    And tap on the "SIGN IN" button
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "Thor" room is presented in the left drawer
+#    And tap on the "Thor" room in the left drawer
+#    Then the "Thor" room is opened
+#    When enter "test message 3" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "test message 3" sent
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    When tap on the "Aimprosoft" link
+#    Then pop-up menu is opened in the Left drawer
+#    When tap on the "Sign out" link
+#    Then the "Sign in to Aimprosoft" screen is opened
+#    When tap on the "Back" button
+#    Then the "Sign in to your Team" screen is opened
+#    When login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "Thor" room is presented in the left drawer
+#    And tap on the "Thor" room in the left drawer
+#    Then the "Thor" room is opened
+#    Then message "test message 3" is present
+#    When tap on "test message 3" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "test message 3" is present
+#    When tap on the "Star sign" button
+#    Then message marked as "starred"
+#    Then message marked as "starred" between "androidQA2" username and "test message 3" message
+#
+#  Scenario: 3.056 Check for "starred" message in "Message details screen" for message of another user in direct room.
+#    Given the "Sign in to your Team" screen is opened
+#    When enter "chat-demo" in the "Your team url" input field
+#    When tap on the "CONTINUE" button
+#    Then the "Sign in to Aimprosoft" screen is opened
+#    When enter "androidQA2" in the "Login" input field
+#    When enter "qwerty123" in the "Password" input field
+#    And tap on the "SIGN IN" button
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "androidQA1" room is presented in the left drawer
+#    And tap on the "androidQA1" room in the left drawer
+#    Then the "androidQA1" direct room is opened
+#    When enter "test message 4" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "test message 4" sent
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    When tap on the "Aimprosoft" link
+#    Then pop-up menu is opened in the Left drawer
+#    When tap on the "Sign out" link
+#    Then the "Sign in to Aimprosoft" screen is opened
+#    When tap on the "Back" button
+#    Then the "Sign in to your Team" screen is opened
+#    When login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "androidQA2" room is presented in the left drawer
+#    And tap on the "androidQA2" room in the left drawer
+#    Then the "androidQA2" direct room is opened
+#    Then message "test message 4" is present
+#    When tap on "test message 4" message in chat history
+#    Then the "Message" details screen is opened
+#    Then message "test message 4" is present
+#    When tap on the "Star sign" button
+#    Then message marked as "starred"
+#    Then message marked as "starred" between "androidQA2" username and "test message 4" message
 
-  Scenario: 3.049 Check delete message from public room in "Message details screen".
-    Given login using the properties file
-    Then the user is logged in
+  Scenario: 3.057 Check "Share message" function for message by another user in public room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
-    When tap on the "IronMan" room in the left drawer
+    And tap on the "IronMan" room in the left drawer
     Then the "IronMan" room is opened
-    When enter "qwerty47" in the "Write a message" input field
+    When enter "test message 5" in the "Write a message" input field
     When tap on the "Send" button
     And hide the keyboard
-    Then the message "qwerty47" sent
-    And tap on "qwerty47" message in chat history
-    Then the "Message" details screen is opened
-    Then message "qwerty47" is present
-    When tap on the More option button
-    Then the pop-up menu is opened in the message details screen
-    And tap on the "Delete" link
-    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
-    When tap on the Delete button in the pop-up menu
+    Then the message "test message 5" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
     And wait while results are refreshed
-    Then the chat history is opened
-    Then the "IronMan" room is opened
-    Then the message "qwerty47" is deleted
-
-  Scenario: 3.050 Check cancel deleting message from private room in "Message details screen".
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room in the left drawer
-    Then the "Hulk" room is opened
-    When enter "qwerty48" in the "Write a message" input field
-    When tap on the "Send" button
-    And hide the keyboard
-    Then the message "qwerty48" sent
-    And tap on "qwerty48" message in chat history
-    Then the "Message" details screen is opened
-    Then message "qwerty48" is present
-    When tap on the More option button
-    Then the pop-up menu is opened in the message details screen
-    And tap on the "Delete" link
-    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
-    When tap on the Cancel button in the pop-up menu
-    Then the "Message" details screen is opened
-    Then message "qwerty48" is present
-
-  Scenario: 3.051 Check delete message from private room in "Message details screen".
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room in the left drawer
-    Then the "Hulk" room is opened
-    When enter "qwerty49" in the "Write a message" input field
-    When tap on the "Send" button
-    And hide the keyboard
-    Then the message "qwerty49" sent
-    And tap on "qwerty49" message in chat history
-    Then the "Message" details screen is opened
-    Then message "qwerty49" is present
-    When tap on the More option button
-    Then the pop-up menu is opened in the message details screen
-    And tap on the "Delete" link
-    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
-    When tap on the Delete button in the pop-up menu
-    Then the chat history is opened
-    Then the "Hulk" room is opened
-    Then the message "qwerty49" is deleted
-
-  Scenario: 3.052 Check cancel deleting message from direct room in "Message details screen".
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "androidQA2" room is presented in the left drawer
-    And tap on the "androidQA2" room in the left drawer
-    Then the "androidQA2" direct room is opened
-    When enter "qwerty50" in the "Write a message" input field
-    When tap on the "Send" button
-    And hide the keyboard
-    Then the message "qwerty50" sent
-    And tap on "qwerty50" message in chat history
-    Then the "Message" details screen is opened
-    Then message "qwerty50" is present
-    When tap on the More option button
-    Then the pop-up menu is opened in the message details screen
-    And tap on the "Delete" link
-    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
-    When tap on the Cancel button in the pop-up menu
-    Then the "Message" details screen is opened
-    Then message "qwerty50" is present
-
-  Scenario: 3.053 Check delete message from direct room in "Message details screen".
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "androidQA2" room is presented in the left drawer
-    And tap on the "androidQA2" room in the left drawer
-    Then the "androidQA2" direct room is opened
-    When enter "qwerty51" in the "Write a message" input field
-    When tap on the "Send" button
-    And hide the keyboard
-    Then the message "qwerty51" sent
-    And tap on "qwerty51" message in chat history
-    Then the "Message" details screen is opened
-    Then message "qwerty51" is present
-    When tap on the More option button
-    Then the pop-up menu is opened in the message details screen
-    And tap on the "Delete" link
-    Then the "Are you sure you want to delete this message? This cannot be undone." pop-up menu is present
-    When tap on the Delete button in the pop-up menu
-    Then the chat history is opened
-    Then the "androidQA2" direct room is opened
-    Then the message "qwerty51" is deleted
-
-  Scenario: 3.054 Check for "starred" message in "Message details screen" for message of another user in public room.
-    Given the "Sign in to your Team" screen is opened
-    When enter "chat-demo" in the "Your team url" input field
-    When tap on the "CONTINUE" button
-    Then the "Sign in to Aimprosoft" screen is opened
-    When enter "androidQA2" in the "Login" input field
-    When enter "qwerty123" in the "Password" input field
-    And tap on the "SIGN IN" button
-    Then the "General" room is opened
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
     And tap on the "IronMan" room in the left drawer
     Then the "IronMan" room is opened
-    When enter "test message 2" in the "Write a message" input field
-    When tap on the "Send" button
-    And hide the keyboard
-    Then the message "test message 2" sent
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    When tap on the "Aimprosoft" link
-    Then pop-up menu is opened in the Left drawer
-    When tap on the "Sign out" link
-    Then the "Sign in to Aimprosoft" screen is opened
-    When tap on the "Back" button
-    Then the "Sign in to your Team" screen is opened
-    When login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "IronMan" room is presented in the left drawer
-    And tap on the "IronMan" room in the left drawer
-    Then the "IronMan" room is opened
-    Then message "test message 2" is present
-    When tap on "test message 2" message in chat history
+    Then message "test message 5" is present
+    When tap on "test message 5" message in chat history
     Then the "Message" details screen is opened
-    Then message "test message 2" is present
-    When tap on the "Star sign" button
-    Then message marked as "starred"
-    Then message marked as "starred" between "androidQA2" username and "test message 2" message
+    Then message "test message 5" is present
+    When tap on the "Share" button
+    Then the "Message forward" screen is opened
+    When enter "Captain" in the "room name search" input field
+    When tap on the "CaptainAmerica" room
+    And tap on the "Apply select room" button
+    Then the "Message" details screen is opened
+    And tap on the Back button
+    Then the chat history is opened
+    Then the "IronMan" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "CaptainAmerica" room is presented in the left drawer
+    And tap on the "CaptainAmerica" room in the left drawer
+    Then the "CaptainAmerica" room is opened
+    Then message "test message 5" is shared to the room
 
-  Scenario: 3.055 Check for "starred" message in "Message details screen" for message of another user in private room.
+  Scenario: 3.058 Check "Share message" function for message by another user in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1390,10 +1534,10 @@ Feature: Message history
     Then the "Thor" room is presented in the left drawer
     And tap on the "Thor" room in the left drawer
     Then the "Thor" room is opened
-    When enter "test message 3" in the "Write a message" input field
+    When enter "test message 6" in the "Write a message" input field
     When tap on the "Send" button
     And hide the keyboard
-    Then the message "test message 3" sent
+    Then the message "test message 6" sent
     When tap on the "Logo" button
     Then Left Drawer is opened
     When tap on the "Aimprosoft" link
@@ -1405,20 +1549,174 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Thor" room is presented in the left drawer
     And tap on the "Thor" room in the left drawer
     Then the "Thor" room is opened
-    Then message "test message 3" is present
-    When tap on "test message 3" message in chat history
+    Then message "test message 6" is present
+    When tap on "test message 6" message in chat history
     Then the "Message" details screen is opened
-    Then message "test message 3" is present
-    When tap on the "Star sign" button
-    Then message marked as "starred"
-    Then message marked as "starred" between "androidQA2" username and "test message 3" message
-#  ???????
-  Scenario: 3.056 Check for "starred" message in "Message details screen" for message of another user in direct room.
+    Then message "test message 6" is present
+    When tap on the "Share" button
+    Then the "Message forward" screen is opened
+    Then "This message can be forwarded only within this room" alert is displayed
+    When tap on the "Apply select room" button
+    Then the "Message" details screen is opened
+    When tap on the Back button
+    Then the chat history is opened
+    Then the "Thor" room is opened
+    Then message "test message 6" is shared to the room
+
+  Scenario: 3.059 Check "Share message" function for message by another user in direct room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA1" room is presented in the left drawer
+    And tap on the "androidQA1" room
+    Then the "androidQA1" direct room is opened
+    When enter "test message 7" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 7" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    Then message "test message 7" is present
+    When tap on "test message 7" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 7" is present
+    When tap on the "Share" button
+    Then the "Message forward" screen is opened
+    Then "This message can be forwarded only within this room" alert is displayed
+    When tap on the "Apply select room" button
+    Then the "Message" details screen is opened
+    When tap on the Back button
+    Then the chat history is opened
+    Then the "androidQA2" direct room is opened
+    Then message "test message 7" is shared to the room
+
+  Scenario: 3.060 Check than mark as "pinned" message in "Message details screen" in public room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "test message 8" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 8" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    Then message "test message 8" is present
+    When tap on "test message 8" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 8" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 8" message
+
+  Scenario: 3.061 Check than mark as "pinned" message in "Message details screen" by another user in private room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When enter "test message 9" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 9" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    Then message "test message 9" is present
+    When tap on "test message 9" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 9" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 9" message
+
+  Scenario: 3.062 Check than mark as "pinned" message in "Message details screen" by another user in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1432,10 +1730,10 @@ Feature: Message history
     Then the "androidQA1" room is presented in the left drawer
     And tap on the "androidQA1" room in the left drawer
     Then the "androidQA1" direct room is opened
-    When enter "test message 4" in the "Write a message" input field
+    When enter "test message 10" in the "Write a message" input field
     When tap on the "Send" button
     And hide the keyboard
-    Then the message "test message 4" sent
+    Then the message "test message 10" sent
     When tap on the "Logo" button
     Then Left Drawer is opened
     When tap on the "Aimprosoft" link
@@ -1447,690 +1745,839 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
-    And tap on the "androidQAr2" room in the left drawer
+    And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
-    Then message "test message 4" is present
-    When tap on "test message 4" message in chat history
+    Then message "test message 10" is present
+    When tap on "test message 10" message in chat history
     Then the "Message" details screen is opened
-    Then message "test message 4" is present
-    When tap on the "Star sign" button
-    Then message marked as "starred"
-    Then message marked as "starred" between "androidQA2" username and "test message 4" message
+    Then message "test message 10" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 10" message
 
-#  Scenario: 3.057 Check "Share message" function for message by another user in public room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    When enter "test message 5" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 5" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    Then message "test message 5" is present
-#    When tap on "test message 5" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 5" is present
-#    When tap on the "Share" button
-#    Then the "Message forward" screen is opened
-#    When enter "Captain" in the "room name search" input field
-#    When tap on the "CaptainAmerica" room
-#    And tap on the "Apply select room" button
-#    Then the "Message" details screen is opened
-#    And tap on the Back button
-#    Then the chat history is opened
-#    Then the "IronMan" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "CaptainAmerica" room is presented in the left drawer
-#    And tap on the "CaptainAmerica" room
-#    Then the "CaptainAmerica" room is opened
-#    Then message "test message 5" is shared to the room
-#
-#  Scenario: 3.058 Check "Share message" function for message by another user in private room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    When enter "test message 6" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 6" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    Then message "test message 6" is present
-#    When tap on "test message 6" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 6" is present
-#    When tap on the "Share" button
-#    Then the "Message forward" screen is opened
-#    Then "This message can be forwarded only within this room" alert is displayed
-#    When tap on the "Apply select room" button
-#    Then the "Message" details screen is opened
-#    When tap on the Back button
-#    Then the chat history is opened
-#    Then the "Thor" room is opened
-#    Then message "test message 6" is shared to the room
-#
-#  Scenario: 3.059 Check "Share message" function for message by another user in direct room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA1" room is presented in the left drawer
-#    And tap on the "androidQA1" room
-#    Then the "androidQA1" direct room is opened
-#    When enter "test message 7" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 7" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA2" room is presented in the left drawer
-#    And tap on the "androidQA2" room
-#    Then the "androidQA2" direct room is opened
-#    Then message "test message 7" is present
-#    When tap on "test message 7" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 7" is present
-#    When tap on the "Share" button
-#    Then the "Message forward" screen is opened
-#    Then "This message can be forwarded only within this room" alert is displayed
-#    When tap on the "Apply select room" button
-#    Then the "Message" details screen is opened
-#    When tap on the Back button
-#    Then the chat history is opened
-#    Then the "androidQA2" direct room is opened
-#    Then message "test message 7" is shared to the room
-#
-#  Scenario: 3.060 Check than mark as "pinned" message in "Message details screen" in public room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    When enter "test message 8" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 8" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    Then message "test message 8" is present
-#    When tap on "test message 8" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 8" is present
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Pin message" link
-#    Then message marked as "pinned"
-#    Then message marked as "pinned" between "androidQA2" username and "test message 8" message
-#
-#  Scenario: 3.061 Check than mark as "pinned" message in "Message details screen" by another user in private room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    When enter "test message 9" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 9" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    Then message "test message 9" is present
-#    When tap on "test message 9" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 9" is present
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Pin message" link
-#    Then message marked as "pinned"
-#    Then message marked as "pinned" between "androidQA2" username and "test message 9" message
-#
-#  Scenario: 3.062 Check than mark as "pinned" message in "Message details screen" by another user in direct room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA1" room is presented in the left drawer
-#    And tap on the "androidQA1" room
-#    Then the "androidQA1" direct room is opened
-#    When enter "test message 10" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 10" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA2" room is presented in the left drawer
-#    And tap on the "androidQA2" room
-#    Then the "androidQA2" direct room is opened
-#    Then message "test message 10" is present
-#    When tap on "test message 10" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 10" is present
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Pin message" link
-#    Then message marked as "pinned"
-#    Then message marked as "pinned" between "androidQA2" username and "test message 10" message
-#
-#  Scenario: 3.063 Check than mark as "pinned" message by another user in chat history in public room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    Then message "test message 8" is present
-#    Then message marked as "pinned"
-#    Then message marked as "pinned" between "androidQA2" username and "test message 8" message
-#
-#  Scenario: 3.064 Check than mark as "pinned" message in chat history in private room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    Then message "test message 9" is present
-#    Then message marked as "pinned"
-#    Then message marked as "pinned" between "androidQA2" username and "test message 9" message
-#
-#  Scenario: 3.065 Check than mark as "pinned" message in chat history in direct room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA2" room is presented in the left drawer
-#    And tap on the "androidQA2" room
-#    Then the "androidQA2" direct room is opened
-#    Then message "test message 10" is present
-#    Then message marked as "pinned"
-#    Then message marked as "pinned" between "androidQA2" username and "test message 10" message
-#
-#  Scenario: 3.066 Check unpin message from "Message details screen" in public room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    Then message "test message 8" is present
-#    When tap on "test message 8" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 8" is present
-#    Then message marked as "pinned" between "androidQA2" username and "test message 8" message
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Unpin message" link
-#    Then the "Message" details screen is opened
-#    Then message "test message 8" is present
-#    Then mark as "pinned" disappears
-#
-#  Scenario: 3.067 Check unpin message from "Message details screen" in private room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    Then message "test message 9" is present
-#    When tap on "test message 9" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 9" is present
-#    Then message marked as "pinned" between "androidQA2" username and "test message 9" message
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Unpin message" link
-#    Then the "Message" details screen is opened
-#    Then message "test message 9" is present
-#    Then mark as "pinned" disappears
-#
-#  Scenario: 3.068 Check unpin message from "Message details screen" in direct room.
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA2" room is presented in the left drawer
-#    And tap on the "androidQA2" room
-#    Then the "androidQA2" direct room is opened
-#    Then message "test message 10" is present
-#    When tap on "test message 10" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 10" is present
-#    Then message marked as "pinned" between "androidQA2" username and "test message 10" message
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Unpin message" link
-#    Then the "Message" details screen is opened
-#    Then message "test message 10" is present
-#    Then mark as "pinned" disappears
-#
-#  Scenario: 3.072 Check add reaction in "Message details screen" in public room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    When enter "test message 11" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 11" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    Then message "test message 11" is present
-#    When tap on "test message 11" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 11" is present
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When select "😀" "emoji_icon" reaction
-#    Then reaction "😀" is added
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When tap on the "🚗" link
-#    When select "🚖" "emoji_icon" reaction
-#    Then reaction "🚖" is added
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When tap on the "🇦🇨" link
-#    When select "🇧🇮" "emoji_icon" reaction
-#    Then reaction "🇧🇮" is added
-#
-#  Scenario: 3.073 Check add reaction in "Message details screen" in private room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    When enter "test message 12" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 12" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    Then message "test message 12" is present
-#    When tap on "test message 12" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 12" is present
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When select "😀" "emoji_icon" reaction
-#    Then reaction "😀" is added
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When tap on the "🚗" link
-#    When select "🚖" "emoji_icon" reaction
-#    Then reaction "🚖" is added
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When tap on the "🇦🇨" link
-#    When select "🇧🇮" "emoji_icon" reaction
-#    Then reaction "🇧🇮" is added
-#
-#  Scenario: 3.074 Check add reaction in "Message details screen" in direct room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA1" room is presented in the left drawer
-#    And tap on the "androidQA1" room
-#    Then the "androidQA1" direct room is opened
-#    When enter "test message 13" in the "Write a message" input field
-#    When tap on the "Send" button
-#    Then the message "test message 13" sent
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA2" room is presented in the left drawer
-#    And tap on the "androidQA2" room
-#    Then the "androidQA2" direct room is opened
-#    Then message "test message 13" is present
-#    When tap on "test message 13" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 13" is present
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When select "😀" "emoji_icon" reaction
-#    Then reaction "😀" is added
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When tap on the "🚗" link
-#    When select "🚖" "emoji_icon" reaction
-#    Then reaction "🚖" is added
-#    When tap on the More option button
-#    Then the pop-up menu is opened in the message details screen
-#    And tap on the "Add reaction" link
-#    Then the "Smile view" panel is present
-#    When tap on the "🇦🇨" link
-#    When select "🇧🇮" "emoji_icon" reaction
-#    Then reaction "🇧🇮" is added
-#
-#  Scenario: 3.075 Check add "reaction" button near with any added emoji under the message which send by another user in  "Message details screen" in public room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    Then message "test message 11" is present
-#    When tap on "test message 11" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 11" is present
-#    Then reaction "😀" is added
-#    Then reaction "🚖" is added
-#    Then reaction "🇧🇮" is added
-#    Then the reaction button is presented near "🇧🇮" added reaction
-#    When tap on the reaction button
-#    And wait while results are refreshed
-#    Then the "Smile view" panel is present
-#    When select "😇" "emoji_icon" reaction
-#    Then reaction "😇" is added
-#
-#  Scenario: 3.076 Check add "reaction" button near with any added emoji under the message which send by another user in  "Message details screen" in private room.
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    Then message "test message 12" is present
-#    When tap on "test message 12" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 12" is present
-#    Then reaction "😀" is added
-#    Then reaction "🚖" is added
-#    Then reaction "🇧🇮" is added
-#    Then the reaction button is presented near "🇧🇮" added reaction
-#    When tap on the reaction button
-#    And wait while results are refreshed
-#    Then the "Smile view" panel is present
-#    When select "😇" "emoji_icon" reaction
-#    Then reaction "😇" is added
-#
-#  Scenario: 3.077 Check add "reaction" button near with any added emoji under the message which send by another user in "Message details screen" in direct room.
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA2" room is presented in the left drawer
-#    And tap on the "androidQA2" room
-#    Then the "androidQA2" direct room is opened
-#    Then message "test message 13" is present
-#    When tap on "test message 13" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 13" is present
-#    Then reaction "😀" is added
-#    Then reaction "🚖" is added
-#    Then reaction "🇧🇮" is added
-#    Then the reaction button is presented near "🇧🇮" added reaction
-#    When tap on the reaction button
-#    And wait while results are refreshed
-#    Then the "Smile view" panel is present
-#    When select "😇" "emoji_icon" reaction
-#    Then reaction "😇" is added
-#
-#  Scenario: 3.078 Check delete "reaction" by tap on the any reactions in "Message details screen" in public room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
-#    Then the "IronMan" room is opened
-#    Then message "test message 11" is present
-#    When tap on "test message 11" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 11" is present
-#    Then reaction "😇" is added
-#    When tap on the "😇" reaction
-#    Then reaction "😇" is deleted
-#
-#  Scenario: 3.079 Check delete "reaction" by tap on the any reactions in "Message details screen" in private room.
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "Thor" room is presented in the left drawer
-#    And tap on the "Thor" room
-#    Then the "Thor" room is opened
-#    Then message "test message 12" is present
-#    When tap on "test message 12" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 12" is present
-#    Then reaction "😇" is added
-#    When tap on the "😇" reaction
-#    Then reaction "😇" is deleted
-#
-#  Scenario: 3.080 Check delete "reaction" by tap on the any reactions in "Message details screen" in direct room.
-#    When login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When swipe from left to right
-#    Then Left Drawer is opened
-#    Then the "androidQA2" room is presented in the left drawer
-#    And tap on the "androidQA2" room
-#    Then the "androidQA2" direct room is opened
-#    Then message "test message 13" is present
-#    When tap on "test message 13" message in chat history
-#    Then the "Message" details screen is opened
-#    Then message "test message 13" is present
-#    Then reaction "😇" is added
-#    When tap on the "😇" reaction
-#    Then reaction "😇" is deleted
+  Scenario: 3.063 Check than mark as "pinned" message by another user in chat history in public room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "test message 11" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 11" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    Then message "test message 11" is present
+    When tap on "test message 11" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 11" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 11" message
+    When tap on the Back button
+    Then the chat history is opened
+    Then the "IronMan" room is opened
+    Then message "test message 11" is present
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 11" message
+
+  Scenario: 3.064 Check than mark as "pinned" message in chat history in private room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When enter "test message 12" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 12" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    Then message "test message 12" is present
+    When tap on "test message 12" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 12" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 12" message
+    When tap on the Back button
+    Then the chat history is opened
+    Then the "Thor" room is opened
+    Then message "test message 12" is present
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 12" message
+
+  Scenario: 3.065 Check than mark as "pinned" message in chat history in direct room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA1" room is presented in the left drawer
+    And tap on the "androidQA1" room in the left drawer
+    Then the "androidQA1" direct room is opened
+    When enter "test message 13" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 13" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    Then message "test message 13" is present
+    When tap on "test message 13" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 13" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 13" message
+    When tap on the Back button
+    Then the chat history is opened
+    Then the "androidQA2" direct room is opened
+    Then message "test message 13" is present
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 13" message
+
+  Scenario: 3.066 Check unpin message from "Message details screen" in public room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "test message 14" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 14" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    Then message "test message 14" is present
+    When tap on "test message 14" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 14" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 14" message
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Unpin message" link
+    Then the "Message" details screen is opened
+    Then message "test message 14" is present
+    Then mark as "pinned" disappears
+
+  Scenario: 3.067 Check unpin message from "Message details screen" in private room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When enter "test message 15" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 15" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    Then message "test message 15" is present
+    When tap on "test message 15" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 15" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 15" message
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Unpin message" link
+    Then the "Message" details screen is opened
+    Then message "test message 15" is present
+    Then mark as "pinned" disappears
+
+  Scenario: 3.068 Check unpin message from "Message details screen" in direct room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA1" room is presented in the left drawer
+    And tap on the "androidQA1" room in the left drawer
+    Then the "androidQA1" direct room is opened
+    When enter "test message 16" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 16" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    Then message "test message 16" is present
+    When tap on "test message 16" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 16" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Pin message" link
+    Then message marked as "pinned"
+    Then message marked as "pinned" between "androidQA2" username and "test message 16" message
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Unpin message" link
+    Then the "Message" details screen is opened
+    Then message "test message 16" is present
+    Then mark as "pinned" disappears
+
+  Scenario: 3.072 Check add reaction in "Message details screen" in public room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "test message 17" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 17" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    Then message "test message 17" is present
+    When tap on "test message 17" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 17" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When tap on the "🚗" link
+    When select "🚖" "emoji_icon" reaction
+    Then reaction "🚖" is added
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When tap on the "🇦🇨" link
+    When select "🇧🇮" "emoji_icon" reaction
+    Then reaction "🇧🇮" is added
+
+  Scenario: 3.073 Check add reaction in "Message details screen" in private room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When enter "test message 18" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 18" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    Then message "test message 18" is present
+    When tap on "test message 18" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 18" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When tap on the "🚗" link
+    When select "🚖" "emoji_icon" reaction
+    Then reaction "🚖" is added
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When tap on the "🇦🇨" link
+    When select "🇧🇮" "emoji_icon" reaction
+    Then reaction "🇧🇮" is added
+
+  Scenario: 3.074 Check add reaction in "Message details screen" in direct room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA1" room is presented in the left drawer
+    And tap on the "androidQA1" room in the left drawer
+    Then the "androidQA1" direct room is opened
+    When enter "test message 19" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 19" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    Then message "test message 19" is present
+    When tap on "test message 19" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 19" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When tap on the "🚗" link
+    When select "🚖" "emoji_icon" reaction
+    Then reaction "🚖" is added
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When tap on the "🇦🇨" link
+    When select "🇧🇮" "emoji_icon" reaction
+    Then reaction "🇧🇮" is added
+
+  Scenario: 3.075 Check add "reaction" button near with any added emoji under the message which send by another user in  "Message details screen" in public room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "test message 20" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 20" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    Then message "test message 20" is present
+    When tap on "test message 20" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 20" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    Then the reaction button is presented near "😀" added reaction
+    When tap on the reaction button
+    And wait while results are refreshed
+    Then the "Smile view" panel is present
+    When select "😇" "emoji_icon" reaction
+    Then reaction "😇" is added
+
+  Scenario: 3.076 Check add "reaction" button near with any added emoji under the message which send by another user in  "Message details screen" in private room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When enter "test message 21" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 21" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    Then message "test message 21" is present
+    When tap on "test message 21" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 21" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    Then the reaction button is presented near "😀" added reaction
+    When tap on the reaction button
+    And wait while results are refreshed
+    Then the "Smile view" panel is present
+    When select "😇" "emoji_icon" reaction
+    Then reaction "😇" is added
+
+  Scenario: 3.077 Check add "reaction" button near with any added emoji under the message which send by another user in "Message details screen" in direct room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA1" room is presented in the left drawer
+    And tap on the "androidQA1" room in the left drawer
+    Then the "androidQA1" direct room is opened
+    When enter "test message 22" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 22" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    Then message "test message 22" is present
+    When tap on "test message 22" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 22" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    Then the reaction button is presented near "😀" added reaction
+    When tap on the reaction button
+    And wait while results are refreshed
+    Then the "Smile view" panel is present
+    When select "😇" "emoji_icon" reaction
+    Then reaction "😇" is added
+
+  Scenario: 3.078 Check delete "reaction" by tap on the any reactions in "Message details screen" in public room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "test message 23" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 23" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    Then message "test message 23" is present
+    When tap on "test message 23" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 23" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    When tap on the "😀" reaction
+    Then reaction "😀" is deleted
+
+  Scenario: 3.079 Check delete "reaction" by tap on the any reactions in "Message details screen" in private room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When enter "test message 24" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 24" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    Then message "test message 24" is present
+    When tap on "test message 24" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 24" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    When tap on the "😀" reaction
+    Then reaction "😀" is deleted
+
+  Scenario: 3.080 Check delete "reaction" by tap on the any reactions in "Message details screen" in direct room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA1" room is presented in the left drawer
+    And tap on the "androidQA1" room in the left drawer
+    Then the "androidQA1" direct room is opened
+    When enter "test message 25" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "test message 25" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When long tap on the "Logo"
+    And tap on the "Mark all as read" link
+    And wait while results are refreshed
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    Then message "test message 25" is present
+    When tap on "test message 25" message in chat history
+    Then the "Message" details screen is opened
+    Then message "test message 25" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Add reaction" link
+    Then the "Smile view" panel is present
+    When select "😀" "emoji_icon" reaction
+    Then reaction "😀" is added
+    When tap on the "😀" reaction
+    Then reaction "😀" is deleted
 ## указать другую комнату для проверки
 #  Scenario: 3.100 Check "Pin message" in a public room using a long tap in chat history.
 #    Given login using the properties file
