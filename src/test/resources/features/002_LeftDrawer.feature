@@ -1,11 +1,11 @@
 Feature: Left Drawer
 
   Background:
-    When login using the properties file
+    Given login using the properties file
     Then the user is logged in
 
   Scenario: 2.001 Check to open a public room through the left drawer.
-    Then the "General" room is opened
+    Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     When tap on the "Rooms" title
@@ -51,7 +51,7 @@ Feature: Left Drawer
     Then the "SpiderMan" room is opened
 
   Scenario: 2.003 Check to open a direct room through the left drawer.
-    Then the "General" room is opened
+    Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     When tap on the "Recent directs" title
@@ -146,7 +146,7 @@ Feature: Left Drawer
     Then the "androidQA2" room appears in the left drawer search result
 
   Scenario: 2.013 Check "Unsubscribe" function for public room.
-    Then the "General" room is opened
+    Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     When tap on the "Rooms" title
@@ -159,7 +159,7 @@ Feature: Left Drawer
     And wait while results are refreshed
     When tap on the "Search logo" button
     When tap on the Back button
-    Given the "General" room is opened
+    Then the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     Then the "Alfresco" room is presented in the left drawer
@@ -170,26 +170,29 @@ Feature: Left Drawer
     Then the "Alfresco" room is deleted from left drawer
 
   Scenario: 2.014 Check "Hide conversation" function for direct room.
-    Then the "General" room is opened
+    Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     When tap on the "Recent directs" title
     Then the "Start direct" screen is opened
-    When tap on the "a.antonenko" room
-    Then the "a.antonenko" direct room is opened
+    When tap on the Search sign
+    And wait while input field would be presented
+    When enter "testuser" in the "Select users" input field
+    When tap on the "testuser2" room
+    Then the "testuser2" direct room is opened
     When swipe from left to right
     Then Left Drawer is opened
     When tap on the "General" room
-    Given the "General" room is opened
+    Then the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "a.antonenko" room is presented in the left drawer
-    When use long tap on the "a.antonenko" room
+    Then the "testuser2" room is presented in the left drawer
+    When use long tap on the "testuser2" room
     And wait while results are refreshed
     Then the "Hide conversation" link is presented
     And tap on the "Hide conversation" link
     And wait while results are refreshed
-    Then the "a.antonenko" room is deleted from left drawer
+    Then the "testuser2" room is deleted from left drawer
 
   Scenario: 2.015 Check the clickable "Rooms" title.
     Given the "General" room is opened
@@ -265,7 +268,7 @@ Feature: Left Drawer
     Then the "androidQA2" room does not appear in the Browse rooms search result
 
   Scenario: 2.021 Check "Leave" room in the "All" tab to the "Browse rooms" screen.
-    Then the "General" room is opened
+    Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     When tap on the "Rooms" title
@@ -279,7 +282,7 @@ Feature: Left Drawer
     And wait while results are refreshed
     When tap on the "Search logo" button
     When tap on the Back button
-    Given the "General" room is opened
+    Then the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     Then the "Alfresco" room is presented in the left drawer
@@ -296,7 +299,7 @@ Feature: Left Drawer
     Then the "Join" link is presented
 
   Scenario: 2.022 Check "Leave" room in the "Joined" tab to the "Browse rooms" screen.
-    Then the "General" room is opened
+    Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     When tap on the "Rooms" title
@@ -310,7 +313,7 @@ Feature: Left Drawer
     And wait while results are refreshed
     When tap on the "Search logo" button
     When tap on the Back button
-    Given the "General" room is opened
+    Then the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     Then the "Alfresco" room is presented in the left drawer
@@ -434,8 +437,8 @@ Feature: Left Drawer
     Then Left Drawer is opened
     When tap on the "Recent direct" title
     Then the "Start direct" screen is opened
-    And tap on the "a.antonenko" user from Start direct list
-    Then the "a.antonenko" direct room is opened
+    And tap on the "EvgeniyDisti" user from Start direct list
+    Then the "EvgeniyDisti" direct room is opened
 
   Scenario: 2.030 Checking select user from the middle of the "Start direct" list.
     Given the "General" room is opened
@@ -443,8 +446,8 @@ Feature: Left Drawer
     Then Left Drawer is opened
     When tap on the "Recent direct" title
     Then the "Start direct" screen is opened
-    And tap on the "h.burmaka" user from Start direct list
-    Then the "h.burmaka" direct room is opened
+    And tap on the "testuser2" user from Start direct list
+    Then the "testuser2" direct room is opened
 
   Scenario: 2.031 Checking select the last user from the "Start direct" list.
     Given the "General" room is opened
@@ -452,8 +455,11 @@ Feature: Left Drawer
     Then Left Drawer is opened
     When tap on the "Recent direct" title
     Then the "Start direct" screen is opened
-    And tap on the "v.viter" user from Start direct list
-    Then the "v.viter" direct room is opened
+    When tap on the Search sign
+    And wait while input field would be presented
+    When enter "tiutiunnyk" in the "Select users" input field
+    And tap on the "y.tiutiunnyk" user from Start direct list
+    Then the "y.tiutiunnyk" direct room is opened
 
   Scenario: 2.032 Check the clickable "Back" button in the "Recent direct" screen.
     Given the "General" room is opened
@@ -464,215 +470,234 @@ Feature: Left Drawer
     And tap on the Back button
     Then the "General" room is opened
 
-  Scenario: 2.033 Check transition by tap on the "bell" icon.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
+#  Scenario: 2.033 Check transition by tap on the "bell" icon.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#
+#  Scenario: 2.034 Check "Mute all chat for:" function for 20 minutes.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Switch mute" slider
+#    Then the remaining time is set for "20 minutes"
+#
+#  Scenario: 2.046 Check cancel "Mute all chat for:" function for 20 minutes.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    Then the remaining time is set for "20 minutes"
+#    And tap on the "Switch mute" slider
+#    Then mute all chat for "20 minutes" function is canceled
+#
+#  Scenario: 2.036 Check "Mute all chat for:" function for 1 hour.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Switch mute" slider
+#    And tap on the "1 hour" quantity
+#    Then the remaining time is set for "1 hour"
+#
+#  Scenario: 2.047 Check cancel "Mute all chat for:" function for 1 hour.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    Then the remaining time is set for "1 hour"
+#    And tap on the "Switch mute" slider
+#    Then mute all chat for "1 hour" function is canceled
+#
+#  Scenario: 2.038 Check "Mute all chat for:" function for 2 hours.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Switch mute" slider
+#    And tap on the "2 hours" quantity
+#    Then the remaining time is set for "2 hours"
+#
+#  Scenario: 2.048 Check cancel "Mute all chat for:" function for 2 hours.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    Then the remaining time is set for "2 hours"
+#    And tap on the "Switch mute" slider
+#    Then mute all chat for "2 hours" function is canceled
+#
+#  Scenario: 2.040 Check "Mute all chat for:" function for 4 hours.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Switch mute" slider
+#    And tap on the "4 hours" quantity
+#    Then the remaining time is set for "4 hours"
+#
+#  Scenario: 2.049 Check cancel "Mute all chat for:" function for 4 hours.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    Then the remaining time is set for "4 hours"
+#    And tap on the "Switch mute" slider
+#    Then mute all chat for "4 hours" function is canceled
+#
+#  Scenario: 2.042 Check "Mute all chat for:" function for 8 hours.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Switch mute" slider
+#    And tap on the "8 hours" quantity
+#    Then the remaining time is set for "8 hours"
+#
+#  Scenario: 2.050 Check cancel "Mute all chat for:" function for 8 hours.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    Then the remaining time is set for "8 hours"
+#    And tap on the "Switch mute" slider
+#    Then mute all chat for "8 hours" function is canceled
+#
+#  Scenario: 2.044 Check "Mute all chat for:" function for 24 hours.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Switch mute" slider
+#    And tap on the "24 hours" quantity
+#    Then the remaining time is set for "24 hours"
+#
+#  Scenario: 2.051 Check cancel "Mute all chat for:" function for 24 hours.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    Then the remaining time is set for "24 hours"
+#    And tap on the "Switch mute" slider
+#    Then mute all chat for "24 hours" function is canceled
+#
+#  Scenario: 2.052 Check transition by tap on the "Notification settings" link.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#
+#  Scenario: 2.053 Check the turn-on the "DND" mode.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#    Then the "DND switch" slider is turned "OFF"
+#    When tap on the "DND switch" slider
+#    And tap on the "Apply settings" button
+#    Then the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#    Then the "DND switch" slider is turned "ON"
+#
+#  Scenario: 2.054 Check the turn-off the "DND" mode.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#    Then the "DND switch" slider is turned "ON"
+#    When tap on the "DND switch" slider
+#    And tap on the "Apply settings" button
+#    Then the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#    Then the "DND switch" slider is turned "OFF"
+#
+#  Scenario: 2.057 Check save "Only direct and mentions" function in the "General settings" screen.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#    When tap on the "Only direct and mentions" radio button
+#    And tap on the "Apply settings" button
+#    Then the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#    Then the "Only direct and mentions" status is saved
+#
+#  Scenario: 2.060 Check save "Nothing" function in the "General settings" screen.
+#    Given the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#    When tap on the "Nothing" radio button
+#    And tap on the "Apply settings" button
+#    Then the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    And tap on the "Bell icon" button
+#    Then the "Mute all chat for:" pop-up menu is opened
+#    And tap on the "Notification settings" link
+#    Then the "Notification settings" screen is opened
+#    Then the "Nothing" status is saved
 
-  Scenario: 2.034 Check "Mute all chat for:" function for 20 minutes.
+  Scenario: Postcondition
     Given the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Switch mute" slider
-    Then the remaining time is set for "20 minutes"
-
-  Scenario: 2.046 Check cancel "Mute all chat for:" function for 20 minutes.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    Then the remaining time is set for "20 minutes"
-    And tap on the "Switch mute" slider
-    Then mute all chat for "20 minutes" function is canceled
-
-  Scenario: 2.036 Check "Mute all chat for:" function for 1 hour.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Switch mute" slider
-    And tap on the "1 hour" quantity
-    Then the remaining time is set for "1 hour"
-
-  Scenario: 2.047 Check cancel "Mute all chat for:" function for 1 hour.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    Then the remaining time is set for "1 hour"
-    And tap on the "Switch mute" slider
-    Then mute all chat for "1 hour" function is canceled
-
-  Scenario: 2.038 Check "Mute all chat for:" function for 2 hours.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Switch mute" slider
-    And tap on the "2 hours" quantity
-    Then the remaining time is set for "2 hours"
-
-  Scenario: 2.048 Check cancel "Mute all chat for:" function for 2 hours.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    Then the remaining time is set for "2 hours"
-    And tap on the "Switch mute" slider
-    Then mute all chat for "2 hours" function is canceled
-
-  Scenario: 2.040 Check "Mute all chat for:" function for 4 hours.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Switch mute" slider
-    And tap on the "4 hours" quantity
-    Then the remaining time is set for "4 hours"
-
-  Scenario: 2.049 Check cancel "Mute all chat for:" function for 4 hours.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    Then the remaining time is set for "4 hours"
-    And tap on the "Switch mute" slider
-    Then mute all chat for "4 hours" function is canceled
-
-  Scenario: 2.042 Check "Mute all chat for:" function for 8 hours.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Switch mute" slider
-    And tap on the "8 hours" quantity
-    Then the remaining time is set for "8 hours"
-
-  Scenario: 2.050 Check cancel "Mute all chat for:" function for 8 hours.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    Then the remaining time is set for "8 hours"
-    And tap on the "Switch mute" slider
-    Then mute all chat for "8 hours" function is canceled
-
-  Scenario: 2.044 Check "Mute all chat for:" function for 24 hours.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Switch mute" slider
-    And tap on the "24 hours" quantity
-    Then the remaining time is set for "24 hours"
-
-  Scenario: 2.051 Check cancel "Mute all chat for:" function for 24 hours.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    Then the remaining time is set for "24 hours"
-    And tap on the "Switch mute" slider
-    Then mute all chat for "24 hours" function is canceled
-
-  Scenario: 2.052 Check transition by tap on the "Notification settings" link.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-
-  Scenario: 2.053 Check the turn-on the "DND" mode.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-    Then the "DND switch" slider is turned "OFF"
-    When tap on the "DND switch" slider
-    And tap on the "Apply settings" button
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-    Then the "DND switch" slider is turned "ON"
-
-  Scenario: 2.054 Check the turn-off the "DND" mode.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-    Then the "DND switch" slider is turned "ON"
-    When tap on the "DND switch" slider
-    And tap on the "Apply settings" button
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-    Then the "DND switch" slider is turned "OFF"
-
-  Scenario: 2.057 Check save "Only direct and mentions" function in the "General settings" screen.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-    When tap on the "Only direct and mentions" radio button
-    And tap on the "Apply settings" button
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-    Then the "Only direct and mentions" status is saved
-
-  Scenario: 2.060 Check save "Nothing" function in the "General settings" screen.
-    Given the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-    When tap on the "Nothing" radio button
-    And tap on the "Apply settings" button
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    And tap on the "Bell icon" button
-    Then the "Mute all chat for:" pop-up menu is opened
-    And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
-    Then the "Nothing" status is saved
+    Then the "EvgeniyDisti" room is presented in the left drawer
+    When use long tap on the "EvgeniyDisti" room
+    And wait while results are refreshed
+    Then the "Hide conversation" link is presented
+    And tap on the "Hide conversation" link
+    And wait while results are refreshed
+    Then the "EvgeniyDisti" room is deleted from left drawer
+    Then the "y.tiutiunnyk" room is presented in the left drawer
+    When use long tap on the "y.tiutiunnyk" room
+    And wait while results are refreshed
+    Then the "Hide conversation" link is presented
+    And tap on the "Hide conversation" link
+    And wait while results are refreshed
+    Then the "y.tiutiunnyk" room is deleted from left drawer

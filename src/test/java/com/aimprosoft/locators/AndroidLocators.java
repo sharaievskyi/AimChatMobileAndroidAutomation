@@ -46,7 +46,7 @@ public interface AndroidLocators {
     String SHARE_MESSAGE_TEXT_XPATH = "//android.widget.TextView[contains(@resource-id, 'link_description')][@text='$1']";
     String REACTION = "reaction";
     String NEW_MESSAGE_SEPARATOR_XPATH = "//android.widget.TextView[contains(@resource-id, 'new_message_divider_text')][@text='New messages']";
-    String USER_DETAILS_SCREEN_XPATH = "//android.widget.TextView[contains(@resource-id, 'toolbar_title_view')][@text='$1']";
+    String DETAILS_SCREEN_XPATH = "//android.widget.TextView[contains(@resource-id, 'toolbar_title_view')][@text='$1']";
     String DATE_SEPARATOR_XPATH = "//android.widget.TextView[contains(@resource-id, 'message_divider_text')][@text='$1']";
 
     // Android message bar

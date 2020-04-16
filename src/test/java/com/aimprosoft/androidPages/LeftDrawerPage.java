@@ -104,7 +104,7 @@ public class LeftDrawerPage extends MobilePageObject {
     }
 
     public boolean theRoomIsPresentedInTheLeftDrawer(String roomName) {
-        withTimeoutOf(25, TimeUnit.SECONDS)
+        withTimeoutOf(60, TimeUnit.SECONDS)
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName))));
         return $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isDisplayed();
     }

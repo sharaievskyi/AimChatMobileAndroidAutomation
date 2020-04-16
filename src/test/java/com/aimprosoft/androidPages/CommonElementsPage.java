@@ -174,15 +174,15 @@ public class CommonElementsPage extends MobilePageObject {
         $$(getAndroidLocator(elementId)).click();
     }
 
-    public boolean verifyThatTheUserDetailsScreenIsOpened(String userName) {
+    public boolean verifyThatTheDetailsScreenIsOpened(String screenName) {
         withTimeoutOf(25, TimeUnit.SECONDS)
-                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.USER_DETAILS_SCREEN_XPATH.replace("$1", userName))));
-        return $(AndroidLocators.USER_DETAILS_SCREEN_XPATH.replace("$1", userName)).isVisible();
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.DETAILS_SCREEN_XPATH.replace("$1", screenName))));
+        return $(AndroidLocators.DETAILS_SCREEN_XPATH.replace("$1", screenName)).isVisible();
     }
 
     public boolean verifyThatTheTheMessageWasSent(String messageText) {
         withTimeoutOf(25, TimeUnit.SECONDS)
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText))));
-        return $(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText)).isDisplayed();
+        return $(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText)).isVisible();
     }
 }

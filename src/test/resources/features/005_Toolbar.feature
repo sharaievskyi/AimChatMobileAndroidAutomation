@@ -105,22 +105,22 @@ Feature: Toolbar
     And tap on the "Apply edit" button
     Then "Name should begin and contains only latin character" alert is displayed
 
-  Scenario: 5.013 Check the room name validation with only the digits in the "Edit Room" screen.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "IronMan" room is presented in the left drawer
-    And tap on the "IronMan" room
-    Then the "IronMan" room is opened
-    When tap on the "IronMan" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When change room name to "123456789" in the field "Edit room name"
-    And tap on the "Apply edit" button
-    Then "Name should begin and contains only latin character" alert is displayed
+#  Scenario: 5.013 Check the room name validation with only the digits in the "Edit Room" screen.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    Then the "IronMan" room is presented in the left drawer
+#    And tap on the "IronMan" room
+#    Then the "IronMan" room is opened
+#    When tap on the "IronMan" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When change room name to "123456789" in the field "Edit room name"
+#    And tap on the "Apply edit" button
+#    Then "Name should begin and contains only latin character" alert is displayed
 
   Scenario: 5.014 Check the room name validation with the empty field in the "Edit Room" screen.
     Given login using the properties file
@@ -351,7 +351,7 @@ Feature: Toolbar
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
-    Then the "SHulk" room is opened
+    Then the "Hulk" room is opened
     And swipe from left to right
     Then Left Drawer is opened
     Then the room "Hulk" is between "Thor" room and "RECENT DIRECTS" section
@@ -481,22 +481,22 @@ Feature: Toolbar
     And tap on the "Apply edit" button
     Then "Name should begin and contains only latin character" alert is displayed
 
-  Scenario: 5.034 Check the room name validation with only the digits in the "Edit Room" screen.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "GhostRider" room is presented in the left drawer
-    And tap on the "GhostRider" room
-    Then the "GhostRider" room is opened
-    When tap on the "GhostRider" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When change room name to "123456789" in the field "Edit room name"
-    And tap on the "Apply edit" button
-    Then "Name should begin and contains only latin character" alert is displayed
+#  Scenario: 5.034 Check the room name validation with only the digits in the "Edit Room" screen.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    Then the "GhostRider" room is presented in the left drawer
+#    And tap on the "GhostRider" room
+#    Then the "GhostRider" room is opened
+#    When tap on the "GhostRider" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When change room name to "123456789" in the field "Edit room name"
+#    And tap on the "Apply edit" button
+#    Then "Name should begin and contains only latin character" alert is displayed
 
   Scenario: 5.035 Check the room name validation with the empty field in the "Edit Room" screen.
     Given login using the properties file

@@ -102,8 +102,9 @@ public class CommonSteps {
     }
 
     @Then("the {string} details screen is opened")
-    public void theDetailsScreenIsOpened(String widgetText) {
-        steps.verifyThatTheWidgetWithTheTextIsPresented(widgetText);
+    public void theDetailsScreenIsOpened(String screenName) {
+//        steps.verifyThatTheWidgetWithTheTextIsPresented(widgetText);
+        steps.verifyThatTheDetailsScreenIsOpened(screenName);
     }
 
     @And("tap on the {string} user from Start direct list")
@@ -349,7 +350,7 @@ public class CommonSteps {
 
     @Then("the {string} user details screen is opened")
     public void theUserDetailsScreenIsOpened(String userName) {
-        steps.verifyThatTheUserDetailsScreenIsOpened(userName);
+        steps.verifyThatTheDetailsScreenIsOpened(userName);
     }
 
     @Then("the {string} link is not presented")

@@ -192,7 +192,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "androidQA2" is between "FAVORITES" and "ROOMS" sections
 
-  Scenario: 4.015 Check  unstar direct room through the right panel.
+  Scenario: 4.015 Check unstar direct room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -204,7 +204,6 @@ Feature: Right drawer
     When swipe from right to left
     Then the "Direct info" screen is opened
     When tap on the "favorite room" button
-    And swipe from left to right
     And swipe from left to right
     Then the "FAVORITES" title is not present
     Then the room "androidQA2" is presented in the "RECENT DIRECTS" section
@@ -1120,8 +1119,11 @@ Feature: Right drawer
     Then Left Drawer is opened
     When tap on the "Recent directs" title
     Then the "Start direct" screen is opened
-    When tap on the "a.antonenko" room
-    Then the "a.antonenko" direct room is opened
+    When tap on the Search sign
+    And wait while input field would be presented
+    When enter "testuser" in the "Select users" input field
+    When tap on the "testuser1" room
+    Then the "testuser1" direct room is opened
     When swipe from right to left
     Then the "Direct info" screen is opened
     When tap on the "Direct settings" link in the Right drawer
@@ -1130,7 +1132,7 @@ Feature: Right drawer
     Then the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "a.antonenko" room is not presented in the left drawer
+    Then the "testuser1" room is not presented in the left drawer
 
   Scenario: 4.081 Checking adds users in the public room as the owner through the right drawer.
     Given login using the properties file

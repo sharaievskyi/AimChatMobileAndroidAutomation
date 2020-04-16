@@ -79,6 +79,7 @@ Feature: Message history
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
+    When swipe from left to right
     Then Left Drawer is opened
     Then the "CaptainAmerica" room is presented in the left drawer
     When tap on the "CaptainAmerica" room
@@ -773,9 +774,9 @@ Feature: Message history
     Then the "General" room is opened
     When swipe from left to right
     Then Left Drawer is opened
-    Then the "a.antonenko" room is presented in the left drawer
-    And tap on the "a.antonenko" room
-    Then the "a.antonenko" direct room is opened
+    Then the "testuser2" room is presented in the left drawer
+    And tap on the "testuser2" room
+    Then the "testuser2" direct room is opened
     When enter "qwerty36" in the "Write a message" input field
     When tap on the "Send" button
     Then the message "qwerty36" sent
@@ -788,20 +789,20 @@ Feature: Message history
     Then message marked as "pinned" between "androidQA1" username and "qwerty36" message
     When tap on the Back button
     Then the chat history is opened
-    Then the "a.antonenko" direct room is opened
+    Then the "testuser2" direct room is opened
     Then message "qwerty36" is present
     Then message marked as "pinned" between "androidQA1" username and "qwerty36" message
     And tap on "qwerty36" message in chat history
     Then the "Message" details screen is opened
     Then message "qwerty36" is present
-    Then message marked as "pinned" between "d.sharaievskyi" username and "qwerty36" message
+    Then message marked as "pinned" between "androidQA1" username and "qwerty36" message
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Unpin message" link
     Then mark as "pinned" disappears
     When tap on the Back button
     Then the chat history is opened
-    Then the "a.antonenko" direct room is opened
+    Then the "testuser2" direct room is opened
     Then message "qwerty36" is present
     Then mark as "pinned" disappears
 
@@ -1225,7 +1226,7 @@ Feature: Message history
     When tap on the "Star sign" button
     Then message marked as "starred"
     Then message marked as "starred" between "androidQA2" username and "test message 3" message
-
+#  ???????
   Scenario: 3.056 Check for "starred" message in "Message details screen" for message of another user in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
@@ -1312,7 +1313,7 @@ Feature: Message history
     Then the "Message" details screen is opened
     And tap on the Back button
     Then the chat history is opened
-    Then the "Marketplace" room is opened
+    Then the "IronMan" room is opened
     When swipe from left to right
     Then Left Drawer is opened
     Then the "CaptainAmerica" room is presented in the left drawer
@@ -1938,7 +1939,7 @@ Feature: Message history
     Then reaction "😇" is added
     When tap on the "😇" reaction
     Then reaction "😇" is deleted
-
+# указать другую комнату для проверки
   Scenario: 3.100 Check "Pin message" in a public room using a long tap in chat history.
     Given login using the properties file
     Then the user is logged in
@@ -2067,7 +2068,7 @@ Feature: Message history
     When tap on the "Star message" link
     Then message marked as "starred"
     Then message marked as "starred" between "androidQA1" username and "qwerty46" message
-
+# указать другую комнату для проверки
   Scenario: 3.107 Check "Star message" in a private room using a long tap in chat history.
     Given login using the properties file
     Then the user is logged in
@@ -2103,7 +2104,7 @@ Feature: Message history
     When tap on the "Star message" link
     Then message marked as "starred"
     Then message marked as "starred" between "androidQA1" username and "qwerty48" message
-
+# указать другую комнату для проверки
   Scenario: 3.109 Check "Unstar message" in a public room using a long tap in chat history.
     Given login using the properties file
     Then the user is logged in
