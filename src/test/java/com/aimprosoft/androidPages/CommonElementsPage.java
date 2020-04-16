@@ -149,6 +149,7 @@ public class CommonElementsPage extends MobilePageObject {
 
     public boolean messageIsSharedToTheRoom(String messageText) {
 //        return $$(AndroidLocators.SHARE_MESSAGE).isDisplayed() && androidElementByText(messageText).isDisplayed();
+        scrollDown();
         return $(AndroidLocators.SHARE_MESSAGE_CONTAINER_XPATH).isVisible() && $(AndroidLocators.SHARE_MESSAGE_TEXT_XPATH.replace("$1", messageText)).isVisible();
     }
 

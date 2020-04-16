@@ -97,4 +97,9 @@ public class MobilePageObject extends PageObject {
     public void tapOnBackButton() {
         getDriver().navigate().back();
     }
+
+    public void scrollDown () {
+        TouchAction action = new TouchAction(AndroidWebDriver.driver());
+        action.longPress(500, 1000, Duration.ofSeconds(1)).moveTo(500, 500).release().perform();
+    }
 }
