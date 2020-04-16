@@ -89,4 +89,8 @@ public class LeftDrawerUserSteps extends ScenarioSteps {
     public void verifyThatThePopUpMenuIsOpenedInTheLeftDrawer() {
         Assert.assertTrue("Pop-up menu is not opened in the Left drawer", leftDrawerPage.verifyThatThePopUpMenuIsOpenedInTheLeftDrawer());
     }
+    @Step
+    public void tapOnTheRoomInTheLeftDrawer(String roomName) {
+        leftDrawerPage.tapOnTheRoomInTheLeftDrawer(roomName);
+    }
 }

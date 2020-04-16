@@ -20,6 +20,7 @@ public interface AndroidLocators {
     String CHANNEL_NAME_XPATH = "//android.widget.TextView[contains(@resource-id, 'channelName')][@text='$1']";
     String ROOM_NAME = "roomName";
     String ROOM_NAME_LEFT_DRAWER_XPATH = "//android.widget.TextView[contains(@resource-id, 'roomName')][@text='$1']";
+    String ROOM_LEFT_DRAWER_XPATH = "//android.widget.TextView[contains(@resource-id, 'roomName')]";
     String ROOM_NAME_ID = "room_Name";
     String MUTE_TITLE = "mute_title";
     String MUTE_TIME_ITEM = "mute_time_item";

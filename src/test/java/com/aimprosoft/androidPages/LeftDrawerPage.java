@@ -105,7 +105,8 @@ public class LeftDrawerPage extends MobilePageObject {
 
     public boolean theRoomIsPresentedInTheLeftDrawer(String roomName) {
         withTimeoutOf(60, TimeUnit.SECONDS)
-                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName))));
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ROOM_LEFT_DRAWER_XPATH)));
+        androidElementByText(roomName).isDisplayed();
         return $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isDisplayed();
     }
 
@@ -135,5 +136,9 @@ public class LeftDrawerPage extends MobilePageObject {
 
     public boolean verifyThatThePopUpMenuIsOpenedInTheLeftDrawer() {
         return $(AndroidLocators.CONTENT_POP_UP_MENU_XPATH).isDisplayed();
+    }
+
+    public void tapOnTheRoomInTheLeftDrawer(String roomName) {
+        $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).click();
     }
 }

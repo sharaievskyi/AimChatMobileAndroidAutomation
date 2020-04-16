@@ -4,6 +4,7 @@ import com.aimprosoft.steps.serenity.LeftDrawerUserSteps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 
 public class LeftDrawerSteps {
@@ -105,5 +106,10 @@ public class LeftDrawerSteps {
     @Then("pop-up menu is opened in the Left drawer")
     public void popUpMenuIsOpenedInTheLeftDrawer() {
         steps.verifyThatThePopUpMenuIsOpenedInTheLeftDrawer();
+    }
+
+    @When("tap on the {string} room in the left drawer")
+    public void tapOnTheRoomInTheLeftDrawer(String roomName) {
+        steps.tapOnTheRoomInTheLeftDrawer(roomName);
     }
 }
