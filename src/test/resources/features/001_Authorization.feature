@@ -1,8 +1,5 @@
 Feature: Authorization
 
-#  Background:
-#    Given wait while app would be loaded
-
   Scenario: 01.001 Sign in to your Team screen.
     Then the "Sign in to your Team" screen is opened
 
@@ -66,6 +63,7 @@ Feature: Authorization
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA1" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
 
@@ -76,6 +74,7 @@ Feature: Authorization
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "testuser2@email.com" in the "Login" input field
     When enter "qwerty1" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
 
@@ -86,6 +85,7 @@ Feature: Authorization
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "qwddw@email.com" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then "We cannot find a user with that login and password combination, please try again." alert is displayed
 
@@ -104,6 +104,7 @@ Feature: Authorization
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA1" in the "Login" input field
     When enter "   " in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then "We cannot find a user with that login and password combination, please try again." alert is displayed
 
@@ -114,6 +115,7 @@ Feature: Authorization
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "&^%^%" in the "Login" input field
     When enter "   " in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then "We cannot find a user with that login and password combination, please try again." alert is displayed
 
@@ -124,6 +126,7 @@ Feature: Authorization
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA1" in the "Login" input field
     When enter "%??*" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then "We cannot find a user with that login and password combination, please try again." alert is displayed
 
