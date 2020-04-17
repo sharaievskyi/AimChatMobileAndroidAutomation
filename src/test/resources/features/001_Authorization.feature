@@ -144,21 +144,3 @@ Feature: Authorization
     Then the "Forgot password?" screen is opened
     When tap on the "Back" button
     Then the "Sign in to Aimprosoft" screen is opened
-
-#  Scenario:
-#
-#
-#
-#  Scenario: 01. Login to chat.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    And enter "chat-demo" in the "Login" input field
-#    And enter "chat-demo" in the "Password" input field
-#    And hide the keyboard
-#    And tap on the "SIGN IN" button
-#
-#  Scenario: 01.100 Login
-#    Given the "Sign in to your Team" screen is opened
-#    When login using the properties file
-#    Then the user is logged in
