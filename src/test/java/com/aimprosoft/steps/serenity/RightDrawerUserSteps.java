@@ -80,4 +80,12 @@ public class RightDrawerUserSteps extends ScenarioSteps {
     public void verifyThatTheRadioButtonByXpathIsSelected(String buttonName) {
         Assert.assertTrue("Radio-button is not selected", rightDrawerPage.verifyThatTheRadioButtonByXpathIsSelected(buttonName));
     }
+    @Step
+    public void verifyThatTheUserNameIsPresentedInTheRoomMembersScreen(String userName) {
+        Assert.assertTrue("User is not presented in the room members screen", rightDrawerPage.verifyThatTheUserNameIsPresentedInTheRoomMembersScreen(userName));
+    }
+    @Step
+    public void verifyThatTheUsersRoleIsPresentedOnTheRightUserName(String role, String userName) {
+        Assert.assertTrue("Role is not present", rightDrawerPage.verifyThatTheUsersRoleIsPresentedOnTheRightUserName(role, userName));
+    }
 }

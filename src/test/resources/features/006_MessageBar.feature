@@ -16,19 +16,24 @@ Feature: Message bar
     Then empty input field contain "Write a message…" placeholder
     
   Scenario: 6.003 Check send message in "Write a message" input field.
+    Given the "General" room is opened
     When enter "qwerty1" in the "Write a message" input field
     When tap on the "Send" button
+    And hide the keyboard
     Then the message "qwerty1" sent
 
   Scenario: 6.004 Check condition that "Send" button should be disabled until the user enters the first symbol.
+    Given the "General" room is opened
     When tap on the "Send" button
     Then the "Send" button is disabled
 
   Scenario: 6.005 Check for clickable " Emoji" button on the "Android Message Bar".
+    Given the "General" room is opened
     When tap on the "Emoji" button
     Then the "Emoji keyboard" keyboard is opened
 
   Scenario: 6.009 Check that emoji send  in a chat history from "Android message bar" in public room.
+    Given the "General" room is opened
     When tap on the "Emoji" button
     Then the "Emoji keyboard" keyboard is opened
     When tap on the "😬" reaction
@@ -38,8 +43,11 @@ Feature: Message bar
     Then the message "😬" sent
 
   Scenario: 6.010 Check that emoji send  in a chat history from "Android message bar" in private room.
-    When swipe from left to right
-    And tap on the "Thor" room
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
     Then the "Thor" room is opened
     When tap on the "Emoji" button
     Then the "Emoji keyboard" keyboard is opened
@@ -50,8 +58,11 @@ Feature: Message bar
     Then the message "😬" sent
 
   Scenario: 6.011 Check that emoji send  in a chat history from "Android message bar" in direct room.
-    When swipe from left to right
-    And tap on the "androidQA2" room
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "Emoji" button
     Then the "Emoji keyboard" keyboard is opened

@@ -83,8 +83,8 @@ public class CommonElementsPage extends MobilePageObject {
     }
 
     public boolean verifyThatTheRoomWithNameIsPresented(String roomName) {
-        withTimeoutOf(25, TimeUnit.SECONDS)
-                .waitFor(ExpectedConditions.presenceOfElementLocated(By.id(AndroidLocators.TOOLBAR_ID)));
+        withTimeoutOf(60, TimeUnit.SECONDS)
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ROOM_TITLE_NAME_XPATH.replace("$1", roomName))));
         return androidElementByTextAndId(roomName, AndroidLocators.ROOM_TITLE_NAME_ID).isDisplayed();
     }
 
@@ -116,9 +116,9 @@ public class CommonElementsPage extends MobilePageObject {
 
     public void changeTheTextInTheField(String valueToEnter, String fieldName) {
         $$(getFieldLocator(fieldName)).click();
-//        if ($(AndroidButtonsLocators.DELETE_BTN_MODAL_ANDROID).isDisplayed()) {
-//            $(AndroidButtonsLocators.DELETE_BTN_MODAL_ANDROID).click();
-//        }
+        if ($(AndroidButtonsLocators.DELETE_BTN_MODAL_ANDROID).isVisible()) {
+            $(AndroidButtonsLocators.DELETE_BTN_MODAL_ANDROID).click();
+        }
         $$(getFieldLocator(fieldName)).clear();
         $$(getFieldLocator(fieldName)).sendKeys(valueToEnter);
     }
@@ -141,7 +141,7 @@ public class CommonElementsPage extends MobilePageObject {
 
     public void clearTheField(String fieldName) {
         $$(getFieldLocator(fieldName)).click();
-        if ($(AndroidButtonsLocators.DELETE_BTN_MODAL_ANDROID).isDisplayed()) {
+        if ($(AndroidButtonsLocators.DELETE_BTN_MODAL_ANDROID).isVisible()) {
             $(AndroidButtonsLocators.DELETE_BTN_MODAL_ANDROID).click();
         }
         $$(getFieldLocator(fieldName)).clear();

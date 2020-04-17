@@ -108,4 +108,16 @@ public class RightDrawerPage extends MobilePageObject {
     public boolean verifyThatTheRadioButtonByXpathIsSelected(String buttonName) {
         return $(AndroidButtonsLocators.PUBLIC_OR_PRIVATE_CHANNEL_XPATH.replace("$1", buttonName)).getAttribute("checked").equals("true");
     }
+
+    public boolean verifyThatTheUserNameIsPresentedInTheRoomMembersScreen(String userName) {
+        withTimeoutOf(25, TimeUnit.SECONDS)
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.USER_NAME_XPATH.replace("$1", userName))));
+        return $(AndroidLocators.USER_NAME_XPATH.replace("$1", userName)).isVisible();
+    }
+
+    public boolean verifyThatTheUsersRoleIsPresentedOnTheRightUserName(String role, String userName) {
+        int xUserName = androidElementByTextAndId(userName, AndroidLocators.USER_NAME).getLocation().getX();
+        int xRole = androidElementByTextAndId(role, AndroidLocators.USER_ROLE).getLocation().getX();
+        return xUserName < xRole;
+    }
 }

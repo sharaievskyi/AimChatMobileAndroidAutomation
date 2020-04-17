@@ -243,11 +243,6 @@ public class CommonSteps {
         steps.tapOnTheElementByText(messageText);
     }
 
-    @Then("the {string} user appear in the Room members screen")
-    public void theUserAppearInTheRoomMembersScreen(String userName) {
-        steps.verifyThatTheWidgetWithTheTextIsPresented(userName);
-    }
-
     @Then("the {string} user disappear in the Room members screen")
     public void theUserDisappearInTheRoomMembersScreen(String userName) {
         steps.verifyThatTheWidgetWithTheTextIsNotPresented(userName);
@@ -315,7 +310,7 @@ public class CommonSteps {
 
     @Then("{string} notification settings is saved")
     public void notificationSettingsIsSaved(String elementByText) {
-        steps.verifyThatTheElementByTextIsChecked(elementByText);
+        steps.verifyThatTheRadioButtonIsChecked(elementByText);
     }
 
     @And("tap on the {string} {string}")

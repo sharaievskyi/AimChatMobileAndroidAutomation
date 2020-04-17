@@ -16,8 +16,9 @@ Feature: Toolbar
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
     Then the "General" room is opened
-    And swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
+    And wait while results are refreshed
     Then the room "General" is between "Thor" room and "RECENT DIRECTS" section
 
   Scenario: 5.004 Checking the "unmute room" function in the "Room settings" for the public room.
@@ -29,9 +30,10 @@ Feature: Toolbar
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
     Then the "General" room is opened
-    And swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the room "General" is between "CaptainAmerica" and "Hulk" rooms
+    And wait while results are refreshed
+    Then the room "General" is between "Rooms" section and "IronMan" room
 
   Scenario: 5.005 Check notification settings "only mentions" in the "Room settings" screen.
     Given login using the properties file
@@ -54,18 +56,19 @@ Feature: Toolbar
     When swipe from left to right
     Then Left Drawer is opened
     Then the "Marketplace" room is presented in the left drawer
-    And tap on the "Marketplace" room
+    And tap on the "Marketplace" room in the left drawer
     Then the "Marketplace" room is opened
     When tap on the "Marketplace" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Leave room" link
+    And wait while results are refreshed
     Then "You left public room #Marketplace" alert is displayed
 
   Scenario: 5.011 Check the room name edit in the "Edit Room" screen.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     When tap on the "Rooms" title
     Then the "Browse rooms" screen is opened
@@ -92,10 +95,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
-    And tap on the "IronMan" room
+    And tap on the "IronMan" room in the left drawer
     Then the "IronMan" room is opened
     When tap on the "IronMan" name in the toolbar
     Then the "Room settings" screen is opened
@@ -103,16 +106,16 @@ Feature: Toolbar
     Then the "Edit room" screen is opened
     When change room name to "ТестКомната" in the field "Edit room name"
     And tap on the "Apply edit" button
-    Then "Name should begin and contains only latin character" alert is displayed
+    Then "Name should start from latin symbol or digit" alert is displayed
 
 #  Scenario: 5.013 Check the room name validation with only the digits in the "Edit Room" screen.
 #    Given login using the properties file
 #    Then the user is logged in
 #    Then the "General" room is opened
-#    When swipe from left to right
+#    When tap on the "Logo" button
 #    Then Left Drawer is opened
 #    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room
+#    And tap on the "IronMan" room in the left drawer
 #    Then the "IronMan" room is opened
 #    When tap on the "IronMan" name in the toolbar
 #    Then the "Room settings" screen is opened
@@ -126,10 +129,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
-    And tap on the "IronMan" room
+    And tap on the "IronMan" room in the left drawer
     Then the "IronMan" room is opened
     When tap on the "IronMan" name in the toolbar
     Then the "Room settings" screen is opened
@@ -143,10 +146,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
-    And tap on the "IronMan" room
+    And tap on the "IronMan" room in the left drawer
     Then the "IronMan" room is opened
     When tap on the "IronMan" name in the toolbar
     Then the "Room settings" screen is opened
@@ -160,10 +163,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
-    And tap on the "IronMan" room
+    And tap on the "IronMan" room in the left drawer
     Then the "IronMan" room is opened
     When tap on the "IronMan" name in the toolbar
     Then the "Room settings" screen is opened
@@ -177,10 +180,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "DoctorStrange" room is presented in the left drawer
-    And tap on the "DoctorStrange" room
+    And tap on the "DoctorStrange" room in the left drawer
     Then the "DoctorStrange" room is opened
     When tap on the "DoctorStrange" name in the toolbar
     Then the "Room settings" screen is opened
@@ -190,7 +193,7 @@ Feature: Toolbar
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
     And wait while results are refreshed
-    And enter "android" in the "Select users" input field
+    And enter "android" in the "Search user name" input field
     And tap on the "androidQA2" link
     And tap on the "Apply select users" button
     And wait while results are refreshed
@@ -201,10 +204,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "DoctorStrange" room is presented in the left drawer
-    And tap on the "DoctorStrange" room
+    And tap on the "DoctorStrange" room in the left drawer
     Then the "DoctorStrange" room is opened
     When tap on the "DoctorStrange" name in the toolbar
     Then the "Room settings" screen is opened
@@ -214,7 +217,7 @@ Feature: Toolbar
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
     When tap on the "More action" button
-    And tap on the "Remove from " link
+    And tap on the "Remove from DoctorStrange" link
     And wait while results are refreshed
     Then the "androidQA2" user disappear in the Room members screen
 
@@ -222,17 +225,25 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the "CaptainAmerica" room is presented in the left drawer
-    And tap on the "CaptainAmerica" room
-    Then the "CaptainAmerica" room is opened
-    When tap on the "CaptainAmerica" name in the toolbar
+    Then the "DoctorStrange" room is presented in the left drawer
+    And tap on the "DoctorStrange" room in the left drawer
+    Then the "DoctorStrange" room is opened
+    When tap on the "DoctorStrange" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
     Then the "Edit room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
+    And tap on the "Invite members" button
+    And wait while results are refreshed
+    And enter "android" in the "Search user name" input field
+    And tap on the "androidQA2" link
+    And tap on the "Apply select users" button
+    And wait while results are refreshed
+    Then the "Room members" screen is opened
+    Then the "androidQA2" user appear in the Room members screen
     When tap on the "More action" button
     And tap on the "Assign as administrator" link
     Then the "Room members" screen is opened
@@ -243,12 +254,12 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the "CaptainAmerica" room is presented in the left drawer
-    And tap on the "CaptainAmerica" room
-    Then the "CaptainAmerica" room is opened
-    When tap on the "CaptainAmerica" name in the toolbar
+    Then the "DoctorStrange" room is presented in the left drawer
+    And tap on the "DoctorStrange" room in the left drawer
+    Then the "DoctorStrange" room is opened
+    When tap on the "DoctorStrange" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
     Then the "Edit room" screen is opened
@@ -263,45 +274,7 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "DoctorStrange" room is presented in the left drawer
-    And tap on the "DoctorStrange" room
-    Then the "DoctorStrange" room is opened
-    When tap on the "DoctorStrange" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Delete room" link
-    And wait while results are refreshed
-    When tap on the "Cancel" button
-    Then the "Room settings" screen is opened
-    When tap on the Back button
-    Then the "DoctorStrange" room is opened
-
-  Scenario: 5.022 Check the "Delete room" function in the "Room settings" screen for the public room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    Then the "DoctorStrange" room is presented in the left drawer
-    And tap on the "DoctorStrange" room
-    Then the "DoctorStrange" room is opened
-    When tap on the "DoctorStrange" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Delete room" link
-    And wait while results are refreshed
-    When tap on the "Accept" button
-    And wait while results are refreshed
-    Then "The public room #DoctorStrange has been deleted" alert is displayed
-    When tap on the "Ok button" button
-    And wait while results are refreshed
-    Then the "General" room is opened
-
-  Scenario: 5.023 Check the "reassign new owner" function.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     When tap on the "Rooms" title
     Then the "Browse rooms" screen is opened
@@ -310,30 +283,75 @@ Feature: Toolbar
     Then the "Create room" screen is opened
     And enter "Batman" in the "Create room name" input field
     And enter "Bruce Wayne" in the "Create room description" input field
-    And tap on the "Add members" button
-    Then the "Invite members" screen is opened
-    And enter "androidQA2" in the "search user name" input field
-    And tap on the "androidQA2" "username"
-    And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "Batman" room is opened
     When tap on the "Batman" name in the toolbar
     Then the "Room settings" screen is opened
-    When tap on the "reassign new owner" link
-    Then the "Room members" screen is opened
-    When tap on the More option button
-    When tap on the "Reassign owner’s rights" link
-    Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
-    Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
+    When tap on the "Delete room" link
+    And wait while results are refreshed
+    When tap on the "Cancel" button
+    Then the "Room settings" screen is opened
+    When tap on the Back button
+    Then the "Batman" room is opened
+
+  Scenario: 5.022 Check the "Delete room" function in the "Room settings" screen for the public room.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Batman" room is presented in the left drawer
+    And tap on the "Batman" room in the left drawer
+    Then the "Batman" room is opened
+    When tap on the "Batman" name in the toolbar
+    Then the "Room settings" screen is opened
+    When tap on the "Delete room" link
+    And wait while results are refreshed
+    When tap on the "Accept" button
+    And wait while results are refreshed
+    Then "The public room #Batman has been deleted" alert is displayed
+    When tap on the "Ok button" button
+    And wait while results are refreshed
+    Then the "General" room is opened
+
+# $$$$$$$$$$$$$$$$
+#  Scenario: 5.023 Check the "reassign new owner" function.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When swipe from left to right
+#    Then Left Drawer is opened
+#    When tap on the "Rooms" title
+#    Then the "Browse rooms" screen is opened
+#    Then the "All" tab is selected
+#    And tap on the "Create room" button
+#    Then the "Create room" screen is opened
+#    And enter "Batman" in the "Create room name" input field
+#    And enter "Bruce Wayne" in the "Create room description" input field
+#    And tap on the "Add members" button
+#    Then the "Invite members" screen is opened
+#    And enter "androidQA2" in the "search user name" input field
+#    And tap on the "androidQA2" "username"
+#    And tap on the "Apply select users" button
+#    And tap on the "Apply create room" button
+#    Then the "Batman" room is opened
+#    When tap on the "Batman" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "reassign new owner" link
+#    Then the "Room members" screen is opened
+#    When tap on the More option button
+#    When tap on the "Reassign owner’s rights" link
+#    Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
+#    Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
 
   Scenario: 5.024 Check transition by click on the name of the private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "SpiderMan" room is presented in the left drawer
-    And tap on the "SpiderMan" room
+    And tap on the "SpiderMan" room in the left drawer
     Then the "SpiderMan" room is opened
     When tap on the "SpiderMan" name in the toolbar
     Then the "Room settings" screen is opened
@@ -342,46 +360,48 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
-    When tap on the "Hulk" name in the toolbar
+    Then the "SpiderMan" room is presented in the left drawer
+    And tap on the "SpiderMan" room in the left drawer
+    Then the "SpiderMan" room is opened
+    When tap on the "SpiderMan" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
-    Then the "Hulk" room is opened
-    And swipe from left to right
+    Then the "SpiderMan" room is opened
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the room "Hulk" is between "Thor" room and "RECENT DIRECTS" section
+    And wait while results are refreshed
+    Then the room "SpiderMan" is between "Thor" room and "RECENT DIRECTS" section
 
   Scenario: 5.027 Checking the "unmute room" function in the "Room settings" for the private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
-    When tap on the "Hulk" name in the toolbar
+    Then the "SpiderMan" room is presented in the left drawer
+    And tap on the "SpiderMan" room in the left drawer
+    Then the "SpiderMan" room is opened
+    When tap on the "SpiderMan" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
-    Then the "Hulk" room is opened
-    And swipe from left to right
+    Then the "SpiderMan" room is opened
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the room "Hulk" is between "General" and "IronMan" rooms
+    And wait while results are refreshed
+    Then the room "SpiderMan" is between "MisterFantastic" and "Storm" rooms
 
   Scenario: 5.028 Check notification settings "only mentions" in the "Room settings" screen.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "SpiderMan" room is presented in the left drawer
-    And tap on the "SpiderMan" room
+    And tap on the "SpiderMan" room in the left drawer
     Then the "SpiderMan" room is opened
     When tap on the "SpiderMan" name in the toolbar
     Then the "Room settings" screen is opened
@@ -394,51 +414,19 @@ Feature: Toolbar
     Then "Only mentions" notification settings is saved
 
   Scenario: 5.031 Check the "Leave room" function for the private room as a member.
-    Given the "Sign in to your Team" screen is opened
-    When enter "chat-demo" in the "Your team url" input field
-    When tap on the "CONTINUE" button
-    Then the "Sign in to Aimprosoft" screen is opened
-    When enter "androidQA2" in the "Login" input field
-    When enter "qwerty123" in the "Password" input field
-    And tap on the "SIGN IN" button
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Rooms" title
-    Then the "Browse rooms" screen is opened
-    Then the "All" tab is selected
-    And tap on the "Create room" button
-    Then the "Create room" screen is opened
-    And enter "Blade" in the "Create room name" input field
-    And enter "Eric Brooks" in the "Create room description" input field
-    And tap on the "Add members" button
-    Then the "Invite members" screen is opened
-    And enter "androidQA" in the "search user name" input field
-    And tap on the "androidQA1" "username"
-    And tap on the "Apply select users" button
-    And tap on the "Apply create room" button
-    Then the "Blade" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Aimprosoft" link
-    Then pop-up menu is opened in the Left drawer
-    When tap on the "Sign out" link
-    Then the "Sign in to Aimprosoft" screen is opened
-    When tap on the "Back" button
-    Then the "Sign in to your Team" screen is opened
-    When login using the properties file
+    Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the "Blade" room is presented in the left drawer
-    And tap on the "Blade" room
-    Then the "Blade" room is opened
-    When tap on the "Blade" name in the toolbar
+    Then the "Storm" room is presented in the left drawer
+    And tap on the "Storm" room in the left drawer
+    Then the "Storm" room is opened
+    When tap on the "Storm" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Leave room" link
-    Then "You left private room #Blade" alert is displayed
-    When tap on the "Ok button" button
+#    Then "You left private room #Storm" alert is displayed
+#    When tap on the "Ok button" button
     And wait while results are refreshed
     Then the "General" room is opened
 
@@ -446,12 +434,19 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the "Hulk" room is presented in the left drawer
-    And tap on the "Hulk" room
-    Then the "Hulk" room is opened
-    When tap on the "Hulk" name in the toolbar
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And tap on the "Private room" title
+    And enter "Blade" in the "Create room name" input field
+    And enter "Eric Brooks" in the "Create room description" input field
+    And tap on the "Apply create room" button
+    Then the "Blade" room is opened
+    When tap on the "Blade" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
     Then the "Edit room" screen is opened
@@ -468,10 +463,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "GhostRider" room is presented in the left drawer
-    And tap on the "GhostRider" room
+    And tap on the "GhostRider" room in the left drawer
     Then the "GhostRider" room is opened
     When tap on the "GhostRider" name in the toolbar
     Then the "Room settings" screen is opened
@@ -479,13 +474,13 @@ Feature: Toolbar
     Then the "Edit room" screen is opened
     When change room name to "ТестКомната" in the field "Edit room name"
     And tap on the "Apply edit" button
-    Then "Name should begin and contains only latin character" alert is displayed
+    Then "Name should start from latin symbol or digit" alert is displayed
 
 #  Scenario: 5.034 Check the room name validation with only the digits in the "Edit Room" screen.
 #    Given login using the properties file
 #    Then the user is logged in
 #    Then the "General" room is opened
-#    When swipe from left to right
+#    When tap on the "Logo" button
 #    Then Left Drawer is opened
 #    Then the "GhostRider" room is presented in the left drawer
 #    And tap on the "GhostRider" room
@@ -502,7 +497,7 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "GhostRider" room is presented in the left drawer
     And tap on the "GhostRider" room
@@ -519,7 +514,7 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "GhostRider" room is presented in the left drawer
     And tap on the "GhostRider" room
@@ -536,7 +531,7 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "GhostRider" room is presented in the left drawer
     And tap on the "GhostRider" room
@@ -553,7 +548,7 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     When tap on the "Rooms" title
     Then the "Browse rooms" screen is opened
@@ -563,11 +558,6 @@ Feature: Toolbar
     And tap on the "Private room" title
     And enter "Deadpool" in the "Create room name" input field
     And enter "Wade Winston Wilson" in the "Create room description" input field
-    And tap on the "Add members" button
-    Then the "Invite members" screen is opened
-    And enter "androidQA2" in the "search user name" input field
-    And tap on the "androidQA2" "username"
-    And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "Deadpool" room is opened
     When tap on the "Deadpool" name in the toolbar
@@ -578,11 +568,10 @@ Feature: Toolbar
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
     And wait while results are refreshed
-    And enter "android" in the "Select users" input field
+    And enter "android" in the "Search user name" input field
     And tap on the "androidQA2" link
     And tap on the "Apply select users" button
     And wait while results are refreshed
-    When tap on the "Room members" list
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
 
@@ -590,7 +579,7 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Deadpool" room is presented in the left drawer
     And tap on the "Deadpool" room
@@ -611,7 +600,7 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Deadpool" room is presented in the left drawer
     And tap on the "Deadpool" room
@@ -624,12 +613,16 @@ Feature: Toolbar
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
     And wait while results are refreshed
-    And enter "android" in the "Select users" input field
+    And enter "android" in the "Search user name" input field
     And tap on the "androidQA2" link
     And tap on the "Apply select users" button
     And wait while results are refreshed
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
+    When tap on the Back button
+    Then the "Edit room" screen is opened
+    When tap on the Back button
+    Then the "Room settings" screen is opened
     When tap on the Back button
     Then the "Deadpool" room is opened
     When tap on the "Deadpool" name in the toolbar
@@ -648,10 +641,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Deadpool" room is presented in the left drawer
-    And tap on the "Deadpool" room
+    And tap on the "Deadpool" room in the left drawer
     Then the "Deadpool" room is opened
     When tap on the "Deadpool" name in the toolbar
     Then the "Room settings" screen is opened
@@ -668,78 +661,80 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the "Deadpool" room is presented in the left drawer
-    And tap on the "Deadpool" room
-    Then the "Deadpool" room is opened
-    When tap on the "Deadpool" name in the toolbar
+    Then the "GhostRider" room is presented in the left drawer
+    And tap on the "GhostRider" room in the left drawer
+    Then the "GhostRider" room is opened
+    When tap on the "GhostRider" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Delete room" link
     And wait while results are refreshed
     When tap on the "Cancel" button
     Then the "Room settings" screen is opened
     When tap on the Back button
-    Then the "Deadpool" room is opened
+    Then the "GhostRider" room is opened
 
   Scenario: 5.043 Check the "Delete room" function in the "Room settings" screen for the private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
-    Then the "Deadpool" room is presented in the left drawer
-    And tap on the "Deadpool" room
-    Then the "Deadpool" room is opened
-    When tap on the "Deadpool" name in the toolbar
+    Then the "GhostRider" room is presented in the left drawer
+    And tap on the "GhostRider" room in the left drawer
+    Then the "GhostRider" room is opened
+    When tap on the "GhostRider" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Delete room" link
     And wait while results are refreshed
     When tap on the "Accept" button
     And wait while results are refreshed
-    Then "The public room #Deadpool has been deleted" alert is displayed
+    Then "The private room #GhostRider has been deleted" alert is displayed
     When tap on the "Ok button" button
     And wait while results are refreshed
     Then the "General" room is opened
 
-  Scenario: 5.044 Check the "reassign new owner" function.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When swipe from left to right
-    Then Left Drawer is opened
-    When tap on the "Rooms" title
-    Then the "Browse rooms" screen is opened
-    Then the "All" tab is selected
-    And tap on the "Create room" button
-    Then the "Create room" screen is opened
-    And tap on the "Private room" title
-    And enter "GreenGoblin" in the "Create room name" input field
-    And enter "Norman Osborn" in the "Create room description" input field
-    And tap on the "Add members" button
-    Then the "Invite members" screen is opened
-    And enter "androidQA2" in the "search user name" input field
-    And tap on the "androidQA2" "username"
-    And tap on the "Apply select users" button
-    And tap on the "Apply create room" button
-    Then the "GreenGoblin" room is opened
-    When tap on the "GreenGoblin" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "reassign new owner" link
-    Then the "Room members" screen is opened
-    When tap on the More option button
-    When tap on the "Reassign owner’s rights" link
-    Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
-    Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
+#    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#  Scenario: 5.044 Check the "reassign new owner" function.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    When tap on the "Rooms" title
+#    Then the "Browse rooms" screen is opened
+#    Then the "All" tab is selected
+#    And tap on the "Create room" button
+#    Then the "Create room" screen is opened
+#    And tap on the "Private room" title
+#    And enter "GreenGoblin" in the "Create room name" input field
+#    And enter "Norman Osborn" in the "Create room description" input field
+#    And tap on the "Add members" button
+#    Then the "Invite members" screen is opened
+#    And enter "androidQA2" in the "search user name" input field
+#    And tap on the "androidQA2" "username"
+#    And tap on the "Apply select users" button
+#    Then the "Create room" screen is opened
+#    And tap on the "Apply create room" button
+#    Then the "GreenGoblin" room is opened
+#    When tap on the "GreenGoblin" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "reassign new owner" link
+#    Then the "Room members" screen is opened
+#    When tap on the More option button
+#    When tap on the "Reassign owner’s rights" link
+#    Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
+#    Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
 
   Scenario: 5.045 Check transition by click on the name of the direct room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
-    And tap on the "androidQA2" room
+    And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "androidQA2" name in the toolbar
     Then the "Direct settings" screen is opened
@@ -748,44 +743,47 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
-    And tap on the "androidQA2" room
+    And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "androidQA2" name in the toolbar
     Then the "Direct settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
     Then the "androidQA2" direct room is opened
-    And swipe from left to right
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And wait while results are refreshed
     Then the room "androidQA2" is presented under the "testuser2" room in the "RECENT DIRECTS" section
 
   Scenario: 5.048 Checking the "unmute room" function in the "Direct settings" for the public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
-    And tap on the "androidQA2" room
+    And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "androidQA2" name in the toolbar
     Then the "Direct settings" screen is opened
     When tap on the "mute switch" button
     And tap on the "Apply settings" button
     Then the "androidQA2" direct room is opened
-    And swipe from left to right
+    When tap on the "Logo" button
+    And wait while results are refreshed
     Then the room "androidQA2" is between "RECENT DIRECTS" section and "testuser2" room
 
   Scenario: 5.050 Check notification settings "Nothing" in the "Direct settings" screen.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
-    And tap on the "androidQA2" room
+    And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "androidQA2" name in the toolbar
     Then the "Direct settings" screen is opened
@@ -800,10 +798,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
-    And tap on the "androidQA2" room
+    And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "androidQA2" name in the toolbar
     Then the "Direct settings" screen is opened
@@ -818,10 +816,10 @@ Feature: Toolbar
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When swipe from left to right
+    When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "testuser2" room is presented in the left drawer
-    And tap on the "testuser2" room
+    And tap on the "testuser2" room in the left drawer
     Then the "testuser2" direct room is opened
     When tap on the "testuser2" name in the toolbar
     Then the "Direct settings" screen is opened

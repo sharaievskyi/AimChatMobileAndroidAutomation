@@ -95,4 +95,14 @@ public class RightDrawerSteps {
     public void theRadioButtonIsSelected(String buttonName) {
         steps.verifyThatTheRadioButtonByXpathIsSelected(buttonName);
     }
+
+    @Then("the {string} user appear in the Room members screen")
+    public void theUserAppearInTheRoomMembersScreen(String userName) {
+        steps.verifyThatTheUserNameIsPresentedInTheRoomMembersScreen(userName);
+    }
+
+    @Then("the {string} role is presented on the right {string}")
+    public void theRoleIsPresentedOnTheRight(String role, String userName) {
+        steps.verifyThatTheUsersRoleIsPresentedOnTheRightUserName(role, userName);
+    }
 }
