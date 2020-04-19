@@ -89,6 +89,7 @@ Feature: Urgent bugs
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "testuser2@email.com" in the "Login" input field
     When enter "qwerty1" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When enter "test message 6" in the "Write a message" input field
@@ -157,6 +158,7 @@ Feature: Urgent bugs
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "testuser2@email.com" in the "Login" input field
     When enter "qwerty1" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button

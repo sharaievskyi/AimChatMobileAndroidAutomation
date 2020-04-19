@@ -1000,7 +1000,9 @@ Feature: Right drawer
     Then the room "androidQA2" is presented under the "testuser2" room in the "RECENT DIRECTS" section
 
   Scenario: 4.065 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the direct room.
-    Given the "General" room is opened
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
@@ -1081,6 +1083,7 @@ Feature: Right drawer
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button

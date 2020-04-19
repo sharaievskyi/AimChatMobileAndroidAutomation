@@ -149,6 +149,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1341,6 +1342,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1383,6 +1385,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1425,6 +1428,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1470,6 +1474,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1527,6 +1532,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1578,6 +1584,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1629,6 +1636,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1676,6 +1684,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1723,6 +1732,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1770,6 +1780,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1823,6 +1834,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1876,6 +1888,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1929,6 +1942,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1982,6 +1996,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2035,6 +2050,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2088,6 +2104,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2150,6 +2167,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2212,6 +2230,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2274,6 +2293,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2328,6 +2348,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2382,6 +2403,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2436,6 +2458,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2486,6 +2509,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -2536,6 +2560,7 @@ Feature: Message history
     Then the "Sign in to Aimprosoft" screen is opened
     When enter "androidQA2" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
     And tap on the "SIGN IN" button
     Then the "General" room is opened
     When tap on the "Logo" button
