@@ -683,6 +683,25 @@ Feature: Left Drawer
     Then the "Notification settings" screen is opened
     Then the "Nothing" status is saved
 
+  Scenario: 2.062 Check save "Everything" function in the "General settings" screen.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "Notification settings" screen is opened
+    When tap on the "Everything" radio button
+    And tap on the "Apply settings" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "Notification settings" screen is opened
+    Then the "Everything" status is saved
+
   Scenario: Postcondition
     Given the "General" room is opened
     When tap on the "Logo" button
