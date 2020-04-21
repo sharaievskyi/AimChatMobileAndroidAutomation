@@ -42,7 +42,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "General" is between "Thor" room and "RECENT DIRECTS" section
 
-  Scenario: 4.007 Check to unmute public room through the right panel.
+  Scenario: 4.005 Check to unmute public room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -53,7 +53,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "General" is between "CaptainAmerica" and "Hulk" rooms
 
-  Scenario: 4.005 Check "mute" private room through the right panel.
+  Scenario: 4.006 Check "mute" private room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -69,7 +69,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "Hulk" is between "Thor" room and "RECENT DIRECTS" section
 
-  Scenario: 4.008 Check to unmute private room through the right panel.
+  Scenario: 4.007 Check to unmute private room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -85,7 +85,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "Hulk" is between "General" and "IronMan" rooms
 
-  Scenario: 4.006 Check "mute" direct room through the right panel.
+  Scenario: 4.008 Check "mute" direct room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -128,7 +128,7 @@ Feature: Right drawer
     Then the "Favorites" title is present
     Then the room "General" is between "FAVORITES" and "ROOMS" sections
 
-  Scenario: 4.013 Check  unstar public room through the right panel.
+  Scenario: 4.011 Check  unstar public room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -140,7 +140,7 @@ Feature: Right drawer
     Then the "FAVORITES" title is not present
     Then the room "General" is between "ROOMS" and "RECENT DIRECTS" sections
 
-  Scenario: 4.011 Check "star" private room through the right panel.
+  Scenario: 4.012 Check "star" private room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -156,7 +156,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "Hulk" is between "FAVORITES" and "ROOMS" sections
 
-  Scenario: 4.014 Check unstar private room through the right panel.
+  Scenario: 4.013 Check unstar private room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -172,7 +172,7 @@ Feature: Right drawer
     Then the "FAVORITES" title is not present
     Then the room "Hulk" is between "ROOMS" and "RECENT DIRECTS" sections
 
-  Scenario: 4.012 Check "star" direct room through the right panel.
+  Scenario: 4.014 Check "star" direct room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -889,7 +889,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "General" is between "Thor" room and "RECENT DIRECTS" section
 
-  Scenario: 4.063 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the public room.
+  Scenario: 4.055 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -904,7 +904,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "General" is between "Thor" room and "RECENT DIRECTS" section
 
-  Scenario: 4.059 Check "unmuted room" function for a public room on the "Room settings" in the right panel.
+  Scenario: 4.056 Check "unmuted room" function for a public room on the "Room settings" in the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -919,7 +919,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "General" is between "CaptainAmerica" and "Hulk" rooms
 
-  Scenario: 4.054 Check "mute room" function for a private room on the "Room settings" in the right panel.
+  Scenario: 4.057 Check "mute room" function for a private room on the "Room settings" in the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -939,7 +939,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "Hulk" is between "Thor" room and "RECENT DIRECTS" section
 
-  Scenario: 4.064 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the private room.
+  Scenario: 4.059 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -979,7 +979,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "Hulk" is between "General" and "IronMan" rooms
 
-  Scenario: 4.055 Check "mute room" function for a direct room on the "Room settings" in the right panel.
+  Scenario: 4.061 Check "mute room" function for a direct room on the "Room settings" in the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -999,7 +999,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "androidQA2" is presented under the "testuser2" room in the "RECENT DIRECTS" section
 
-  Scenario: 4.065 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the direct room.
+  Scenario: 4.063 Try to save the data without clicking on the "checkmark" button in the "Room settings" block for the direct room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1019,7 +1019,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "androidQA2" is presented under the "testuser2" room in the "RECENT DIRECTS" section
 
-  Scenario: 4.061 Check "unmuted room" function for a direct room on the "Room settings" in the right panel.
+  Scenario: 4.064 Check "unmuted room" function for a direct room on the "Room settings" in the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1039,7 +1039,7 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the room "androidQA2" is between "RECENT DIRECTS" section and "testuser2" room
 
-  Scenario: 4.062 Check for clickable "Back" button in the "Room settings" list.
+  Scenario: 4.065 Check for clickable "Back" button in the "Room settings" list.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1124,8 +1124,8 @@ Feature: Right drawer
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Leave room" link
-    And wait while results are refreshed
-    When tap on the "Ok" link
+#    And wait while results are refreshed
+#    When tap on the "Ok" link
     And wait while results are refreshed
     Then the "General" room is opened
     When tap on the "Logo" button
@@ -1270,27 +1270,7 @@ Feature: Right drawer
     Then the "Room members" screen is opened
     Then the "testuser2" user appear in the Room members screen
 
-# Узнать как должна проходить проверка, какой ожидаемый результат
-#  Scenario: 4.086 Check assign admin rights for other participants.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "MisterFantastic" room is presented in the left drawer
-#    And tap on the "MisterFantastic" room in the left drawer
-#    Then the "MisterFantastic" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    Then the "testuser2" user appear in the Room members screen
-#    When tap on the "More action" button
-#    And tap on the "Assign as administrator" link
-#    Then the "testuser2" user is presented under "Administration" section and "androidQA1" user
-#    Then the "(admin)" role is presented on the right "testuser2"
-
-  Scenario: 4.087 Checking remove any user from the public room as an admin.
+  Scenario: 4.086 Checking remove any user from the public room as an admin.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1309,7 +1289,7 @@ Feature: Right drawer
     And wait while results are refreshed
     Then the "testuser2" user disappear in the Room members screen
 
-  Scenario: 4.088 Checking adds users in the private room as the owner through the right drawer.
+  Scenario: 4.087 Checking adds users in the private room as the owner through the right drawer.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1338,7 +1318,7 @@ Feature: Right drawer
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
 
-  Scenario: 4.089 Checking remove any user from the private room as an owner.
+  Scenario: 4.088 Checking remove any user from the private room as an owner.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1353,11 +1333,11 @@ Feature: Right drawer
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
     When tap on the "More action" button
-    And tap on the "Remove from MisterFantastic" link
+    And tap on the "Remove from Storm" link
     And wait while results are refreshed
     Then the "androidQA2" user disappear in the Room members screen
 
-  Scenario: 4.090 Check assign admin rights to another member in the private room as the owner.
+  Scenario: 4.089 Check assign admin rights to another member in the private room as the owner.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1384,7 +1364,7 @@ Feature: Right drawer
     Then the "androidQA2" user is presented under "Administration" section and "androidQA1" user
     Then the "(admin)" role is presented between "androidQA2" username and "null null" user full name
 
-  Scenario: 4.091 Check change owner's rights to the other members in the private room as the owner.
+  Scenario: 4.090 Check change owner's rights to the other members in the private room as the owner.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1403,7 +1383,7 @@ Feature: Right drawer
     Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
     Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
 
-  Scenario: 4.092 Checking adds users in the private room as the admin through the right drawer.
+  Scenario: 4.091 Checking adds users in the private room as the admin through the right drawer.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1425,27 +1405,7 @@ Feature: Right drawer
     Then the "Room members" screen is opened
     Then the "testuser2" user appear in the Room members screen
 
-# &&&&&&&&&&&&&&&
-#  Scenario: 4.093 Check assign admin rights to another participant in the private room as the owner.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "Storm" room is presented in the left drawer
-#    And tap on the "Storm" room in the left drawer
-#    Then the "Storm" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    Then the "testuser2" user appear in the Room members screen
-#    When tap on the "More action" button
-#    And tap on the "Assign as administrator" link
-#    Then the "testuser2" user is presented under "Administration" section and "androidQA1" user
-#    Then the "(admin)" role is presented on the right "testuser2"
-
-  Scenario: 4.094 Checking remove any user from the private room as an admin.
+  Scenario: 4.092 Checking remove any user from the private room as an admin.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1460,11 +1420,11 @@ Feature: Right drawer
     Then the "Room members" screen is opened
     Then the "testuser2" user appear in the Room members screen
     When tap on the "More action" button
-    And tap on the "Remove from MisterFantastic" link
+    And tap on the "Remove from Storm" link
     And wait while results are refreshed
     Then the "testuser2" user disappear in the Room members screen
 
-  Scenario: 4.095 Check "Edit room" function for the public room.
+  Scenario: 4.093 Check "Edit room" function for the public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1488,7 +1448,7 @@ Feature: Right drawer
     When tap on the Back button
     Then the "CaptainMarvel" room is opened
 
-  Scenario: 4.096 Checking change description of the room in the "Edit room" screen.
+  Scenario: 4.094 Checking change description of the room in the "Edit room" screen.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1508,7 +1468,7 @@ Feature: Right drawer
     And wait while results are refreshed
     Then description "Carol Danvers" of room is present
 
-  Scenario: 4.097 Check delete members from "Edit list of members" in the "Edit Room" screen for public room.
+  Scenario: 4.095 Check delete members from "Edit list of members" in the "Edit Room" screen for public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1527,11 +1487,11 @@ Feature: Right drawer
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
     When tap on the "More action" button
-    And tap on the "Remove from " link
+    And tap on the "Remove from CaptainMarvel" link
     And wait while results are refreshed
     Then the "androidQA2" user disappear in the Room members screen
 
-  Scenario: 4.098 Check invite members in the "Edit list of members" in the "Edit Room" screen for public room.
+  Scenario: 4.096 Check invite members in the "Edit list of members" in the "Edit Room" screen for public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1557,7 +1517,7 @@ Feature: Right drawer
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
 
-  Scenario: 4.099 Checking assign admin rights.
+  Scenario: 4.097 Checking assign admin rights.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1580,7 +1540,7 @@ Feature: Right drawer
     Then the "androidQA2" user is presented under "Administration" section and "androidQA1" user
     Then the "(admin)" role is presented between "androidQA2" username and "null null" user full name
 
-  Scenario: 4.100 Check cancel delete room for public room.
+  Scenario: 4.098 Check cancel delete room for public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1600,7 +1560,7 @@ Feature: Right drawer
     When tap on the Back button
     Then the "CaptainMarvel" room is opened
 
-  Scenario: 4.101 Check "Delete room" function for public room.
+  Scenario: 4.099 Check "Delete room" function for public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1622,7 +1582,7 @@ Feature: Right drawer
     And wait while results are refreshed
     Then the "General" room is opened
 
-    Scenario: 4.102 Check cancel delete room for public room.
+    Scenario: 4.100 Check cancel delete room for public room.
       Given login using the properties file
       Then the user is logged in
       Then the "General" room is opened
@@ -1642,7 +1602,7 @@ Feature: Right drawer
       When tap on the Back button
       Then the "Hulk" room is opened
 
-  Scenario: 4.103 Check "Delete room" function for private room.
+  Scenario: 4.101 Check "Delete room" function for private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1665,7 +1625,7 @@ Feature: Right drawer
     Then the "General" room is opened
 
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-#  Scenario: 4.104 Check the "reassign new owner" function for the public room.
+#  Scenario: 4.102 Check the "reassign new owner" function for the public room.
 #    Given login using the properties file
 #    Then the user is logged in
 #    Then the "General" room is opened
@@ -1691,7 +1651,7 @@ Feature: Right drawer
 #    Then the "General" room is opened
 #
 ##  ********** Прекондишен ************************
-#  Scenario: 4.105 Check the "reassign new owner" function for the private room.
+#  Scenario: 4.103 Check the "reassign new owner" function for the private room.
 #    Given the "General" room is opened
 #    When swipe from left to right
 #    And tap on the "MyPrivateRoom" room

@@ -15,6 +15,7 @@ public interface AndroidLocators {
     String ROOM_TITLE_NAME_ID = "toolbar_title";
     String ROOM_TITLE_NAME_XPATH = "//android.widget.TextView[contains(@resource-id, 'toolbar_title')][@text='$1']";
     String DIRECT_ROOM_NAME_ID = "direct_name";
+    String DIRECT_ROOM_NAME_XPATH = "//android.widget.TextView[contains(@resource-id, 'direct_name')][@text='$1']";
 
     // Left drawer
     String CHANNEL_NAME_ID = "channelName";

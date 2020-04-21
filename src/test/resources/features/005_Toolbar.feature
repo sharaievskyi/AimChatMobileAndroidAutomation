@@ -108,6 +108,7 @@ Feature: Toolbar
     And tap on the "Apply edit" button
     Then "Name should start from latin symbol or digit" alert is displayed
 
+#    Создать новую комнату для проверки валидации
 #  Scenario: 5.013 Check the room name validation with only the digits in the "Edit Room" screen.
 #    Given login using the properties file
 #    Then the user is logged in
@@ -174,7 +175,7 @@ Feature: Toolbar
     Then the "Edit room" screen is opened
     When change room name to "%%&&*" in the field "Edit room name"
     And tap on the "Apply edit" button
-    Then "Name should begin and contains only latin character" alert is displayed
+    Then "Name should start from latin symbol or digit" alert is displayed
 
   Scenario: 5.017 Check add a new members to the public room.
     Given login using the properties file
@@ -476,6 +477,7 @@ Feature: Toolbar
     And tap on the "Apply edit" button
     Then "Name should start from latin symbol or digit" alert is displayed
 
+#    Создать новую тестовую комнату для проверки
 #  Scenario: 5.034 Check the room name validation with only the digits in the "Edit Room" screen.
 #    Given login using the properties file
 #    Then the user is logged in
@@ -542,7 +544,7 @@ Feature: Toolbar
     Then the "Edit room" screen is opened
     When change room name to "%%&&*" in the field "Edit room name"
     And tap on the "Apply edit" button
-    Then "Name should begin and contains only latin character" alert is displayed
+    Then "Name should start from latin symbol or digit" alert is displayed
 
   Scenario: 5.038 Check add a new members to the private room.
     Given login using the properties file
@@ -776,7 +778,7 @@ Feature: Toolbar
     And wait while results are refreshed
     Then the room "androidQA2" is between "RECENT DIRECTS" section and "testuser2" room
 
-  Scenario: 5.050 Check notification settings "Nothing" in the "Direct settings" screen.
+  Scenario: 5.049 Check notification settings "Nothing" in the "Direct settings" screen.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -794,7 +796,7 @@ Feature: Toolbar
     Then the "Direct settings" screen is opened
     Then "Nothing" notification settings is saved
 
-  Scenario: 5.049 Check notification settings "Everything" in the "Direct settings" screen.
+  Scenario: 5.051 Check notification settings "Everything" in the "Direct settings" screen.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -827,3 +829,37 @@ Feature: Toolbar
     Then the "General" room is opened
     When swipe from left to right
     Then the "testuser2" room is deleted from left drawer
+
+#    Добавить степы и  экспектед
+#  Scenario: 5.053 Check the "Mark all as read" function by a tap on the "Aimchat" favicon on the toolbar.
+#    Given the "Sign in to your Team" screen is opened
+#    When enter "chat-demo" in the "Your team url" input field
+#    When tap on the "CONTINUE" button
+#    Then the "Sign in to Aimprosoft" screen is opened
+#    When enter "androidQA2" in the "Login" input field
+#    When enter "qwerty123" in the "Password" input field
+#    And hide the keyboard
+#    And tap on the "SIGN IN" button
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "androidQA1" room is presented in the left drawer
+#    And tap on the "androidQA1" room in the left drawer
+#    Then the "androidQA1" direct room is opened
+#    When enter "test message 15" in the "Write a message" input field
+#    When tap on the "Send" button
+#    And hide the keyboard
+#    Then the message "test message 15" sent
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    When tap on the "Aimprosoft" link
+#    Then pop-up menu is opened in the Left drawer
+#    When tap on the "Sign out" link
+#    Then the "Sign in to Aimprosoft" screen is opened
+#    When tap on the "Back" button
+#    Then the "Sign in to your Team" screen is opened
+#    When login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link

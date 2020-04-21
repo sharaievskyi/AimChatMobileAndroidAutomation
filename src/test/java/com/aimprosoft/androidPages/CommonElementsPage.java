@@ -89,8 +89,8 @@ public class CommonElementsPage extends MobilePageObject {
     }
 
     public boolean verifyThatTheDirectRoomWithNameIsPresented(String directRoomName) {
-        withTimeoutOf(25, TimeUnit.SECONDS)
-                .waitFor(ExpectedConditions.presenceOfElementLocated(By.id(AndroidLocators.TOOLBAR_ID)));
+        withTimeoutOf(60, TimeUnit.SECONDS)
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.DIRECT_ROOM_NAME_XPATH.replace("$1", directRoomName))));
         return androidElementByTextAndId(directRoomName, AndroidLocators.DIRECT_ROOM_NAME_ID).isDisplayed();
     }
 

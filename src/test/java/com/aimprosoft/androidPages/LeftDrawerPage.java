@@ -100,6 +100,8 @@ public class LeftDrawerPage extends MobilePageObject {
     }
 
     public boolean leftDrawerIsOpened() {
+        withTimeoutOf(30, TimeUnit.SECONDS)
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.id(AndroidLocators.LEFT_DRAWER)));
         return $$(AndroidLocators.LEFT_DRAWER).isDisplayed();
     }
 
