@@ -61,7 +61,7 @@ Feature: Authorization
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
     Then the "Sign in to Aimprosoft" screen is opened
-    When enter "androidQA1" in the "Login" input field
+    When enter "androidQA1@email.com" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
     And hide the keyboard
     And tap on the "SIGN IN" button
@@ -102,7 +102,7 @@ Feature: Authorization
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
     Then the "Sign in to Aimprosoft" screen is opened
-    When enter "androidQA1" in the "Login" input field
+    When enter "androidQA1@email.com" in the "Login" input field
     When enter "   " in the "Password" input field
     And hide the keyboard
     And tap on the "SIGN IN" button
@@ -124,7 +124,7 @@ Feature: Authorization
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
     Then the "Sign in to Aimprosoft" screen is opened
-    When enter "androidQA1" in the "Login" input field
+    When enter "androidQA1@email.com" in the "Login" input field
     When enter "%??*" in the "Password" input field
     And hide the keyboard
     And tap on the "SIGN IN" button

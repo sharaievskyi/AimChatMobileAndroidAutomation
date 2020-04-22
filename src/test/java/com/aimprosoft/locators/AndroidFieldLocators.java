@@ -33,4 +33,7 @@ public interface AndroidFieldLocators {
     // Right Drawer
     String EDIT_ROOM_NAME = "edit_room_name";
     String EDIT_ROOM_DESCRIPTION = "edit_room_description";
+
+    // Profile
+    String FIRST_NAME = "profile_first_name";
 }

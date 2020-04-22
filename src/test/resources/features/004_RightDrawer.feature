@@ -1081,7 +1081,7 @@ Feature: Right drawer
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
     Then the "Sign in to Aimprosoft" screen is opened
-    When enter "androidQA2" in the "Login" input field
+    When enter "androidQA2@email.com" in the "Login" input field
     When enter "qwerty123" in the "Password" input field
     And hide the keyboard
     And tap on the "SIGN IN" button
