@@ -8,8 +8,15 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import net.thucydides.core.webdriver.DriverSource;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import static com.aimprosoft.myDriver.appium.core.Selectors.elementByIdOrClassName;
 
