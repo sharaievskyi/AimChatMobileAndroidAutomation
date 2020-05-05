@@ -54,10 +54,7 @@ public class AndroidWebDriver implements DriverSource {
         return elementByIdOrClassName(driver, idOrClassName);
     }
 
-//    public static AndroidDriver driver() {
-//        return driver;
-//    }
-    public AndroidDriver driver() {
-    return driver;
-}
+    public static AndroidDriver driver() {
+        return driver;
+    }
 }
