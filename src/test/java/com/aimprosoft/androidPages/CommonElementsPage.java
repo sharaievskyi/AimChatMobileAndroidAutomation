@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.concurrent.TimeUnit;
 
+import static com.aimprosoft.locators.AndroidLocators.ELEMENT_WITH_TEXT_XPATH;
+
 public class CommonElementsPage extends MobilePageObject {
 
     public CommonElementsPage(WebDriver driver) { super(driver);}
@@ -29,7 +31,7 @@ public class CommonElementsPage extends MobilePageObject {
 
     public boolean verifyThatTheWidgetWithTheTextIsPresented(String widgetText) {
         withTimeoutOf(25, TimeUnit.SECONDS)
-                .waitFor(ExpectedConditions.presenceOfElementLocated(By.className("android.widget.TextView")));
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(ELEMENT_WITH_TEXT_XPATH.replace("$1", widgetText))));
         return androidElementByText(widgetText).isDisplayed();
     }
 
@@ -136,7 +138,7 @@ public class CommonElementsPage extends MobilePageObject {
     }
 
     public boolean verifyThatTheWidgetWithTheTextIsNotPresented(String widgetText) {
-        return $(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", widgetText)).isCurrentlyVisible();
+        return $(ELEMENT_WITH_TEXT_XPATH.replace("$1", widgetText)).isCurrentlyVisible();
     }
 
     public void clearTheField(String fieldName) {
