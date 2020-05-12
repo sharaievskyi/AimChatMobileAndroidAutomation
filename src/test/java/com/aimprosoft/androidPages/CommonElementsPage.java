@@ -188,4 +188,14 @@ public class CommonElementsPage extends MobilePageObject {
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText))));
         return $(AndroidLocators.MESSAGE_CONTENT_TEXT_XPATH.replace("$1", messageText)).isVisible();
     }
+
+    public boolean removeDirectRoom(String roomName) {
+        if ($(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isDisplayed()) {
+            longTap(androidElementByText(roomName));
+            waitABit(3000);
+            tap(androidElementByText("Hide conversation"));
+            waitABit(3000);
+        }
+        return $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isCurrentlyVisible();
+    }
 }

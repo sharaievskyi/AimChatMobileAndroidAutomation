@@ -182,4 +182,8 @@ public class CommonUserSteps extends ScenarioSteps {
     public void verifyThatTheTheMessageWasSent(String messageText) {
         Assert.assertTrue("The message was not sent", commonElementsPage.verifyThatTheTheMessageWasSent(messageText));
     }
+    @Step
+    public void removeDirectRoom(String roomName) {
+        Assert.assertFalse("The direct room is not deleted", commonElementsPage.removeDirectRoom(roomName));
+    }
 }

@@ -352,4 +352,9 @@ public class CommonSteps {
     public void theLinkIsNotPresented(String buttonName) {
         steps.verifyThatTheWidgetWithTheTextIsNotPresented(buttonName);
     }
+
+    @Then("remove {string} direct room")
+    public void removeDirectRoom(String roomName) {
+        steps.removeDirectRoom(roomName);
+    }
 }
