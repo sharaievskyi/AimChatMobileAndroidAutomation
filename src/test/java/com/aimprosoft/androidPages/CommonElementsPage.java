@@ -179,8 +179,8 @@ public class CommonElementsPage extends MobilePageObject {
 
     public boolean verifyThatTheDetailsScreenIsOpened(String screenName) {
         withTimeoutOf(25, TimeUnit.SECONDS)
-                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.DETAILS_SCREEN_XPATH.replace("$1", screenName))));
-        return $(AndroidLocators.DETAILS_SCREEN_XPATH.replace("$1", screenName)).isVisible();
+                .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", screenName))));
+        return $(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", screenName)).isVisible();
     }
 
     public boolean verifyThatTheTheMessageWasSent(String messageText) {
