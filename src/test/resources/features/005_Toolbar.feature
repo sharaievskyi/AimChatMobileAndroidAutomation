@@ -177,99 +177,99 @@ Feature: Toolbar
     And tap on the "Apply edit" button
     Then "Name should start from latin symbol or digit" alert is displayed
 
-  Scenario: 5.017 Check add a new members to the public room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "DoctorStrange" room is presented in the left drawer
-    And tap on the "DoctorStrange" room in the left drawer
-    Then the "DoctorStrange" room is opened
-    When tap on the "DoctorStrange" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    And tap on the "Invite members" button
-    And wait while results are refreshed
-    And enter "android" in the "Search user name" input field
-    And tap on the "androidQA2" link
-    And tap on the "Apply select users" button
-    And wait while results are refreshed
-    Then the "Room members" screen is opened
-    Then the "androidQA2" user appear in the Room members screen
+#  Scenario: 5.017 Check add a new members to the public room.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "DoctorStrange" room is presented in the left drawer
+#    And tap on the "DoctorStrange" room in the left drawer
+#    Then the "DoctorStrange" room is opened
+#    When tap on the "DoctorStrange" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    And tap on the "Invite members" button
+#    And wait while results are refreshed
+#    And enter "android" in the "Search user name" input field
+#    And tap on the "androidQA2" link
+#    And tap on the "Apply select users" button
+#    And wait while results are refreshed
+#    Then the "Room members" screen is opened
+#    Then the "androidQA2" user appear in the Room members screen
+#
+#  Scenario: 5.018 Checking delete the members from the public room.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "DoctorStrange" room is presented in the left drawer
+#    And tap on the "DoctorStrange" room in the left drawer
+#    Then the "DoctorStrange" room is opened
+#    When tap on the "DoctorStrange" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    Then the "androidQA2" user appear in the Room members screen
+#    When tap on the "More action" button
+#    And tap on the "Remove from DoctorStrange" link
+#    And wait while results are refreshed
+#    Then the "androidQA2" user disappear in the Room members screen
 
-  Scenario: 5.018 Checking delete the members from the public room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "DoctorStrange" room is presented in the left drawer
-    And tap on the "DoctorStrange" room in the left drawer
-    Then the "DoctorStrange" room is opened
-    When tap on the "DoctorStrange" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    Then the "androidQA2" user appear in the Room members screen
-    When tap on the "More action" button
-    And tap on the "Remove from DoctorStrange" link
-    And wait while results are refreshed
-    Then the "androidQA2" user disappear in the Room members screen
-
-  Scenario: 5.019 Check the "Assign as administrator" function in the "Room members" screen for the public room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "DoctorStrange" room is presented in the left drawer
-    And tap on the "DoctorStrange" room in the left drawer
-    Then the "DoctorStrange" room is opened
-    When tap on the "DoctorStrange" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    And tap on the "Invite members" button
-    And wait while results are refreshed
-    And enter "android" in the "Search user name" input field
-    And tap on the "androidQA2" link
-    And tap on the "Apply select users" button
-    And wait while results are refreshed
-    Then the "Room members" screen is opened
-    Then the "androidQA2" user appear in the Room members screen
-    When tap on the "More action" button
-    And tap on the "Assign as administrator" link
-    Then the "Room members" screen is opened
-    Then the "androidQA2" user is presented under "Administration" section and "androidQA1" user
-    Then the "(admin)" role is presented between "androidQA2" username and "null null" user full name
-
-  Scenario: 5.020 Check the "Reassign owner's rights" function in the "Room members" screen for the public room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "DoctorStrange" room is presented in the left drawer
-    And tap on the "DoctorStrange" room in the left drawer
-    Then the "DoctorStrange" room is opened
-    When tap on the "DoctorStrange" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Reassign owner’s rights" link
-    Then the "androidQA2" user is presented between "Administration" section and "AndroidQA1" user
-    Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
+#  Scenario: 5.019 Check the "Assign as administrator" function in the "Room members" screen for the public room.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "DoctorStrange" room is presented in the left drawer
+#    And tap on the "DoctorStrange" room in the left drawer
+#    Then the "DoctorStrange" room is opened
+#    When tap on the "DoctorStrange" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    And tap on the "Invite members" button
+#    And wait while results are refreshed
+#    And enter "android" in the "Search user name" input field
+#    And tap on the "androidQA2" link
+#    And tap on the "Apply select users" button
+#    And wait while results are refreshed
+#    Then the "Room members" screen is opened
+#    Then the "androidQA2" user appear in the Room members screen
+#    When tap on the "More action" button
+#    And tap on the "Assign as administrator" link
+#    Then the "Room members" screen is opened
+#    Then the "androidQA2" user is presented under "Administration" section and "androidQA1" user
+#    Then the "(admin)" role is presented between "androidQA2" username and "null null" user full name
+#
+#  Scenario: 5.020 Check the "Reassign owner's rights" function in the "Room members" screen for the public room.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "DoctorStrange" room is presented in the left drawer
+#    And tap on the "DoctorStrange" room in the left drawer
+#    Then the "DoctorStrange" room is opened
+#    When tap on the "DoctorStrange" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Reassign owner’s rights" link
+#    Then the "androidQA2" user is presented between "Administration" section and "AndroidQA1" user
+#    Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
 
   Scenario: 5.021 Check the cancel "Delete room" in the "Room Settings" screen for the public room.
     Given login using the properties file
@@ -546,118 +546,118 @@ Feature: Toolbar
     And tap on the "Apply edit" button
     Then "Name should start from latin symbol or digit" alert is displayed
 
-  Scenario: 5.038 Check add a new members to the private room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    When tap on the "Rooms" title
-    Then the "Browse rooms" screen is opened
-    Then the "All" tab is selected
-    And tap on the "Create room" button
-    Then the "Create room" screen is opened
-    And tap on the "Private room" title
-    And enter "Deadpool" in the "Create room name" input field
-    And enter "Wade Winston Wilson" in the "Create room description" input field
-    And tap on the "Apply create room" button
-    Then the "Deadpool" room is opened
-    When tap on the "Deadpool" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    And tap on the "Invite members" button
-    And wait while results are refreshed
-    And enter "android" in the "Search user name" input field
-    And tap on the "androidQA2" link
-    And tap on the "Apply select users" button
-    And wait while results are refreshed
-    Then the "Room members" screen is opened
-    Then the "androidQA2" user appear in the Room members screen
+#  Scenario: 5.038 Check add a new members to the private room.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    When tap on the "Rooms" title
+#    Then the "Browse rooms" screen is opened
+#    Then the "All" tab is selected
+#    And tap on the "Create room" button
+#    Then the "Create room" screen is opened
+#    And tap on the "Private room" title
+#    And enter "Deadpool" in the "Create room name" input field
+#    And enter "Wade Winston Wilson" in the "Create room description" input field
+#    And tap on the "Apply create room" button
+#    Then the "Deadpool" room is opened
+#    When tap on the "Deadpool" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    And tap on the "Invite members" button
+#    And wait while results are refreshed
+#    And enter "android" in the "Search user name" input field
+#    And tap on the "androidQA2" link
+#    And tap on the "Apply select users" button
+#    And wait while results are refreshed
+#    Then the "Room members" screen is opened
+#    Then the "androidQA2" user appear in the Room members screen
 
-  Scenario: 5.039 Checking delete the members from the private room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "Deadpool" room is presented in the left drawer
-    And tap on the "Deadpool" room
-    Then the "Deadpool" room is opened
-    When tap on the "Deadpool" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    Then the "androidQA2" user appear in the Room members screen
-    When tap on the "More action" button
-    And tap on the "Remove from" link
-    And wait while results are refreshed
-    Then the "androidQA2" user disappear in the Room members screen
+#  Scenario: 5.039 Checking delete the members from the private room.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "Deadpool" room is presented in the left drawer
+#    And tap on the "Deadpool" room
+#    Then the "Deadpool" room is opened
+#    When tap on the "Deadpool" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    Then the "androidQA2" user appear in the Room members screen
+#    When tap on the "More action" button
+#    And tap on the "Remove from" link
+#    And wait while results are refreshed
+#    Then the "androidQA2" user disappear in the Room members screen
 
-  Scenario: 5.040 Check the "Assign as administrator" function in the "Room members" screen for the private room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "Deadpool" room is presented in the left drawer
-    And tap on the "Deadpool" room
-    Then the "Deadpool" room is opened
-    When tap on the "Deadpool" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    And tap on the "Invite members" button
-    And wait while results are refreshed
-    And enter "android" in the "Search user name" input field
-    And tap on the "androidQA2" link
-    And tap on the "Apply select users" button
-    And wait while results are refreshed
-    Then the "Room members" screen is opened
-    Then the "androidQA2" user appear in the Room members screen
-    When tap on the Back button
-    Then the "Edit room" screen is opened
-    When tap on the Back button
-    Then the "Room settings" screen is opened
-    When tap on the Back button
-    Then the "Deadpool" room is opened
-    When tap on the "Deadpool" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Assign as administrator" link
-    Then the "Room members" screen is opened
-    Then the "androidQA2" user is presented under "Administration" section and "androidQA1" user
-    Then the "(admin)" role is presented between "androidQA2" username and "null null" user full name
-
-  Scenario: 5.041 Check the "Reassign owner's rights" function in the "Room members" screen for the private room.
-    Given login using the properties file
-    Then the user is logged in
-    Then the "General" room is opened
-    When tap on the "Logo" button
-    Then Left Drawer is opened
-    Then the "Deadpool" room is presented in the left drawer
-    And tap on the "Deadpool" room in the left drawer
-    Then the "Deadpool" room is opened
-    When tap on the "Deadpool" name in the toolbar
-    Then the "Room settings" screen is opened
-    When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
-    When tap on the "Room members" list
-    Then the "Room members" screen is opened
-    When tap on the "More action" button
-    And tap on the "Reassign owner’s rights" link
-    Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
-    Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
+#  Scenario: 5.040 Check the "Assign as administrator" function in the "Room members" screen for the private room.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "Deadpool" room is presented in the left drawer
+#    And tap on the "Deadpool" room
+#    Then the "Deadpool" room is opened
+#    When tap on the "Deadpool" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    And tap on the "Invite members" button
+#    And wait while results are refreshed
+#    And enter "android" in the "Search user name" input field
+#    And tap on the "androidQA2" link
+#    And tap on the "Apply select users" button
+#    And wait while results are refreshed
+#    Then the "Room members" screen is opened
+#    Then the "androidQA2" user appear in the Room members screen
+#    When tap on the Back button
+#    Then the "Edit room" screen is opened
+#    When tap on the Back button
+#    Then the "Room settings" screen is opened
+#    When tap on the Back button
+#    Then the "Deadpool" room is opened
+#    When tap on the "Deadpool" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Assign as administrator" link
+#    Then the "Room members" screen is opened
+#    Then the "androidQA2" user is presented under "Administration" section and "androidQA1" user
+#    Then the "(admin)" role is presented between "androidQA2" username and "null null" user full name
+#
+#  Scenario: 5.041 Check the "Reassign owner's rights" function in the "Room members" screen for the private room.
+#    Given login using the properties file
+#    Then the user is logged in
+#    Then the "General" room is opened
+#    When tap on the "Logo" button
+#    Then Left Drawer is opened
+#    Then the "Deadpool" room is presented in the left drawer
+#    And tap on the "Deadpool" room in the left drawer
+#    Then the "Deadpool" room is opened
+#    When tap on the "Deadpool" name in the toolbar
+#    Then the "Room settings" screen is opened
+#    When tap on the "Edit room" link
+#    Then the "Edit room" screen is opened
+#    When tap on the "Room members" list
+#    Then the "Room members" screen is opened
+#    When tap on the "More action" button
+#    And tap on the "Reassign owner’s rights" link
+#    Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
+#    Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
 
   Scenario: 5.042 Check the cancel "Delete room"  in the "Room Settings" screen for the private room.
     Given login using the properties file
