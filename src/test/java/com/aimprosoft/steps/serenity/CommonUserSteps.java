@@ -186,4 +186,8 @@ public class CommonUserSteps extends ScenarioSteps {
     public void removeDirectRoom(String roomName) {
         Assert.assertFalse("The direct room is not deleted", commonElementsPage.removeDirectRoom(roomName));
     }
+    @Step
+    public void removeRoom(String roomName) {
+        Assert.assertFalse("The room is not deleted", commonElementsPage.removeRoom(roomName));
+    }
 }

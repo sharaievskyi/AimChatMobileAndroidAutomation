@@ -357,4 +357,9 @@ public class CommonSteps {
     public void removeDirectRoom(String roomName) {
         steps.removeDirectRoom(roomName);
     }
+
+    @Then("remove {string} room")
+    public void removeRoom(String roomName) {
+        steps.removeRoom(roomName);
+    }
 }
