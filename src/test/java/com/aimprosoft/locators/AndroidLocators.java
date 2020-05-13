@@ -6,7 +6,7 @@ public interface AndroidLocators {
     String SIGN_IN_TITLE = "sign_in_title";
     String TEXT_INPUT_ERROR = "textinput_error";
     String LOGO = "//android.widget.FrameLayout[contains(@resource-id, '$1')]";
-    String ELEMENT_WITH_TEXT_XPATH = "//android.widget.TextView[@text='$1']";
+    String ELEMENT_WITH_TEXT_XPATH = "//android.widget.TextView[contains(@text, '$1')]";
     String TEAM_NAME = "team_name";
     String FINGERPRINT_AUTHORIZATION_ID = "//android.widget.FrameLayout[contains(@resource-id, 'content')]";
     String PROGRESS_BAR_LOAD_DATA = "//android.widget.ProgressBar[contains(@resource-id, 'progressBarLoadData')]";

@@ -4,6 +4,7 @@ public interface AndroidButtonsLocators {
 
     String CONTINUE = "sign_in_team_continue_btn";
     String SIGN_IN = "sign_in_continue_btn";
+    String SIGN_IN_XPATH = "//android.widget.Button[contains(@resource-id, 'sign_in_continue_btn')]";
     String JOIN = "joinButton";
     String BACK_BTN = "android.widget.ImageButton";
     String MORE_OPTION_BTN = "android.widget.ImageView";

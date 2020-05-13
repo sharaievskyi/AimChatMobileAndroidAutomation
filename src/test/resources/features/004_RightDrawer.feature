@@ -5,7 +5,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
 
   Scenario: 4.002 Check transition by a tap on the "three-dots" button on the top right corner in the private room.
     Given login using the properties file
@@ -17,7 +17,7 @@ Feature: Right drawer
     And tap on the "Thor" room in the left drawer
     Then the "Thor" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
 
   Scenario: 4.003 Check transition by a tap on the "three-dots" button on the top right corner in the direct room.
     Given login using the properties file
@@ -29,14 +29,14 @@ Feature: Right drawer
     And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
 
   Scenario: 4.004 Check "mute" public room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "mute room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -47,7 +47,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "mute room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -63,7 +63,7 @@ Feature: Right drawer
     And tap on the "Hulk" room in the left drawer
     Then the "Hulk" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "mute room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -79,7 +79,7 @@ Feature: Right drawer
     And tap on the "Hulk" room in the left drawer
     Then the "Hulk" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "mute room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -95,7 +95,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "mute room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -111,7 +111,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "mute room" button
     And swipe from left to right
     Then the room "androidQA2" is between "RECENT DIRECTS" section and "testuser2" room
@@ -121,7 +121,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "favorite room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -133,7 +133,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "favorite room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -150,7 +150,7 @@ Feature: Right drawer
     And tap on the "Hulk" room in the left drawer
     Then the "Hulk" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "favorite room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -166,7 +166,7 @@ Feature: Right drawer
     And tap on the "Hulk" room
     Then the "Hulk" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "favorite room" button
     And swipe from left to right
     Then the "FAVORITES" title is not present
@@ -182,7 +182,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "favorite room" button
     And swipe from left to right
     Then Left Drawer is opened
@@ -198,7 +198,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "favorite room" button
     And swipe from left to right
     Then the "FAVORITES" title is not present
@@ -209,7 +209,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     And wait while results are refreshed
     Then the "Room members" screen is opened
@@ -219,7 +219,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     And wait while results are refreshed
     Then the "Room members" screen is opened
@@ -231,7 +231,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     And wait while results are refreshed
     Then the "Room members" screen is opened
@@ -249,7 +249,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     And wait while results are refreshed
     Then the "Room members" screen is opened
@@ -261,7 +261,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
@@ -271,7 +271,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     When tap on the Messages tab
@@ -282,7 +282,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     When tap on the "Files" tab
@@ -293,7 +293,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     When tap on the Back button
@@ -328,7 +328,7 @@ Feature: Right drawer
     And hide the keyboard
     Then the message "qwerty85" sent
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
@@ -366,7 +366,7 @@ Feature: Right drawer
     And hide the keyboard
     Then the message "qwerty87" sent
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
@@ -404,7 +404,7 @@ Feature: Right drawer
     And hide the keyboard
     Then the message "qwerty89" sent
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
@@ -425,7 +425,7 @@ Feature: Right drawer
     And tap on the "IronMan" room in the left drawer
     Then the "IronMan" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
@@ -448,7 +448,7 @@ Feature: Right drawer
     And tap on the "Thor" room in the left drawer
     Then the "Thor" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
@@ -471,7 +471,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "Pinned messages" link in the Right drawer
     Then the "Pinned messages" screen is opened
     Then the "All" tab is selected
@@ -530,7 +530,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
@@ -562,7 +562,7 @@ Feature: Right drawer
     And hide the keyboard
     Then the message "qwerty91" sent
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
@@ -600,7 +600,7 @@ Feature: Right drawer
     And hide the keyboard
     Then the message "qwerty93" sent
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
@@ -638,7 +638,7 @@ Feature: Right drawer
     And hide the keyboard
     Then the message "qwerty95" sent
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
@@ -659,7 +659,7 @@ Feature: Right drawer
     And tap on the "IronMan" room in the left drawer
     Then the "IronMan" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
@@ -682,7 +682,7 @@ Feature: Right drawer
     And tap on the "Thor" room in the left drawer
     Then the "Thor" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
@@ -705,7 +705,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room in the left drawer
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     Then the "All" tab is selected
@@ -765,7 +765,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     When tap on the Back button
@@ -777,7 +777,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Uploaded files" link in the Right drawer
     Then the "Uploaded files" screen is opened
 
@@ -858,7 +858,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Uploaded files" link in the Right drawer
     Then the "Uploaded files" screen is opened
     When tap on the Back button
@@ -870,7 +870,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
 
@@ -879,7 +879,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
@@ -894,7 +894,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
@@ -909,7 +909,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
@@ -929,7 +929,7 @@ Feature: Right drawer
     And tap on the "Hulk" room in the left drawer
     Then the "Hulk" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
@@ -949,7 +949,7 @@ Feature: Right drawer
     And tap on the "Hulk" room in the left drawer
     Then the "Hulk" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
@@ -969,7 +969,7 @@ Feature: Right drawer
     And tap on the "Hulk" room
     Then the "Hulk" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "mute switch" button
@@ -989,7 +989,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "Direct settings" link in the Right drawer
     Then the "Direct settings" screen is opened
     When tap on the "mute switch" button
@@ -1009,7 +1009,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "Direct settings" link in the Right drawer
     Then the "Direct settings" screen is opened
     When tap on the "mute switch" button
@@ -1029,7 +1029,7 @@ Feature: Right drawer
     And tap on the "androidQA2" room
     Then the "androidQA2" direct room is opened
     When tap on the "three dots" button
-    Then the "Direct info" screen is opened
+    Then the "Direct Info" screen is opened
     When tap on the "Direct settings" link in the Right drawer
     Then the "Direct settings" screen is opened
     When tap on the "mute switch" button
@@ -1044,7 +1044,7 @@ Feature: Right drawer
     Then the user is logged in
     Then the "General" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the Back button
@@ -1065,7 +1065,7 @@ Feature: Right drawer
     When tap on the "Join" button
     And wait while results are refreshed
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Leave room" link
@@ -1120,7 +1120,7 @@ Feature: Right drawer
     And tap on the "HumanTorch" room in the left drawer
     Then the "HumanTorch" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Leave room" link
@@ -1212,7 +1212,7 @@ Feature: Right drawer
     And tap on the "MisterFantastic" room in the left drawer
     Then the "MisterFantastic" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -1239,7 +1239,7 @@ Feature: Right drawer
     And tap on the "MisterFantastic" room in the left drawer
     Then the "MisterFantastic" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
@@ -1347,7 +1347,7 @@ Feature: Right drawer
     And tap on the "Storm" room in the left drawer
     Then the "Storm" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -1374,7 +1374,7 @@ Feature: Right drawer
     And tap on the "Storm" room in the left drawer
     Then the "Storm" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
@@ -1415,7 +1415,7 @@ Feature: Right drawer
     And tap on the "Storm" room in the left drawer
     Then the "Storm" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     Then the "testuser2" user appear in the Room members screen
@@ -1434,11 +1434,11 @@ Feature: Right drawer
     And tap on the "CaptainAmerica" room in the left drawer
     Then the "CaptainAmerica" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When change room name to "CaptainMarvel" in the field "Edit room name"
     And tap on the "Apply edit" button
     And wait while results are refreshed
@@ -1458,11 +1458,11 @@ Feature: Right drawer
     And tap on the "CaptainMarvel" room in the left drawer
     Then the "CaptainMarvel" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When change description to "Carol Danvers" in the field "Edit room description"
     And tap on the "Apply edit" button
     And wait while results are refreshed
@@ -1482,7 +1482,7 @@ Feature: Right drawer
 #    When tap on the "Room settings" link in the Right drawer
 #    Then the "Room settings" screen is opened
 #    When tap on the "Edit room" link
-#    Then the "Edit room" screen is opened
+#    Then the "Edit Room" screen is opened
 #    When tap on the "Room members" list
 #    Then the "Room members" screen is opened
 #    Then the "androidQA2" user appear in the Room members screen
@@ -1505,7 +1505,7 @@ Feature: Right drawer
 #    When tap on the "Room settings" link in the Right drawer
 #    Then the "Room settings" screen is opened
 #    When tap on the "Edit room" link
-#    Then the "Edit room" screen is opened
+#    Then the "Edit Room" screen is opened
 #    When tap on the "Room members" list
 #    Then the "Room members" screen is opened
 #    And tap on the "Invite members" button
@@ -1527,11 +1527,11 @@ Feature: Right drawer
     And tap on the "CaptainMarvel" room in the left drawer
     Then the "CaptainMarvel" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     When tap on the "More action" button
@@ -1550,7 +1550,7 @@ Feature: Right drawer
     And tap on the "CaptainMarvel" room in the left drawer
     Then the "CaptainMarvel" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Delete room" link
@@ -1570,7 +1570,7 @@ Feature: Right drawer
     And tap on the "CaptainMarvel" room in the left drawer
     Then the "CaptainMarvel" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Delete room" link
@@ -1592,7 +1592,7 @@ Feature: Right drawer
       And tap on the "Hulk" room in the left drawer
       Then the "Hulk" room is opened
       When tap on the "three dots" button
-      Then the "Room info" screen is opened
+      Then the "Room Info" screen is opened
       When tap on the "Room settings" link in the Right drawer
       Then the "Room settings" screen is opened
       When tap on the "Delete room" link
@@ -1612,7 +1612,7 @@ Feature: Right drawer
     And tap on the "Hulk" room in the left drawer
     Then the "Hulk" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Delete room" link

@@ -41,11 +41,11 @@ Feature: Urgent bugs
     When tap on the "AntMan" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Public room" title
     When tap on the "Apply edit" button
     And wait while results are refreshed
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     And tap on the Back button
     Then the "Room settings" screen is opened
     When tap on the Back button
@@ -53,7 +53,7 @@ Feature: Urgent bugs
     When tap on the "AntMan" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     Then the "public_channel" radio-button is selected
 
   Scenario: 11.005 The app is crashed if open the "Create room" screen. (Bug ID 95005).
@@ -427,7 +427,7 @@ Feature: Urgent bugs
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
 
   Scenario: 11.031 The app crashes when the user send "#" to the chat. (Bug ID 67362)
     When login using the properties file

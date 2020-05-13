@@ -418,7 +418,7 @@ Feature: Message history
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty14" in the field "Message bar input"
     And tap on the "Message bar edit" button
     And wait while results are refreshed
@@ -444,7 +444,7 @@ Feature: Message history
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty16" in the field "Message bar input"
     And tap on the "Message bar edit" button
     And wait while results are refreshed
@@ -470,7 +470,7 @@ Feature: Message history
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty18" in the field "Message bar input"
     And tap on the "Message bar edit" button
     And wait while results are refreshed
@@ -496,7 +496,7 @@ Feature: Message history
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty20" in the field "Message bar input"
     And tap on the "Message bar edit" button
     And wait while results are refreshed
@@ -527,7 +527,7 @@ Feature: Message history
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty22" in the field "Message bar input"
     And tap on the "Message bar edit" button
     And wait while results are refreshed
@@ -558,7 +558,7 @@ Feature: Message history
     When tap on the More option button
     Then the pop-up menu is opened in the message details screen
     And tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty24" in the field "Message bar input"
     And tap on the "Message bar edit" button
     And wait while results are refreshed
