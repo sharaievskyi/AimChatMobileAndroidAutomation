@@ -1080,40 +1080,40 @@ Feature: Right drawer
     Then the "Alfresco" room is not presented in the left drawer
 
   Scenario: 4.079 Check "Leave room" function for private room.
-#    Given the "Sign in to your Team" screen is opened
-#    When enter "chat-demo" in the "Your team url" input field
-#    When tap on the "CONTINUE" button
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When enter "androidQA2@email.com" in the "Login" input field
-#    When enter "qwerty123" in the "Password" input field
-#    And hide the keyboard
-#    And tap on the "SIGN IN" button
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Rooms" title
-#    Then the "Browse rooms" screen is opened
-#    Then the "All" tab is selected
-#    And tap on the "Create room" button
-#    Then the "Create room" screen is opened
-#    And tap on the "Private room" title
-#    And enter "HumanTorch" in the "Create room name" input field
-#    And enter "Johnny Storm" in the "Create room description" input field
-#    And tap on the "Add members" button
-#    Then the "Invite members" screen is opened
-#    And enter "androidQA1" in the "search user name" input field
-#    And tap on the "androidQA1" "username"
-#    And tap on the "Apply select users" button
-#    And tap on the "Apply create room" button
-#    Then the "HumanTorch" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Aimprosoft" link
-#    Then pop-up menu is opened in the Left drawer
-#    When tap on the "Sign out" link
-#    Then the "Sign in to Aimprosoft" screen is opened
-#    When tap on the "Back" button
-#    Then the "Sign in to your Team" screen is opened
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2@email.com" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And tap on the "Private room" title
+    And enter "HumanTorch" in the "Create room name" input field
+    And enter "Johnny Storm" in the "Create room description" input field
+    And tap on the "Add members" button
+    Then the "Invite members" screen is opened
+    And enter "androidQA1" in the "search user name" input field
+    And tap on the "androidQA1" "username"
+    And tap on the "Apply select users" button
+    And tap on the "Apply create room" button
+    Then the "HumanTorch" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1135,15 +1135,15 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the "HumanTorch" room is not presented in the left drawer
 
-#  Scenario: 4.080 Check "Hide conversation" function for direct room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Recent directs" title
-#    Then the "Start direct" screen is opened
-#    When tap on the Search sign
+  Scenario: 4.080 Check "Hide conversation" function for direct room.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Recent directs" title
+    Then the "Start direct" screen is opened
+    When tap on the Search sign
     And wait while input field would be presented
     When enter "testuser" in the "Select users" input field
     When tap on the "testuser1" room
@@ -1158,52 +1158,52 @@ Feature: Right drawer
     Then Left Drawer is opened
     Then the "testuser1" room is not presented in the left drawer
 
-#  Scenario: 4.081 Checking adds users in the public room as the owner through the right drawer.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Rooms" title
-#    Then the "Browse rooms" screen is opened
-#    Then the "All" tab is selected
-#    And tap on the "Create room" button
-#    Then the "Create room" screen is opened
-#    And enter "MisterFantastic" in the "Create room name" input field
-#    And enter "Reed Richards" in the "Create room description" input field
-#    And tap on the "Apply create room" button
-#    Then the "MisterFantastic" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    And tap on the "Invite members" button
-#    And wait while results are refreshed
-#    And enter "android" in the "Search user name" input field
-#    And tap on the "androidQA2" link
-#    And tap on the "Apply select users" button
-#    And wait while results are refreshed
-#    Then the "Room members" screen is opened
-#    Then the "androidQA2" user appear in the Room members screen
+  Scenario: 4.081 Checking adds users in the public room as the owner through the right drawer.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And enter "MisterFantastic" in the "Create room name" input field
+    And enter "Reed Richards" in the "Create room description" input field
+    And tap on the "Apply create room" button
+    Then the "MisterFantastic" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
+    Then the "Room members" screen is opened
+    And tap on the "Invite members" button
+    And wait while results are refreshed
+    And enter "android" in the "Search user name" input field
+    And tap on the "androidQA2" link
+    And tap on the "Apply select users" button
+    And wait while results are refreshed
+    Then the "Room members" screen is opened
+    Then the "androidQA2" user appear in the Room members screen
 
-#  Scenario: 4.082 Checking remove any user from the public room as an owner.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "MisterFantastic" room is presented in the left drawer
-#    And tap on the "MisterFantastic" room in the left drawer
-#    Then the "MisterFantastic" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    Then the "androidQA2" user appear in the Room members screen
-#    When tap on the "More action" button
-#    And tap on the "Remove from MisterFantastic" link
-#    And wait while results are refreshed
-#    Then the "androidQA2" user disappear in the Room members screen
+  Scenario: 4.082 Checking remove any user from the public room as an owner.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "MisterFantastic" room is presented in the left drawer
+    And tap on the "MisterFantastic" room in the left drawer
+    Then the "MisterFantastic" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
+    Then the "Room members" screen is opened
+    Then the "androidQA2" user appear in the Room members screen
+    When tap on the "More action" button
+    And tap on the "Remove from MisterFantastic" link
+    And wait while results are refreshed
+    Then the "androidQA2" user disappear in the Room members screen
 
   Scenario: 4.083 Check change admin rights to another participant in the public room as the an owner.
     Given login using the properties file
@@ -1251,94 +1251,94 @@ Feature: Right drawer
     Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
     Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
 
-#  Scenario: 4.085 Checking adds users in the public room as the admin through the right drawer.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "MisterFantastic" room is presented in the left drawer
-#    And tap on the "MisterFantastic" room in the left drawer
-#    Then the "MisterFantastic" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    And tap on the "Invite members" button
-#    And wait while results are refreshed
-#    And enter "test" in the "Search user name" input field
-#    And tap on the "testuser2" link
-#    And tap on the "Apply select users" button
-#    And wait while results are refreshed
-#    Then the "Room members" screen is opened
-#    Then the "testuser2" user appear in the Room members screen
-#
-#  Scenario: 4.086 Checking remove any user from the public room as an admin.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "MisterFantastic" room is presented in the left drawer
-#    And tap on the "MisterFantastic" room in the left drawer
-#    Then the "MisterFantastic" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    Then the "testuser2" user appear in the Room members screen
-#    When tap on the "More action" button
-#    And tap on the "Remove from MisterFantastic" link
-#    And wait while results are refreshed
-#    Then the "testuser2" user disappear in the Room members screen
+  Scenario: 4.085 Checking adds users in the public room as the admin through the right drawer.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "MisterFantastic" room is presented in the left drawer
+    And tap on the "MisterFantastic" room in the left drawer
+    Then the "MisterFantastic" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
+    Then the "Room members" screen is opened
+    And tap on the "Invite members" button
+    And wait while results are refreshed
+    And enter "test" in the "Search user name" input field
+    And tap on the "testuser2" link
+    And tap on the "Apply select users" button
+    And wait while results are refreshed
+    Then the "Room members" screen is opened
+    Then the "testuser2" user appear in the Room members screen
 
-#  Scenario: 4.087 Checking adds users in the private room as the owner through the right drawer.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Rooms" title
-#    Then the "Browse rooms" screen is opened
-#    Then the "All" tab is selected
-#    And tap on the "Create room" button
-#    Then the "Create room" screen is opened
-#    And tap on the "Private room" title
-#    And enter "Storm" in the "Create room name" input field
-#    And enter "Ororo Munroe" in the "Create room description" input field
-#    And tap on the "Apply create room" button
-#    Then the "Storm" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    And tap on the "Invite members" button
-#    And wait while results are refreshed
-#    And enter "android" in the "Search user name" input field
-#    And tap on the "androidQA2" link
-#    And tap on the "Apply select users" button
-#    And wait while results are refreshed
-#    Then the "Room members" screen is opened
-#    Then the "androidQA2" user appear in the Room members screen
-#
-#  Scenario: 4.088 Checking remove any user from the private room as an owner.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "Storm" room is presented in the left drawer
-#    And tap on the "Storm" room in the left drawer
-#    Then the "Storm" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    Then the "androidQA2" user appear in the Room members screen
-#    When tap on the "More action" button
-#    And tap on the "Remove from Storm" link
-#    And wait while results are refreshed
-#    Then the "androidQA2" user disappear in the Room members screen
+  Scenario: 4.086 Checking remove any user from the public room as an admin.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "MisterFantastic" room is presented in the left drawer
+    And tap on the "MisterFantastic" room in the left drawer
+    Then the "MisterFantastic" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
+    Then the "Room members" screen is opened
+    Then the "testuser2" user appear in the Room members screen
+    When tap on the "More action" button
+    And tap on the "Remove from MisterFantastic" link
+    And wait while results are refreshed
+    Then the "testuser2" user disappear in the Room members screen
+
+  Scenario: 4.087 Checking adds users in the private room as the owner through the right drawer.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And tap on the "Private room" title
+    And enter "Storm" in the "Create room name" input field
+    And enter "Ororo Munroe" in the "Create room description" input field
+    And tap on the "Apply create room" button
+    Then the "Storm" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
+    Then the "Room members" screen is opened
+    And tap on the "Invite members" button
+    And wait while results are refreshed
+    And enter "android" in the "Search user name" input field
+    And tap on the "androidQA2" link
+    And tap on the "Apply select users" button
+    And wait while results are refreshed
+    Then the "Room members" screen is opened
+    Then the "androidQA2" user appear in the Room members screen
+
+  Scenario: 4.088 Checking remove any user from the private room as an owner.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Storm" room is presented in the left drawer
+    And tap on the "Storm" room in the left drawer
+    Then the "Storm" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
+    Then the "Room members" screen is opened
+    Then the "androidQA2" user appear in the Room members screen
+    When tap on the "More action" button
+    And tap on the "Remove from Storm" link
+    And wait while results are refreshed
+    Then the "androidQA2" user disappear in the Room members screen
 
   Scenario: 4.089 Check assign admin rights to another member in the private room as the owner.
     Given login using the properties file
@@ -1386,27 +1386,27 @@ Feature: Right drawer
     Then the "androidQA2" user is presented between "Administration" section and "androidQA1" user
     Then the "(owner)" role is presented between "androidQA2" username and "null null" user full name
 
-#  Scenario: 4.091 Checking adds users in the private room as the admin through the right drawer.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "Storm" room is presented in the left drawer
-#    And tap on the "Storm" room in the left drawer
-#    Then the "Storm" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room members" link in the Right drawer
-#    Then the "Room members" screen is opened
-#    And tap on the "Invite members" button
-#    And wait while results are refreshed
-#    And enter "test" in the "Search user name" input field
-#    And tap on the "testuser2" link
-#    And tap on the "Apply select users" button
-#    And wait while results are refreshed
-#    Then the "Room members" screen is opened
-#    Then the "testuser2" user appear in the Room members screen
+  Scenario: 4.091 Checking adds users in the private room as the admin through the right drawer.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Storm" room is presented in the left drawer
+    And tap on the "Storm" room in the left drawer
+    Then the "Storm" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room members" link in the Right drawer
+    Then the "Room members" screen is opened
+    And tap on the "Invite members" button
+    And wait while results are refreshed
+    And enter "test" in the "Search user name" input field
+    And tap on the "testuser2" link
+    And tap on the "Apply select users" button
+    And wait while results are refreshed
+    Then the "Room members" screen is opened
+    Then the "testuser2" user appear in the Room members screen
 
   Scenario: 4.092 Checking remove any user from the private room as an admin.
     Given login using the properties file
@@ -1471,54 +1471,54 @@ Feature: Right drawer
     And wait while results are refreshed
     Then description "Carol Danvers" of room is present
 
-#  Scenario: 4.095 Check delete members from "Edit list of members" in the "Edit Room" screen for public room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "CaptainMarvel" room is presented in the left drawer
-#    And tap on the "CaptainMarvel" room in the left drawer
-#    Then the "CaptainMarvel" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room settings" link in the Right drawer
-#    Then the "Room settings" screen is opened
-#    When tap on the "Edit room" link
-#    Then the "Edit Room" screen is opened
-#    When tap on the "Room members" list
-#    Then the "Room members" screen is opened
-#    Then the "androidQA2" user appear in the Room members screen
-#    When tap on the "More action" button
-#    And tap on the "Remove from CaptainMarvel" link
-#    And wait while results are refreshed
-#    Then the "androidQA2" user disappear in the Room members screen
+  Scenario: 4.095 Check delete members from "Edit list of members" in the "Edit Room" screen for public room.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "CaptainMarvel" room is presented in the left drawer
+    And tap on the "CaptainMarvel" room in the left drawer
+    Then the "CaptainMarvel" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
+    Then the "Room settings" screen is opened
+    When tap on the "Edit room" link
+    Then the "Edit Room" screen is opened
+    When tap on the "Room members" list
+    Then the "Room members" screen is opened
+    Then the "androidQA2" user appear in the Room members screen
+    When tap on the "More action" button
+    And tap on the "Remove from CaptainMarvel" link
+    And wait while results are refreshed
+    Then the "androidQA2" user disappear in the Room members screen
 
-#  Scenario: 4.096 Check invite members in the "Edit list of members" in the "Edit Room" screen for public room.
-#    Given login using the properties file
-#    Then the user is logged in
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "CaptainMarvel" room is presented in the left drawer
-#    And tap on the "CaptainMarvel" room in the left drawer
-#    Then the "CaptainMarvel" room is opened
-#    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
-#    When tap on the "Room settings" link in the Right drawer
-#    Then the "Room settings" screen is opened
-#    When tap on the "Edit room" link
-#    Then the "Edit Room" screen is opened
-#    When tap on the "Room members" list
-#    Then the "Room members" screen is opened
-#    And tap on the "Invite members" button
-#    And wait while results are refreshed
-#    And enter "android" in the "Search user name" input field
-#    And tap on the "androidQA2" link
-#    And tap on the "Apply select users" button
-#    When tap on the "Room members" list
-#    Then the "Room members" screen is opened
-#    Then the "androidQA2" user appear in the Room members screen
+  Scenario: 4.096 Check invite members in the "Edit list of members" in the "Edit Room" screen for public room.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "CaptainMarvel" room is presented in the left drawer
+    And tap on the "CaptainMarvel" room in the left drawer
+    Then the "CaptainMarvel" room is opened
+    When tap on the "three dots" button
+    Then the "Room info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
+    Then the "Room settings" screen is opened
+    When tap on the "Edit room" link
+    Then the "Edit Room" screen is opened
+    When tap on the "Room members" list
+    Then the "Room members" screen is opened
+    And tap on the "Invite members" button
+    And wait while results are refreshed
+    And enter "android" in the "Search user name" input field
+    And tap on the "androidQA2" link
+    And tap on the "Apply select users" button
+    When tap on the "Room members" list
+    Then the "Room members" screen is opened
+    Then the "androidQA2" user appear in the Room members screen
 
   Scenario: 4.097 Checking assign admin rights.
     Given login using the properties file

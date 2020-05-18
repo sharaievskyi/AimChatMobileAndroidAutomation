@@ -711,5 +711,4 @@ Feature: Left Drawer
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then remove "EvgeniyDisti" direct room
-    Then remove "testuser2" direct room
     Then remove "y.tiutiunnyk" direct room
