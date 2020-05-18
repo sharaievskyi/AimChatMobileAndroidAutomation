@@ -293,10 +293,14 @@ Feature: Left Drawer
     And wait while input field would be presented
     And enter "Alfresco" in the "Search rooms" input field
     Then the "Alfresco" room appears in the Browse rooms search result
-    Then the "Leave" link is presented
+    Then the "LEAVE" link is presented
     When tap on the "Leave" link
+    When tap on the "Search logo" button
+    When tap on the Search sign
+    And wait while input field would be presented
+    When enter "Alfresco" in the "Search rooms" input field
     And wait while results are refreshed
-    Then the "Join" link is presented
+    Then the "JOIN" link is presented
 
   Scenario: 2.022 Check "Leave" room in the "Joined" tab to the "Browse rooms" screen.
     Given the "General" room is opened
@@ -326,90 +330,90 @@ Feature: Left Drawer
     And wait while input field would be presented
     And enter "Alfresco" in the "Search rooms" input field
     Then the "Alfresco" room appears in the Browse rooms search result
-    Then the "Leave" link is presented
+    Then the "LEAVE" link is presented
     When tap on the "Leave" link
     And wait while results are refreshed
     Then the "Alfresco" room does not appear in the Browse rooms search result
 
-#  Scenario: 2.023 Checking creates public room in the "All" tab to the "Browse rooms" screen.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Rooms" title
-#    Then the "Browse rooms" screen is opened
-#    Then the "All" tab is selected
-#    And tap on the "Create room" button
-#    Then the "Create room" screen is opened
-#    And enter "IronMan" in the "Create room name" input field
-#    And enter "Tony Stark" in the "Create room description" input field
+  Scenario: 2.023 Checking creates public room in the "All" tab to the "Browse rooms" screen.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And enter "IronMan" in the "Create room name" input field
+    And enter "Tony Stark" in the "Create room description" input field
 #    And tap on the "Add members" button
 #    Then the "Invite members" screen is opened
 #    And enter "androidQA2" in the "search user name" input field
 #    And tap on the "androidQA2" "username"
 #    And tap on the "Apply select users" button
-#    And tap on the "Apply create room" button
-#    Then the "IronMan" room is opened
+    And tap on the "Apply create room" button
+    Then the "IronMan" room is opened
 
-#  Scenario: 2.024 Checking creates public room in the "Joined" tab to the "Browse rooms" screen.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Rooms" title
-#    Then the "Browse rooms" screen is opened
-#    And tap on the "Joined" tab
-#    Then the "Joined" tab is selected
-#    And tap on the "Create room" button
-#    Then the "Create room" screen is opened
-#    And enter "CaptainAmerica" in the "Create room name" input field
-#    And enter "Steven Rogers" in the "Create room description" input field
+  Scenario: 2.024 Checking creates public room in the "Joined" tab to the "Browse rooms" screen.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    And tap on the "Joined" tab
+    Then the "Joined" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And enter "CaptainAmerica" in the "Create room name" input field
+    And enter "Steven Rogers" in the "Create room description" input field
 #    And tap on the "Add members" button
 #    Then the "Invite members" screen is opened
 #    And enter "androidQA2" in the "search user name" input field
 #    And tap on the "androidQA2" "username"
 #    And tap on the "Apply select users" button
-#    And tap on the "Apply create room" button
-#    Then the "CaptainAmerica" room is opened
+    And tap on the "Apply create room" button
+    Then the "CaptainAmerica" room is opened
 
-#  Scenario: 2.025 Checking creates private room in the "Joined" tab to the "Browse rooms" screen.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Rooms" title
-#    Then the "Browse rooms" screen is opened
-#    And tap on the "Joined" tab
-#    Then the "Joined" tab is selected
-#    And tap on the "Create room" button
-#    Then the "Create room" screen is opened
-#    And tap on the "Private room" title
-#    And enter "Thor" in the "Create room name" input field
-#    And enter "King of Asgard" in the "Create room description" input field
+  Scenario: 2.025 Checking creates private room in the "Joined" tab to the "Browse rooms" screen.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    And tap on the "Joined" tab
+    Then the "Joined" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And tap on the "Private room" title
+    And enter "Thor" in the "Create room name" input field
+    And enter "King of Asgard" in the "Create room description" input field
 #    And tap on the "Add members" button
 #    Then the "Invite members" screen is opened
 #    And enter "androidQA2" in the "search user name" input field
 #    And tap on the "androidQA2" "username"
 #    And tap on the "Apply select users" button
-#    And tap on the "Apply create room" button
-#    Then the "Thor" room is opened
+    And tap on the "Apply create room" button
+    Then the "Thor" room is opened
 
-#  Scenario: 2.026 Checking creates private room in the "All" tab to the "Browse rooms" screen.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    When tap on the "Rooms" title
-#    Then the "Browse rooms" screen is opened
-#    Then the "All" tab is selected
-#    And tap on the "Create room" button
-#    Then the "Create room" screen is opened
-#    And tap on the "Private room" title
-#    And enter "Hulk" in the "Create room name" input field
-#    And enter "Dr. Robert Bruce Banner" in the "Create room description" input field
+  Scenario: 2.026 Checking creates private room in the "All" tab to the "Browse rooms" screen.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Rooms" title
+    Then the "Browse rooms" screen is opened
+    Then the "All" tab is selected
+    And tap on the "Create room" button
+    Then the "Create room" screen is opened
+    And tap on the "Private room" title
+    And enter "Hulk" in the "Create room name" input field
+    And enter "Dr. Robert Bruce Banner" in the "Create room description" input field
 #    And tap on the "Add members" button
 #    Then the "Invite members" screen is opened
 #    And enter "androidQA2" in the "search user name" input field
 #    And tap on the "androidQA2" "username"
 #    And tap on the "Apply select users" button
-#    And tap on the "Apply create room" button
-#    Then the "Hulk" room is opened
+    And tap on the "Apply create room" button
+    Then the "Hulk" room is opened
 
   Scenario: 2.027 Check the clickable "Back" button in the "Browse rooms" screen.
     Given the "General" room is opened
@@ -603,120 +607,109 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "Notification settings" screen is opened
+    Then the "General settings" screen is opened
 
-#  Scenario: 2.053 Check the turn-on the "DND" mode.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    Then the "DND switch" slider is turned "OFF"
-#    When tap on the "DND switch" slider
-#    And tap on the "Apply settings" button
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    Then the "DND switch" slider is turned "ON"
-#
-#  Scenario: 2.054 Check the turn-off the "DND" mode.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    Then the "DND switch" slider is turned "ON"
-#    When tap on the "DND switch" slider
-#    And tap on the "Apply settings" button
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    Then the "DND switch" slider is turned "OFF"
-#
-#  Scenario: 2.057 Check save "Only direct and mentions" function in the "General settings" screen.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    When tap on the "Only direct and mentions" radio button
-#    And tap on the "Apply settings" button
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    Then the "Only direct and mentions" status is saved
-#
-#  Scenario: 2.060 Check save "Nothing" function in the "General settings" screen.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    When tap on the "Nothing" radio button
-#    And tap on the "Apply settings" button
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    Then the "Nothing" status is saved
-#
-#  Scenario: 2.062 Check save "Everything" function in the "General settings" screen.
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    When tap on the "Everything" radio button
-#    And tap on the "Apply settings" button
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    And tap on the "Bell icon" button
-#    Then the "Mute all chat for:" pop-up menu is opened
-#    And tap on the "Notification settings" link
-#    Then the "Notification settings" screen is opened
-#    Then the "Everything" status is saved
+  Scenario: 2.053 Check the turn-on the "DND" mode.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    Then the "DND switch" slider is turned "OFF"
+    When tap on the "DND switch" slider
+    And tap on the "Apply settings" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    Then the "DND switch" slider is turned "ON"
 
-#  Scenario: Postcondition
-#    Given the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "EvgeniyDisti" room is presented in the left drawer
-#    When use long tap on the "EvgeniyDisti" room
-#    And wait while results are refreshed
-#    Then the "Hide conversation" link is presented
-#    And tap on the "Hide conversation" link
-#    And wait while results are refreshed
-#    Then the "EvgeniyDisti" room is deleted from left drawer
-#    Then the "y.tiutiunnyk" room is presented in the left drawer
-#    When use long tap on the "y.tiutiunnyk" room
-#    And wait while results are refreshed
-#    Then the "Hide conversation" link is presented
-#    And tap on the "Hide conversation" link
-#    And wait while results are refreshed
-#    Then the "y.tiutiunnyk" room is deleted from left drawer
+  Scenario: 2.054 Check the turn-off the "DND" mode.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    Then the "DND switch" slider is turned "ON"
+    When tap on the "DND switch" slider
+    And tap on the "Apply settings" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    Then the "DND switch" slider is turned "OFF"
+
+  Scenario: 2.057 Check save "Only direct and mentions" function in the "General settings" screen.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    When tap on the "Only direct and mentions" radio button
+    And tap on the "Apply settings" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    Then the "Only direct and mentions" status is saved
+
+  Scenario: 2.060 Check save "Nothing" function in the "General settings" screen.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    When tap on the "Nothing" radio button
+    And tap on the "Apply settings" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    Then the "Nothing" status is saved
+
+  Scenario: 2.062 Check save "Everything" function in the "General settings" screen.
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    When tap on the "Everything" radio button
+    And tap on the "Apply settings" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    And tap on the "Bell icon" button
+    Then the "Mute all chat for:" pop-up menu is opened
+    And tap on the "Notification settings" link
+    Then the "General settings" screen is opened
+    Then the "Everything" status is saved
+
+  Scenario: Postcondition
+    Given the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then remove "EvgeniyDisti" direct room
+    Then remove "testuser2" direct room
+    Then remove "y.tiutiunnyk" direct room

@@ -2847,7 +2847,7 @@ Feature: Message history
     When long tap on "qwerty58" message in chat history
     Then content pop-up menu is opened
     When tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When tap on the "Cancel edit" button
     Then the chat history is opened
     Then message "qwerty58" is present
@@ -2869,8 +2869,7 @@ Feature: Message history
     When long tap on "qwerty59" message in chat history
     Then content pop-up menu is opened
     When tap on the "Edit message" link
-    Then the "Edit message" screen is opened
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty60" in the field "Message bar input"
     And tap on the "Message bar edit" button
     Then message "qwerty60 (edited)" is present
@@ -2892,7 +2891,7 @@ Feature: Message history
     When long tap on "qwerty61" message in chat history
     Then content pop-up menu is opened
     When tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When tap on the "Cancel edit" button
     Then the chat history is opened
     Then message "qwerty61" is present
@@ -2914,7 +2913,7 @@ Feature: Message history
     When long tap on "qwerty62" message in chat history
     Then content pop-up menu is opened
     When tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty63" in the field "Message bar input"
     And tap on the "Message bar edit" button
     Then message "qwerty63 (edited)" is present
@@ -2936,7 +2935,7 @@ Feature: Message history
     When long tap on "qwerty64" message in chat history
     Then content pop-up menu is opened
     When tap on the "Edit message" link
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When tap on the "Cancel edit" button
     Then the chat history is opened
     Then message "qwerty64" is present
@@ -2958,8 +2957,7 @@ Feature: Message history
     When long tap on "qwerty65" message in chat history
     Then content pop-up menu is opened
     When tap on the "Edit message" link
-    Then the "Edit message" screen is opened
-    Then the "Edit message" screen is opened
+    Then the "Edit Message" screen is opened
     When change message to "qwerty66" in the field "Message bar input"
     And tap on the "Message bar edit" button
     Then message "qwerty66 (edited)" is present

@@ -124,6 +124,7 @@ Feature: Right drawer
     Then the "Room Info" screen is opened
     When tap on the "favorite room" button
     And swipe from left to right
+    And swipe from left to right
     Then Left Drawer is opened
     Then the "Favorites" title is present
     Then the room "General" is between "FAVORITES" and "ROOMS" sections
@@ -135,6 +136,7 @@ Feature: Right drawer
     When tap on the "three dots" button
     Then the "Room Info" screen is opened
     When tap on the "favorite room" button
+    And swipe from left to right
     And swipe from left to right
     Then Left Drawer is opened
     Then the "FAVORITES" title is not present
@@ -1064,6 +1066,7 @@ Feature: Right drawer
     Then the "Alfresco" room is opened
     When tap on the "Join" button
     And wait while results are refreshed
+    And wait while results are refreshed
     When tap on the "three dots" button
     Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
@@ -1141,19 +1144,19 @@ Feature: Right drawer
 #    When tap on the "Recent directs" title
 #    Then the "Start direct" screen is opened
 #    When tap on the Search sign
-#    And wait while input field would be presented
-#    When enter "testuser" in the "Select users" input field
-#    When tap on the "testuser1" room
-#    Then the "testuser1" direct room is opened
-#    When tap on the "three dots" button
-#    Then the "Direct info" screen is opened
-#    When tap on the "Direct settings" link in the Right drawer
-#    Then the "Direct settings" screen is opened
-#    When tap on the "Hide conversation" link
-#    Then the "General" room is opened
-#    When tap on the "Logo" button
-#    Then Left Drawer is opened
-#    Then the "testuser1" room is not presented in the left drawer
+    And wait while input field would be presented
+    When enter "testuser" in the "Select users" input field
+    When tap on the "testuser1" room
+    Then the "testuser1" direct room is opened
+    When tap on the "three dots" button
+    Then the "Direct Info" screen is opened
+    When tap on the "Direct settings" link in the Right drawer
+    Then the "Direct settings" screen is opened
+    When tap on the "Hide conversation" link
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "testuser1" room is not presented in the left drawer
 
 #  Scenario: 4.081 Checking adds users in the public room as the owner through the right drawer.
 #    Given login using the properties file
@@ -1582,25 +1585,25 @@ Feature: Right drawer
     And wait while results are refreshed
     Then the "General" room is opened
 
-    Scenario: 4.100 Check cancel delete room for public room.
-      Given login using the properties file
-      Then the user is logged in
-      Then the "General" room is opened
-      When tap on the "Logo" button
-      Then Left Drawer is opened
-      Then the "Hulk" room is presented in the left drawer
-      And tap on the "Hulk" room in the left drawer
-      Then the "Hulk" room is opened
-      When tap on the "three dots" button
-      Then the "Room Info" screen is opened
-      When tap on the "Room settings" link in the Right drawer
-      Then the "Room settings" screen is opened
-      When tap on the "Delete room" link
-      And wait while results are refreshed
-      When tap on the "Cancel" button
-      Then the "Room settings" screen is opened
-      When tap on the Back button
-      Then the "Hulk" room is opened
+  Scenario: 4.100 Check cancel delete room for public room.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Hulk" room is presented in the left drawer
+    And tap on the "Hulk" room in the left drawer
+    Then the "Hulk" room is opened
+    When tap on the "three dots" button
+    Then the "Room Info" screen is opened
+    When tap on the "Room settings" link in the Right drawer
+    Then the "Room settings" screen is opened
+    When tap on the "Delete room" link
+    And wait while results are refreshed
+    When tap on the "Cancel" button
+    Then the "Room settings" screen is opened
+    When tap on the Back button
+    Then the "Hulk" room is opened
 
   Scenario: 4.101 Check "Delete room" function for private room.
     Given login using the properties file

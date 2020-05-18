@@ -191,10 +191,19 @@ public class CommonElementsPage extends MobilePageObject {
 
     public boolean removeDirectRoom(String roomName) {
         if ($(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isVisible()) {
-            longTap(androidElementByText(roomName));
-            waitABit(3000);
-            tap(androidElementByText("Hide conversation"));
-            waitABit(3000);
+            tap(androidElementByText(roomName));
+            withTimeoutOf(60, TimeUnit.SECONDS)
+                    .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.DIRECT_ROOM_NAME_XPATH.replace("$1", roomName))));
+            $$(getButtonLocator("THREE_DOTS")).click();
+            withTimeoutOf(25, TimeUnit.SECONDS)
+                    .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", "Direct Info"))));
+            $(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", "Direct settings")).click();
+            withTimeoutOf(25, TimeUnit.SECONDS)
+                    .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", "Hide conversation"))));
+            $(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", "Hide conversation")).click();
+            withTimeoutOf(60, TimeUnit.SECONDS)
+                    .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(AndroidLocators.ROOM_TITLE_NAME_XPATH.replace("$1", "General"))));
+            $$(getButtonLocator("LOGO")).click();
         }
         return $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isCurrentlyVisible();
     }
