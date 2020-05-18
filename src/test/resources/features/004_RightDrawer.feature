@@ -1174,7 +1174,7 @@ Feature: Right drawer
     And tap on the "Apply create room" button
     Then the "MisterFantastic" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -1196,7 +1196,7 @@ Feature: Right drawer
     And tap on the "MisterFantastic" room in the left drawer
     Then the "MisterFantastic" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
@@ -1261,7 +1261,7 @@ Feature: Right drawer
     And tap on the "MisterFantastic" room in the left drawer
     Then the "MisterFantastic" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -1283,7 +1283,7 @@ Feature: Right drawer
     And tap on the "MisterFantastic" room in the left drawer
     Then the "MisterFantastic" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     Then the "testuser2" user appear in the Room members screen
@@ -1309,7 +1309,7 @@ Feature: Right drawer
     And tap on the "Apply create room" button
     Then the "Storm" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -1331,7 +1331,7 @@ Feature: Right drawer
     And tap on the "Storm" room in the left drawer
     Then the "Storm" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
@@ -1396,7 +1396,7 @@ Feature: Right drawer
     And tap on the "Storm" room in the left drawer
     Then the "Storm" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room members" link in the Right drawer
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -1481,7 +1481,7 @@ Feature: Right drawer
     And tap on the "CaptainMarvel" room in the left drawer
     Then the "CaptainMarvel" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
@@ -1504,7 +1504,7 @@ Feature: Right drawer
     And tap on the "CaptainMarvel" room in the left drawer
     Then the "CaptainMarvel" room is opened
     When tap on the "three dots" button
-    Then the "Room info" screen is opened
+    Then the "Room Info" screen is opened
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
