@@ -84,8 +84,7 @@ Feature: Toolbar
     Then the "Edit Room" screen is opened
     When change room name to "DoctorStrange" in the field "Edit room name"
     And tap on the "Apply edit" button
-    And wait while results are refreshed
-    Then name "DoctorStrange" of room is present
+    And wait while progress bar is disappeared
     When tap on the Back button
     Then the "Room settings" screen is opened
     When tap on the Back button
@@ -189,7 +188,7 @@ Feature: Toolbar
     When tap on the "DoctorStrange" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -213,7 +212,7 @@ Feature: Toolbar
     When tap on the "DoctorStrange" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
@@ -234,7 +233,7 @@ Feature: Toolbar
     When tap on the "DoctorStrange" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -263,7 +262,7 @@ Feature: Toolbar
     When tap on the "DoctorStrange" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     When tap on the "More action" button
@@ -309,7 +308,7 @@ Feature: Toolbar
     When tap on the "Delete room" link
     And wait while results are refreshed
     When tap on the "Accept" button
-    And wait while results are refreshed
+    And wait while progress bar is disappeared
     Then "The public room #Batman has been deleted" alert is displayed
     When tap on the "Ok button" button
     And wait while results are refreshed
@@ -453,8 +452,7 @@ Feature: Toolbar
     Then the "Edit Room" screen is opened
     When change room name to "GhostRider" in the field "Edit room name"
     And tap on the "Apply edit" button
-    And wait while results are refreshed
-    Then name "GhostRider" of room is present
+    And wait while progress bar is disappeared
     When tap on the Back button
     Then the "Room settings" screen is opened
     When tap on the Back button
@@ -565,7 +563,7 @@ Feature: Toolbar
     When tap on the "Deadpool" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -589,7 +587,7 @@ Feature: Toolbar
     When tap on the "Deadpool" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
@@ -610,7 +608,7 @@ Feature: Toolbar
     When tap on the "Deadpool" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -630,7 +628,7 @@ Feature: Toolbar
     When tap on the "Deadpool" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     When tap on the "More action" button
@@ -651,7 +649,7 @@ Feature: Toolbar
     When tap on the "Deadpool" name in the toolbar
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     When tap on the "More action" button
@@ -691,7 +689,7 @@ Feature: Toolbar
     When tap on the "Delete room" link
     And wait while results are refreshed
     When tap on the "Accept" button
-    And wait while results are refreshed
+    And wait while progress bar is disappeared
     Then "The private room #GhostRider has been deleted" alert is displayed
     When tap on the "Ok button" button
     And wait while results are refreshed

@@ -30,7 +30,7 @@ public class CommonElementsPage extends MobilePageObject {
     }
 
     public boolean verifyThatTheWidgetWithTheTextIsPresented(String widgetText) {
-        withTimeoutOf(25, TimeUnit.SECONDS)
+        withTimeoutOf(60, TimeUnit.SECONDS)
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(ELEMENT_WITH_TEXT_XPATH.replace("$1", widgetText))));
         return androidElementByText(widgetText).isDisplayed();
     }
@@ -235,5 +235,22 @@ public class CommonElementsPage extends MobilePageObject {
             $$(getButtonLocator("LOGO")).click();
         }
         return $(AndroidLocators.ROOM_NAME_LEFT_DRAWER_XPATH.replace("$1", roomName)).isCurrentlyVisible();
+    }
+
+    public void waitWhileElementToBeVisible(int waitSec, String xpath) {
+        waitABit(250);
+        int counter = 0;
+        while (!(findBy(xpath).isVisible()) && (counter < 5)) {
+            waitABit(waitSec);
+            counter++;
+        }
+    }
+
+    public void waitWhileElementToBeInvisible(int waitSec, String xpath) {
+        int counter = 0;
+        while ((findBy(xpath).isVisible()) && (counter <= 60)) {
+            waitABit(waitSec);
+            counter++;
+        }
     }
 }

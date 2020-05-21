@@ -346,11 +346,11 @@ Feature: Left Drawer
     Then the "Create room" screen is opened
     And enter "IronMan" in the "Create room name" input field
     And enter "Tony Stark" in the "Create room description" input field
-#    And tap on the "Add members" button
-#    Then the "Invite members" screen is opened
-#    And enter "androidQA2" in the "search user name" input field
-#    And tap on the "androidQA2" "username"
-#    And tap on the "Apply select users" button
+    And tap on the "Add members" button
+    Then the "Invite members" screen is opened
+    And enter "androidQA2" in the "search user name" input field
+    And tap on the "androidQA2" "username"
+    And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "IronMan" room is opened
 
@@ -366,11 +366,11 @@ Feature: Left Drawer
     Then the "Create room" screen is opened
     And enter "CaptainAmerica" in the "Create room name" input field
     And enter "Steven Rogers" in the "Create room description" input field
-#    And tap on the "Add members" button
-#    Then the "Invite members" screen is opened
-#    And enter "androidQA2" in the "search user name" input field
-#    And tap on the "androidQA2" "username"
-#    And tap on the "Apply select users" button
+    And tap on the "Add members" button
+    Then the "Invite members" screen is opened
+    And enter "androidQA2" in the "search user name" input field
+    And tap on the "androidQA2" "username"
+    And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "CaptainAmerica" room is opened
 
@@ -387,11 +387,11 @@ Feature: Left Drawer
     And tap on the "Private room" title
     And enter "Thor" in the "Create room name" input field
     And enter "King of Asgard" in the "Create room description" input field
-#    And tap on the "Add members" button
-#    Then the "Invite members" screen is opened
-#    And enter "androidQA2" in the "search user name" input field
-#    And tap on the "androidQA2" "username"
-#    And tap on the "Apply select users" button
+    And tap on the "Add members" button
+    Then the "Invite members" screen is opened
+    And enter "androidQA2" in the "search user name" input field
+    And tap on the "androidQA2" "username"
+    And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "Thor" room is opened
 
@@ -407,11 +407,11 @@ Feature: Left Drawer
     And tap on the "Private room" title
     And enter "Hulk" in the "Create room name" input field
     And enter "Dr. Robert Bruce Banner" in the "Create room description" input field
-#    And tap on the "Add members" button
-#    Then the "Invite members" screen is opened
-#    And enter "androidQA2" in the "search user name" input field
-#    And tap on the "androidQA2" "username"
-#    And tap on the "Apply select users" button
+    And tap on the "Add members" button
+    Then the "Invite members" screen is opened
+    And enter "androidQA2" in the "search user name" input field
+    And tap on the "androidQA2" "username"
+    And tap on the "Apply select users" button
     And tap on the "Apply create room" button
     Then the "Hulk" room is opened
 

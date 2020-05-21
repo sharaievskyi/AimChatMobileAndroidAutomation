@@ -1,6 +1,7 @@
 package com.aimprosoft.steps.serenity;
 
 import com.aimprosoft.androidPages.CommonElementsPage;
+import com.aimprosoft.locators.AndroidLocators;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.junit.Assert;
@@ -189,5 +190,10 @@ public class CommonUserSteps extends ScenarioSteps {
     @Step
     public void removeRoom(String roomName) {
         Assert.assertFalse("The room is not deleted", commonElementsPage.removeRoom(roomName));
+    }
+    @Step
+    public void waitWhileProgressBarIsDisappeared() {
+        commonElementsPage.waitWhileElementToBeVisible(200, AndroidLocators.PROGRESS_BAR);
+        commonElementsPage.waitWhileElementToBeInvisible(500, AndroidLocators.PROGRESS_BAR);
     }
 }

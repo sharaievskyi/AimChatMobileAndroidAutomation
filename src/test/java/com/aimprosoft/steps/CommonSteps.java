@@ -362,4 +362,9 @@ public class CommonSteps {
     public void removeRoom(String roomName) {
         steps.removeRoom(roomName);
     }
+
+    @And("wait while progress bar is disappeared")
+    public void waitWhileProgressBarIsDisappeared() {
+        steps.waitWhileProgressBarIsDisappeared();
+    }
 }

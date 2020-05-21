@@ -86,7 +86,7 @@ public class MobilePageObject extends PageObject {
 
     public void horizontalSwipeFromLeftToRight() {
         TouchAction action = new TouchAction(AndroidWebDriver.driver());
-        action.longPress(50, 200, Duration.ofSeconds(1)).moveTo(900, 200).release().perform();
+        action.longPress(20, 500, Duration.ofSeconds(1)).moveTo(900, 500).release().perform();
     }
 
     public void horizontalSwipeFromRightToLeft() {

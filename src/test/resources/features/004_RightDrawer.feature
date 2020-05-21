@@ -35,23 +35,33 @@ Feature: Right drawer
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
     When tap on the "three dots" button
     Then the "Room Info" screen is opened
     When tap on the "mute room" button
     And swipe from left to right
     Then Left Drawer is opened
-    Then the room "General" is between "Thor" room and "RECENT DIRECTS" section
+    Then the room "IronMan" is between "Thor" room and "RECENT DIRECTS" section
 
   Scenario: 4.005 Check to unmute public room through the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
     When tap on the "three dots" button
     Then the "Room Info" screen is opened
     When tap on the "mute room" button
     And swipe from left to right
     Then Left Drawer is opened
-    Then the room "General" is between "CaptainAmerica" and "Hulk" rooms
+    Then the room "IronMan" is between "Hulk" and "SpiderMan" rooms
 
   Scenario: 4.006 Check "mute" private room through the right panel.
     Given login using the properties file
@@ -83,7 +93,7 @@ Feature: Right drawer
     When tap on the "mute room" button
     And swipe from left to right
     Then Left Drawer is opened
-    Then the room "Hulk" is between "General" and "IronMan" rooms
+    Then the room "Hulk" is between "CaptainAmerica" and "IronMan" rooms
 
   Scenario: 4.008 Check "mute" direct room through the right panel.
     Given login using the properties file
@@ -486,6 +496,7 @@ Feature: Right drawer
     Then the pinned message "qwerty88" is open in chat history
     Then message "qwerty88" marked as "pinned"
 
+# *************************************************************************************************************
 
 #  Scenario: 4.030 Check transition to pinned message in chat history for public room by click on the message in "Files" tab.
 #    When swipe from right to left
@@ -526,11 +537,17 @@ Feature: Right drawer
 #    And wait while results are refreshed
 #    Then the pinned message "" is open in chat history
 
+#  ****************************************************************************************************************
 
   Scenario: 4.033 Check for clickable "Starred messages" list in the right panel.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
     When tap on the "three dots" button
     Then the "Room Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
@@ -719,9 +736,9 @@ Feature: Right drawer
     And wait while results are refreshed
     Then the pinned message "qwerty94" is open in chat history
     Then message "qwerty94" marked as "starred"
+
+
 #    **********************************************************************************************************
-
-
 
 #  Scenario: 4.040 Check transition to starred message in chat history for public room by click on the file in the "Files" tab.
 #    When swipe from right to left
@@ -762,17 +779,25 @@ Feature: Right drawer
 #    And wait while results are refreshed
 #    Then the pinned message "" is open in chat history
 
+#  ***********************************************************************************************************
+
+
   Scenario: 4.043 Check for clickable "Back" button in the "Starred messages" list.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
     When tap on the "three dots" button
     Then the "Room Info" screen is opened
     When tap on the "Starred messages" link in the Right drawer
     Then the "Starred messages" screen is opened
     When tap on the Back button
     Then the chat history is opened
-    Then the "General" room is opened
+    Then the "IronMan" room is opened
 
   Scenario: 4.044 Check for clickable "Uploaded files" list in the right panel.
     Given login using the properties file
@@ -782,6 +807,9 @@ Feature: Right drawer
     Then the "Room Info" screen is opened
     When tap on the "Uploaded files" link in the Right drawer
     Then the "Uploaded files" screen is opened
+
+
+#  ********************************************************************************************************
 
 #  Scenario: 4.045 Check transition to uploaded files in chat history for public room by click on the files in the "By all members" tab.
 #    When swipe from right to left
@@ -854,6 +882,10 @@ Feature: Right drawer
 #    When tap on the "" uploaded file
 #    And wait while results are refreshed
 #    Then the uploaded file "" is open in chat history
+
+#  *******************************************************************************************************
+
+
 
   Scenario: 4.051 Check for clickable "Back" button in the "Uploaded files" list.
     Given login using the properties file
@@ -1444,8 +1476,7 @@ Feature: Right drawer
     Then the "Edit Room" screen is opened
     When change room name to "CaptainMarvel" in the field "Edit room name"
     And tap on the "Apply edit" button
-    And wait while results are refreshed
-    Then name "CaptainMarvel" of room is present
+    And wait while progress bar is disappeared
     When tap on the Back button
     Then the "Room settings" screen is opened
     When tap on the Back button
@@ -1468,7 +1499,13 @@ Feature: Right drawer
     Then the "Edit Room" screen is opened
     When change description to "Carol Danvers" in the field "Edit room description"
     And tap on the "Apply edit" button
-    And wait while results are refreshed
+    And wait while progress bar is disappeared
+    When tap on the Back button
+    Then the "Room settings" screen is opened
+    When tap on the Back button
+    Then the "CaptainMarvel" room is opened
+    When tap on the "three dots" button
+    Then the "Room Info" screen is opened
     Then description "Carol Danvers" of room is present
 
   Scenario: 4.095 Check delete members from "Edit list of members" in the "Edit Room" screen for public room.
