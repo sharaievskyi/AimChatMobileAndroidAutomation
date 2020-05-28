@@ -1616,7 +1616,7 @@ Feature: Right drawer
     When tap on the "Delete room" link
     And wait while results are refreshed
     When tap on the "Accept" button
-    And wait while results are refreshed
+    And wait while progress bar is disappeared
     Then "The public room #CaptainMarvel has been deleted" alert is displayed
     When tap on the "Ok button" button
     And wait while results are refreshed

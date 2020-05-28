@@ -620,7 +620,7 @@ Feature: Toolbar
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
     When tap on the Back button
-    Then the "Edit room" screen is opened
+    Then the "Edit Room" screen is opened
     When tap on the Back button
     Then the "Room settings" screen is opened
     When tap on the Back button
