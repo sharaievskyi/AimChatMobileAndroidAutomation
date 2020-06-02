@@ -253,4 +253,14 @@ public class CommonElementsPage extends MobilePageObject {
             counter++;
         }
     }
+
+    public void markAllMessagesAsRead() {
+        if ($(AndroidLocators.UNREAD_COUNT_ICON).isVisible()) {
+            longTap($(AndroidLocators.UNREAD_COUNT_ICON));
+            withTimeoutOf(25, TimeUnit.SECONDS)
+                    .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(ELEMENT_WITH_TEXT_XPATH.replace("$1", "Mark all as read"))));
+            tap($(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", "Mark all as read")));
+            waitABit(3000);
+        }
+    }
 }

@@ -1473,7 +1473,7 @@ Feature: Right drawer
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit Room" screen is opened
+    Then the "Edit room" screen is opened
     When change room name to "CaptainMarvel" in the field "Edit room name"
     And tap on the "Apply edit" button
     And wait while progress bar is disappeared
@@ -1496,7 +1496,7 @@ Feature: Right drawer
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit Room" screen is opened
+    Then the "Edit room" screen is opened
     When change description to "Carol Danvers" in the field "Edit room description"
     And tap on the "Apply edit" button
     And wait while progress bar is disappeared
@@ -1522,7 +1522,7 @@ Feature: Right drawer
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit Room" screen is opened
+    Then the "Edit room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     Then the "androidQA2" user appear in the Room members screen
@@ -1545,7 +1545,7 @@ Feature: Right drawer
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit Room" screen is opened
+    Then the "Edit room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     And tap on the "Invite members" button
@@ -1571,7 +1571,7 @@ Feature: Right drawer
     When tap on the "Room settings" link in the Right drawer
     Then the "Room settings" screen is opened
     When tap on the "Edit room" link
-    Then the "Edit Room" screen is opened
+    Then the "Edit room" screen is opened
     When tap on the "Room members" list
     Then the "Room members" screen is opened
     When tap on the "More action" button

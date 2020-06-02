@@ -1451,9 +1451,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
@@ -1497,9 +1498,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
@@ -1555,9 +1557,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Thor" room is presented in the left drawer
@@ -1607,9 +1610,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
@@ -1659,9 +1663,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
@@ -1707,9 +1712,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Thor" room is presented in the left drawer
@@ -1755,9 +1761,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
@@ -1803,9 +1810,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
@@ -1857,9 +1865,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Thor" room is presented in the left drawer
@@ -1911,9 +1920,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
@@ -1965,9 +1975,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
@@ -2019,9 +2030,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Thor" room is presented in the left drawer
@@ -2073,9 +2085,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
@@ -2127,9 +2140,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
@@ -2190,9 +2204,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Thor" room is presented in the left drawer
@@ -2253,9 +2268,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
@@ -2316,9 +2332,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
@@ -2371,9 +2388,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Thor" room is presented in the left drawer
@@ -2426,9 +2444,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer
@@ -2481,9 +2500,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "IronMan" room is presented in the left drawer
@@ -2532,9 +2552,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "Thor" room is presented in the left drawer
@@ -2583,9 +2604,10 @@ Feature: Message history
     When login using the properties file
     Then the user is logged in
     Then the "General" room is opened
-    When long tap on the "Logo"
-    And tap on the "Mark all as read" link
-    And wait while results are refreshed
+    When mark all messages as read if there are new messages
+#    When long tap on the "Logo"
+#    And tap on the "Mark all as read" link
+#    And wait while results are refreshed
     When tap on the "Logo" button
     Then Left Drawer is opened
     Then the "androidQA2" room is presented in the left drawer

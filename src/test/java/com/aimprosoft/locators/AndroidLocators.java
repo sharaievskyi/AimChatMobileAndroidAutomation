@@ -11,6 +11,7 @@ public interface AndroidLocators {
     String FINGERPRINT_AUTHORIZATION_ID = "//android.widget.FrameLayout[contains(@resource-id, 'content')]";
     String PROGRESS_BAR_LOAD_DATA = "//android.widget.ProgressBar[contains(@resource-id, 'progressBarLoadData')]";
     String PROGRESS_BAR = "//android.widget.ProgressBar";
+    String UNREAD_COUNT_ICON = "//android.widget.TextView[contains(@resource-id, 'unread_count_icon')]";
 
     // Room screen
     String ROOM_TITLE_NAME_ID = "toolbar_title";

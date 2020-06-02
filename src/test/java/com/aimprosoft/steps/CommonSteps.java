@@ -367,4 +367,9 @@ public class CommonSteps {
     public void waitWhileProgressBarIsDisappeared() {
         steps.waitWhileProgressBarIsDisappeared();
     }
+
+    @When("mark all messages as read if there are new messages")
+    public void markAllMessagesAsRead() {
+        steps.markAllMessagesAsRead();
+    }
 }

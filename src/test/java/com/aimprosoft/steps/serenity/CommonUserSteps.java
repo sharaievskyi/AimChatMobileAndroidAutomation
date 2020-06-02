@@ -196,4 +196,8 @@ public class CommonUserSteps extends ScenarioSteps {
         commonElementsPage.waitWhileElementToBeVisible(200, AndroidLocators.PROGRESS_BAR);
         commonElementsPage.waitWhileElementToBeInvisible(500, AndroidLocators.PROGRESS_BAR);
     }
+    @Step
+    public void markAllMessagesAsRead() {
+        commonElementsPage.markAllMessagesAsRead();
+    }
 }

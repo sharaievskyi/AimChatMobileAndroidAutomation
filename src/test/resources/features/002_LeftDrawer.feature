@@ -607,7 +607,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
 
   Scenario: 2.053 Check the turn-on the "DND" mode.
     Given the "General" room is opened
@@ -616,7 +616,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     Then the "DND switch" slider is turned "OFF"
     When tap on the "DND switch" slider
     And tap on the "Apply settings" button
@@ -626,7 +626,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     Then the "DND switch" slider is turned "ON"
 
   Scenario: 2.054 Check the turn-off the "DND" mode.
@@ -636,7 +636,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     Then the "DND switch" slider is turned "ON"
     When tap on the "DND switch" slider
     And tap on the "Apply settings" button
@@ -646,7 +646,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settingss" screen is opened
     Then the "DND switch" slider is turned "OFF"
 
   Scenario: 2.057 Check save "Only direct and mentions" function in the "General settings" screen.
@@ -656,7 +656,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     When tap on the "Only direct and mentions" radio button
     And tap on the "Apply settings" button
     Then the "General" room is opened
@@ -665,7 +665,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     Then the "Only direct and mentions" status is saved
 
   Scenario: 2.060 Check save "Nothing" function in the "General settings" screen.
@@ -675,7 +675,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     When tap on the "Nothing" radio button
     And tap on the "Apply settings" button
     Then the "General" room is opened
@@ -684,7 +684,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     Then the "Nothing" status is saved
 
   Scenario: 2.062 Check save "Everything" function in the "General settings" screen.
@@ -694,7 +694,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     When tap on the "Everything" radio button
     And tap on the "Apply settings" button
     Then the "General" room is opened
@@ -703,7 +703,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "General settings" screen is opened
+    Then the "Notification settings" screen is opened
     Then the "Everything" status is saved
 
   Scenario: Postcondition
