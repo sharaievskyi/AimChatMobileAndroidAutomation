@@ -105,4 +105,9 @@ public class RightDrawerSteps {
     public void theRoleIsPresentedOnTheRight(String role, String userName) {
         steps.verifyThatTheUsersRoleIsPresentedOnTheRightUserName(role, userName);
     }
+
+    @When("tap on the Reassign new owner link")
+    public void tapOnTheReassignNewOwnerLink() {
+        steps.tapOnTheReassignNewOwnerLink();
+    }
 }

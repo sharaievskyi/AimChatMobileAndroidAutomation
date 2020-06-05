@@ -914,7 +914,100 @@ Feature: Message history
     Then message "qwerty36" is present
     Then mark as "pinned" disappears
 
-  Scenario: 3.039 Check add reaction in "Message details screen" in public room.
+  Scenario: 3.033 Check copy text from "Message details screen" in public room and send copied text in other public room.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    When tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "copy message 1" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 1" sent
+    And tap on "copy message 1" message in chat history
+    Then the "Message" details screen is opened
+    Then message "copy message 1" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Copy text" link
+    When tap on the Back button
+    Then the chat history is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "CaptainAmerica" room is presented in the left drawer
+    When tap on the "CaptainAmerica" room in the left drawer
+    Then the "CaptainAmerica" room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 1" sent
+
+  Scenario: 3.034 Check copy text from "Message details screen" in private room and  send copied text in other private room.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "SpiderMan" room is presented in the left drawer
+    When tap on the "SpiderMan" room in the left drawer
+    Then the "SpiderMan" room is opened
+    When enter "copy message 2" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 2" sent
+    And tap on "copy message 2" message in chat history
+    Then the "Message" details screen is opened
+    Then message "copy message 2" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Copy text" link
+    When tap on the Back button
+    Then the chat history is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    When tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 2" sent
+
+  Scenario: 3.035 Check copy text from "Message details screen" in direct room and send copied text in other direct room.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    When enter "copy message 3" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 3" sent
+    And tap on "copy message 3" message in chat history
+    Then the "Message" details screen is opened
+    Then message "copy message 3" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Copy text" link
+    When tap on the Back button
+    Then the chat history is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "testuser2" room is presented in the left drawer
+    And tap on the "testuser2" room in the left drawer
+    Then the "atestuser2" direct room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 3" sent
+
+  Scenario: 3.036 Check add reaction in "Message details screen" in public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -951,7 +1044,7 @@ Feature: Message history
     When select "🇧🇮" "emoji_icon" reaction
     Then reaction "🇧🇮" is added
 
-  Scenario: 3.040 Check add reaction in "Message details screen" in private room.
+  Scenario: 3.037 Check add reaction in "Message details screen" in private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -988,7 +1081,7 @@ Feature: Message history
     When select "🇧🇮" "emoji_icon" reaction
     Then reaction "🇧🇮" is added
 
-  Scenario: 3.041 Check add reaction in "Message details screen" in direct room.
+  Scenario: 3.038 Check add reaction in "Message details screen" in direct room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1025,7 +1118,7 @@ Feature: Message history
     When select "🇧🇮" "emoji_icon" reaction
     Then reaction "🇧🇮" is added
 
-  Scenario: 3.042 Check add "reaction" button near with any added emoji under the message in "Message details screen" in direct room.
+  Scenario: 3.039 Check add "reaction" button near with any added emoji under the message in "Message details screen" in direct room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1054,7 +1147,7 @@ Feature: Message history
     When select "😶" "emoji_icon" reaction
     Then reaction "😶" is added
 
-  Scenario: 3.043 Check add "reaction" button near with any added emoji under the message in "Message details screen" in private room.
+  Scenario: 3.040 Check add "reaction" button near with any added emoji under the message in "Message details screen" in private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1083,7 +1176,7 @@ Feature: Message history
     When select "🤗" "emoji_icon" reaction
     Then reaction "🤗" is added
 
-  Scenario: 3.044 Check add "reaction" button near with any added emoji under the message in "Message details screen" in public room.
+  Scenario: 3.041 Check add "reaction" button near with any added emoji under the message in "Message details screen" in public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1112,7 +1205,7 @@ Feature: Message history
     When select "😉" "emoji_icon" reaction
     Then reaction "😉" is added
 
-  Scenario: 3.045 Check delete "reaction" by tap on the any reactions in "Message details screen" in public room.
+  Scenario: 3.042 Check delete "reaction" by tap on the any reactions in "Message details screen" in public room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1137,7 +1230,7 @@ Feature: Message history
     When tap on the "😂" reaction
     Then reaction "😂" is deleted
 
-  Scenario: 3.046 Check delete "reaction" by tap on the any reactions in "Message details screen" in private room.
+  Scenario: 3.043 Check delete "reaction" by tap on the any reactions in "Message details screen" in private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1162,7 +1255,7 @@ Feature: Message history
     When tap on the "😘" reaction
     Then reaction "😘" is deleted
 
-  Scenario: 3.047 Check delete "reaction" by tap on the any reactions in "Message details screen" in direct room.
+  Scenario: 3.044 Check delete "reaction" by tap on the any reactions in "Message details screen" in direct room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1187,7 +1280,7 @@ Feature: Message history
     When tap on the "🤑" reaction
     Then reaction "🤑" is deleted
 
-  Scenario: 3.048 Check cancel deleting message from public room in "Message details screen".
+  Scenario: 3.045 Check cancel deleting message from public room in "Message details screen".
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1211,7 +1304,7 @@ Feature: Message history
     Then the "Message" details screen is opened
     Then message "qwerty46" is present
 
-  Scenario: 3.049 Check delete message from public room in "Message details screen".
+  Scenario: 3.046 Check delete message from public room in "Message details screen".
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1237,7 +1330,7 @@ Feature: Message history
     Then the "IronMan" room is opened
     Then the message "qwerty47" is deleted
 
-  Scenario: 3.050 Check cancel deleting message from private room in "Message details screen".
+  Scenario: 3.047 Check cancel deleting message from private room in "Message details screen".
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1261,7 +1354,7 @@ Feature: Message history
     Then the "Message" details screen is opened
     Then message "qwerty48" is present
 
-  Scenario: 3.051 Check delete message from private room in "Message details screen".
+  Scenario: 3.048 Check delete message from private room in "Message details screen".
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1286,7 +1379,7 @@ Feature: Message history
     Then the "Hulk" room is opened
     Then the message "qwerty49" is deleted
 
-  Scenario: 3.052 Check cancel deleting message from direct room in "Message details screen".
+  Scenario: 3.049 Check cancel deleting message from direct room in "Message details screen".
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1310,7 +1403,7 @@ Feature: Message history
     Then the "Message" details screen is opened
     Then message "qwerty50" is present
 
-  Scenario: 3.053 Check delete message from direct room in "Message details screen".
+  Scenario: 3.050 Check delete message from direct room in "Message details screen".
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
@@ -1335,7 +1428,7 @@ Feature: Message history
     Then the "androidQA2" direct room is opened
     Then the message "qwerty51" is deleted
 
-  Scenario: 3.054 Check for "starred" message in "Message details screen" for message of another user in public room.
+  Scenario: 3.051 Check for "starred" message in "Message details screen" for message of another user in public room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1378,7 +1471,7 @@ Feature: Message history
     Then message marked as "starred"
     Then message marked as "starred" between "androidQA2" username and "test message 2" message
 
-  Scenario: 3.055 Check for "starred" message in "Message details screen" for message of another user in private room.
+  Scenario: 3.052 Check for "starred" message in "Message details screen" for message of another user in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1421,7 +1514,7 @@ Feature: Message history
     Then message marked as "starred"
     Then message marked as "starred" between "androidQA2" username and "test message 3" message
 
-  Scenario: 3.056 Check for "starred" message in "Message details screen" for message of another user in direct room.
+  Scenario: 3.053 Check for "starred" message in "Message details screen" for message of another user in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1468,7 +1561,7 @@ Feature: Message history
     Then message marked as "starred"
     Then message marked as "starred" between "androidQA2" username and "test message 4" message
 
-  Scenario: 3.057 Check "Share message" function for message by another user in public room.
+  Scenario: 3.054 Check "Share message" function for message by another user in public room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1527,7 +1620,7 @@ Feature: Message history
     Then the "CaptainAmerica" room is opened
     Then message "test message 5" is shared to the room
 
-  Scenario: 3.058 Check "Share message" function for message by another user in private room.
+  Scenario: 3.055 Check "Share message" function for message by another user in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1580,7 +1673,7 @@ Feature: Message history
     Then the "Thor" room is opened
     Then message "test message 6" is shared to the room
 
-  Scenario: 3.059 Check "Share message" function for message by another user in direct room.
+  Scenario: 3.056 Check "Share message" function for message by another user in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1633,7 +1726,7 @@ Feature: Message history
     Then the "androidQA2" direct room is opened
     Then message "test message 7" is shared to the room
 
-  Scenario: 3.060 Check than mark as "pinned" message in "Message details screen" in public room.
+  Scenario: 3.057 Check than mark as "pinned" message in "Message details screen" in public room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1682,7 +1775,7 @@ Feature: Message history
     Then message marked as "pinned"
     Then message marked as "pinned" between "androidQA2" username and "test message 8" message
 
-  Scenario: 3.061 Check than mark as "pinned" message in "Message details screen" by another user in private room.
+  Scenario: 3.058 Check than mark as "pinned" message in "Message details screen" by another user in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1731,7 +1824,7 @@ Feature: Message history
     Then message marked as "pinned"
     Then message marked as "pinned" between "androidQA2" username and "test message 9" message
 
-  Scenario: 3.062 Check than mark as "pinned" message in "Message details screen" by another user in direct room.
+  Scenario: 3.059 Check than mark as "pinned" message in "Message details screen" by another user in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1780,7 +1873,7 @@ Feature: Message history
     Then message marked as "pinned"
     Then message marked as "pinned" between "androidQA2" username and "test message 10" message
 
-  Scenario: 3.063 Check than mark as "pinned" message by another user in chat history in public room.
+  Scenario: 3.060 Check than mark as "pinned" message by another user in chat history in public room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1835,7 +1928,7 @@ Feature: Message history
     Then message marked as "pinned"
     Then message marked as "pinned" between "androidQA2" username and "test message 11" message
 
-  Scenario: 3.064 Check than mark as "pinned" message in chat history in private room.
+  Scenario: 3.061 Check than mark as "pinned" message in chat history in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1890,7 +1983,7 @@ Feature: Message history
     Then message marked as "pinned"
     Then message marked as "pinned" between "androidQA2" username and "test message 12" message
 
-  Scenario: 3.065 Check than mark as "pinned" message in chat history in direct room.
+  Scenario: 3.062 Check than mark as "pinned" message in chat history in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -1945,7 +2038,7 @@ Feature: Message history
     Then message marked as "pinned"
     Then message marked as "pinned" between "androidQA2" username and "test message 13" message
 
-  Scenario: 3.066 Check unpin message from "Message details screen" in public room.
+  Scenario: 3.063 Check unpin message from "Message details screen" in public room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2000,7 +2093,7 @@ Feature: Message history
     Then message "test message 14" is present
     Then mark as "pinned" disappears
 
-  Scenario: 3.067 Check unpin message from "Message details screen" in private room.
+  Scenario: 3.064 Check unpin message from "Message details screen" in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2055,7 +2148,7 @@ Feature: Message history
     Then message "test message 15" is present
     Then mark as "pinned" disappears
 
-  Scenario: 3.068 Check unpin message from "Message details screen" in direct room.
+  Scenario: 3.065 Check unpin message from "Message details screen" in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2110,7 +2203,172 @@ Feature: Message history
     Then message "test message 16" is present
     Then mark as "pinned" disappears
 
-  Scenario: 3.072 Check add reaction in "Message details screen" in public room.
+  Scenario: 3.066 Check copy text from "Message details screen" in public room and send copied text in other public room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2@email.com" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "copy message 4" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 4" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When mark all messages as read if there are new messages
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    When tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    Then message "copy message 4" is present
+    And tap on "copy message 4" message in chat history
+    Then the "Message" details screen is opened
+    Then message "copy message 4" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Copy text" link
+    When tap on the Back button
+    Then the chat history is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "CaptainAmerica" room is presented in the left drawer
+    When tap on the "CaptainAmerica" room in the left drawer
+    Then the "CaptainAmerica" room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 4" sent
+
+  Scenario: 3.067 Check copy text from "Message details screen" in private room and  send copied text in other private room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2@email.com" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    And tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When enter "copy message 5" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 5" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When mark all messages as read if there are new messages
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    When tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    Then message "copy message 5" is present
+    And tap on "copy message 5" message in chat history
+    Then the "Message" details screen is opened
+    Then message "copy message 5" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Copy text" link
+    When tap on the Back button
+    Then the chat history is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "SpiderMan" room is presented in the left drawer
+    When tap on the "SpiderMan" room in the left drawer
+    Then the "SpiderMan" room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 5" sent
+
+  Scenario: 3.068 Check copy text from "Message details screen" in direct room and send copied text in other direct room.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA2@email.com" in the "Login" input field
+    When enter "qwerty123" in the "Password" input field
+    And hide the keyboard
+    And tap on the "SIGN IN" button
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA1" room is presented in the left drawer
+    And tap on the "androidQA1" room in the left drawer
+    Then the "androidQA1" direct room is opened
+    When enter "copy message 6" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 6" sent
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    When tap on the "Aimprosoft" link
+    Then pop-up menu is opened in the Left drawer
+    When tap on the "Sign out" link
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Back" button
+    Then the "Sign in to your Team" screen is opened
+    When login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When mark all messages as read if there are new messages
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    Then message "copy message 6" is present
+    And tap on "copy message 6" message in chat history
+    Then the "Message" details screen is opened
+    Then message "copy message 6" is present
+    When tap on the More option button
+    Then the pop-up menu is opened in the message details screen
+    And tap on the "Copy text" link
+    When tap on the Back button
+    Then the chat history is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "testuser2" room is presented in the left drawer
+    And tap on the "testuser2" room in the left drawer
+    Then the "testuser2" direct room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 6" sent
+
+  Scenario: 3.069 Check add reaction in "Message details screen" in public room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2174,7 +2432,7 @@ Feature: Message history
     When select "🇧🇮" "emoji_icon" reaction
     Then reaction "🇧🇮" is added
 
-  Scenario: 3.073 Check add reaction in "Message details screen" in private room.
+  Scenario: 3.070 Check add reaction in "Message details screen" in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2238,7 +2496,7 @@ Feature: Message history
     When select "🇧🇮" "emoji_icon" reaction
     Then reaction "🇧🇮" is added
 
-  Scenario: 3.074 Check add reaction in "Message details screen" in direct room.
+  Scenario: 3.071 Check add reaction in "Message details screen" in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2302,7 +2560,7 @@ Feature: Message history
     When select "🇧🇮" "emoji_icon" reaction
     Then reaction "🇧🇮" is added
 
-  Scenario: 3.075 Check add "reaction" button near with any added emoji under the message which send by another user in  "Message details screen" in public room.
+  Scenario: 3.072 Check add "reaction" button near with any added emoji under the message which send by another user in  "Message details screen" in public room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2358,7 +2616,7 @@ Feature: Message history
     When select "😇" "emoji_icon" reaction
     Then reaction "😇" is added
 
-  Scenario: 3.076 Check add "reaction" button near with any added emoji under the message which send by another user in  "Message details screen" in private room.
+  Scenario: 3.073 Check add "reaction" button near with any added emoji under the message which send by another user in  "Message details screen" in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2414,7 +2672,7 @@ Feature: Message history
     When select "😇" "emoji_icon" reaction
     Then reaction "😇" is added
 
-  Scenario: 3.077 Check add "reaction" button near with any added emoji under the message which send by another user in "Message details screen" in direct room.
+  Scenario: 3.074 Check add "reaction" button near with any added emoji under the message which send by another user in "Message details screen" in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2470,7 +2728,7 @@ Feature: Message history
     When select "😇" "emoji_icon" reaction
     Then reaction "😇" is added
 
-  Scenario: 3.078 Check delete "reaction" by tap on the any reactions in "Message details screen" in public room.
+  Scenario: 3.075 Check delete "reaction" by tap on the any reactions in "Message details screen" in public room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2522,7 +2780,7 @@ Feature: Message history
     When tap on the "😀" reaction
     Then reaction "😀" is deleted
 
-  Scenario: 3.079 Check delete "reaction" by tap on the any reactions in "Message details screen" in private room.
+  Scenario: 3.076 Check delete "reaction" by tap on the any reactions in "Message details screen" in private room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2574,7 +2832,7 @@ Feature: Message history
     When tap on the "😀" reaction
     Then reaction "😀" is deleted
 
-  Scenario: 3.080 Check delete "reaction" by tap on the any reactions in "Message details screen" in direct room.
+  Scenario: 3.077 Check delete "reaction" by tap on the any reactions in "Message details screen" in direct room.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field
     When tap on the "CONTINUE" button
@@ -2984,6 +3242,84 @@ Feature: Message history
     And tap on the "Message bar edit" button
     Then message "qwerty66 (edited)" is present
     Then "edited" alert is displayed
+
+  Scenario: 3.118 Check "Copy text" function in a public room using a long tap in the chat history.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "IronMan" room is presented in the left drawer
+    And tap on the "IronMan" room in the left drawer
+    Then the "IronMan" room is opened
+    When enter "copy message 7" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 7" sent
+    When long tap on "copy message 7" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Copy text" link
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "CaptainAmerica" room is presented in the left drawer
+    When tap on the "CaptainAmerica" room in the left drawer
+    Then the "CaptainAmerica" room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 7" sent
+
+  Scenario: 3.119 Check "Copy text" function in a private room using a long tap in the chat history.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "SpiderMan" room is presented in the left drawer
+    And tap on the "SpiderMan" room in the left drawer
+    Then the "SpiderMan" room is opened
+    When enter "copy message 8" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 8" sent
+    When long tap on "copy message 8" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Copy text" link
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "Thor" room is presented in the left drawer
+    When tap on the "Thor" room in the left drawer
+    Then the "Thor" room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 8" sent
+
+  Scenario: 3.120 Check "Copy text" function in a direct room using a long tap in the chat history.
+    Given login using the properties file
+    Then the user is logged in
+    Then the "General" room is opened
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "androidQA2" room is presented in the left drawer
+    And tap on the "androidQA2" room in the left drawer
+    Then the "androidQA2" direct room is opened
+    When enter "copy message 9" in the "Write a message" input field
+    When tap on the "Send" button
+    And hide the keyboard
+    Then the message "copy message 9" sent
+    When long tap on "copy message 9" message in chat history
+    Then content pop-up menu is opened
+    When tap on the "Copy text" link
+    When tap on the "Logo" button
+    Then Left Drawer is opened
+    Then the "testuser2" room is presented in the left drawer
+    And tap on the "testuser2" room in the left drawer
+    Then the "testuser2" direct room is opened
+    When long tap on the "write a message" field
+    And tap on the Paste button
+    When tap on the "Send" button
+    Then the message "copy message 9" sent
 
   Scenario: 3.121 Check "Add reaction" button in a public room using a long tap in the chat history.
     Given login using the properties file

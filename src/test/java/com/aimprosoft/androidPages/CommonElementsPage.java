@@ -3,12 +3,15 @@ package com.aimprosoft.androidPages;
 import com.aimprosoft.locators.AndroidButtonsLocators;
 import com.aimprosoft.locators.AndroidFieldLocators;
 import com.aimprosoft.locators.AndroidLocators;
+import com.aimprosoft.myDriver.AndroidWebDriver;
 import com.aimprosoft.myDriver.appium.core.MobilePageObject;
 import com.aimprosoft.myDriver.appium.core.models.LocatorsReflection;
+import io.appium.java_client.TouchAction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static com.aimprosoft.locators.AndroidLocators.ELEMENT_WITH_TEXT_XPATH;
@@ -44,7 +47,7 @@ public class CommonElementsPage extends MobilePageObject {
 //    }
 
     public boolean verifyThatTheWarningIsDisplayed (String warningMessage) {
-        withTimeoutOf(25, TimeUnit.SECONDS)
+        withTimeoutOf(60, TimeUnit.SECONDS)
                 .waitFor(ExpectedConditions.presenceOfElementLocated(By.className("android.widget.TextView")));
         return androidElementByText(warningMessage).isDisplayed();
     }
@@ -262,5 +265,27 @@ public class CommonElementsPage extends MobilePageObject {
             tap($(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", "Mark all as read")));
             waitABit(3000);
         }
+    }
+
+    public void tapOnTheField(String elementId) {
+        $$(getFieldLocator(elementId)).click();
+        waitABit(2000);
+    }
+
+    public void tapOnTheEnterButtonOnThePhoneKeyboard() {
+        TouchAction action = new TouchAction(AndroidWebDriver.driver());
+        action.press(996, 1710).release().perform();
+        waitABit(2000);
+    }
+
+    public void longTapOnTheField(String fieldId) {
+        longTap($$(getFieldLocator(fieldId)));
+    }
+
+    public void tapOnThePasteButton() {
+        waitABit(2000);
+        TouchAction action = new TouchAction(AndroidWebDriver.driver());
+        action.press(200, 1510).release().perform();
+        waitABit(2000);
     }
 }

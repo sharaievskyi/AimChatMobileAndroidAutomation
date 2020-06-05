@@ -372,4 +372,24 @@ public class CommonSteps {
     public void markAllMessagesAsRead() {
         steps.markAllMessagesAsRead();
     }
+
+    @When("tap on the {string} field")
+    public void tapOnTheField(String elementId) {
+        steps.tapOnTheField(elementId);
+    }
+
+    @And("tap on the Enter button on the phone keyboard")
+    public void tapOnTheEnterButtonOnThePhoneKeyboard() {
+        steps.tapOnTheEnterButtonOnThePhoneKeyboard();
+    }
+
+    @When("long tap on the {string} field")
+    public void longTapOnTheField(String fieldId) {
+        steps.longTapOnTheField(fieldId);
+    }
+
+    @And("tap on the Paste button")
+    public void tapOnThePasteButton() {
+        steps.tapOnThePasteButton();
+    }
 }

@@ -1671,21 +1671,32 @@ Feature: Right drawer
 #    Then the "General" room is opened
 #    When tap on the "Logo" button
 #    Then Left Drawer is opened
-#    Then the "IronMan" room is presented in the left drawer
-#    And tap on the "IronMan" room in the left drawer
-#    Then the "IronMan" room is opened
+#    When tap on the "Rooms" title
+#    Then the "Browse rooms" screen is opened
+#    Then the "All" tab is selected
+#    And tap on the "Create room" button
+#    Then the "Create room" screen is opened
+#    And enter "1111111" in the "Create room name" input field
+#    And enter "2222222" in the "Create room description" input field
+#    And tap on the "Add members" button
+#    Then the "Invite members" screen is opened
+#    And enter "androidQA2" in the "search user name" input field
+#    And tap on the "androidQA2" "username"
+#    And tap on the "Apply select users" button
+#    And tap on the "Apply create room" button
+#    Then the "1111111" room is opened
 #    When tap on the "three dots" button
-#    Then the "Room info" screen is opened
+#    Then the "Room Info" screen is opened
 #    When tap on the "Room settings" link in the Right drawer
 #    Then the "Room settings" screen is opened
 #    And wait while results are refreshed
-#    When tap on the "reassign new owner" link
+#    When tap on the Reassign new owner link
 #    Then the "Room members" screen is opened
 #    When tap on the More option button
-#    When tap on the "Reassign owner’s rights" link
+#    When tap on the "Reassign owner's rigths" link
 #    And tap on the Back button
 #    When tap on the "Leave room" link
-#    Then "You left public room #IronMan" alert is displayed
+#    Then "You left public room #1111111" alert is displayed
 #    When tap on the "Ok button" button
 #    And wait while results are refreshed
 #    Then the "General" room is opened

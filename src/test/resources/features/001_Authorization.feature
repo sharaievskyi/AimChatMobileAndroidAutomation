@@ -130,6 +130,25 @@ Feature: Authorization
     And tap on the "SIGN IN" button
     Then "We cannot find a user with that login and password combination, please try again." alert is displayed
 
+  Scenario: 1.019 Check login with the empty "Login" field.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When tap on the "Login" field
+    And tap on the Enter button on the phone keyboard
+    Then "Your login must not be empty and contain only characters in range of (A-Za-z0-9_-.)" alert is displayed
+
+  Scenario: 1.020 Check login with the empty "Password" field.
+    Given the "Sign in to your Team" screen is opened
+    When enter "chat-demo" in the "Your team url" input field
+    When tap on the "CONTINUE" button
+    Then the "Sign in to Aimprosoft" screen is opened
+    When enter "androidQA1@email.com" in the "Login" input field
+    When tap on the "Password" field
+    And tap on the Enter button on the phone keyboard
+    Then "Password couldn't be empty" alert is displayed
+
   Scenario: 1.023 Check transition by tap on the "Forgot your password?" link.
     Given the "Sign in to your Team" screen is opened
     When enter "chat-demo" in the "Your team url" input field

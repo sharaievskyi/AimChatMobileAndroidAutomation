@@ -88,4 +88,8 @@ public class RightDrawerUserSteps extends ScenarioSteps {
     public void verifyThatTheUsersRoleIsPresentedOnTheRightUserName(String role, String userName) {
         Assert.assertTrue("Role is not present", rightDrawerPage.verifyThatTheUsersRoleIsPresentedOnTheRightUserName(role, userName));
     }
+    @Step
+    public void tapOnTheReassignNewOwnerLink() {
+        rightDrawerPage.tapOnTheReassignNewOwnerLink();
+    }
 }

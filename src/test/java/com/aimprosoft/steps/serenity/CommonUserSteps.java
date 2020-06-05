@@ -200,4 +200,20 @@ public class CommonUserSteps extends ScenarioSteps {
     public void markAllMessagesAsRead() {
         commonElementsPage.markAllMessagesAsRead();
     }
+    @Step
+    public void tapOnTheField(String elementId) {
+        commonElementsPage.tapOnTheField(elementId);
+    }
+    @Step
+    public void tapOnTheEnterButtonOnThePhoneKeyboard() {
+        commonElementsPage.tapOnTheEnterButtonOnThePhoneKeyboard();
+    }
+    @Step
+    public void longTapOnTheField(String fieldId) {
+        commonElementsPage.longTapOnTheField(fieldId);
+    }
+    @Step
+    public void tapOnThePasteButton() {
+        commonElementsPage.tapOnThePasteButton();
+    }
 }

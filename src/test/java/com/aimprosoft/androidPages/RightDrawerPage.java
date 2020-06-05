@@ -1,6 +1,7 @@
 package com.aimprosoft.androidPages;
 
 import com.aimprosoft.locators.AndroidButtonsLocators;
+import com.aimprosoft.locators.AndroidLinksLocators;
 import com.aimprosoft.locators.AndroidLocators;
 import com.aimprosoft.myDriver.appium.core.MobilePageObject;
 import org.openqa.selenium.By;
@@ -119,5 +120,9 @@ public class RightDrawerPage extends MobilePageObject {
         int xUserName = androidElementByTextAndId(userName, AndroidLocators.USER_NAME).getLocation().getX();
         int xRole = androidElementByTextAndId(role, AndroidLocators.USER_ROLE).getLocation().getX();
         return xUserName < xRole;
+    }
+
+    public void tapOnTheReassignNewOwnerLink() {
+        $(AndroidLinksLocators.REASSIGN_OWNERS_RIGHTS).click();
     }
 }
