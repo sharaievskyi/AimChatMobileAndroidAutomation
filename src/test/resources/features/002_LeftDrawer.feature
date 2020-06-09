@@ -646,7 +646,7 @@ Feature: Left Drawer
     And tap on the "Bell icon" button
     Then the "Mute all chat for:" pop-up menu is opened
     And tap on the "Notification settings" link
-    Then the "Notification settingss" screen is opened
+    Then the "Notification settings" screen is opened
     Then the "DND switch" slider is turned "OFF"
 
   Scenario: 2.057 Check save "Only direct and mentions" function in the "General settings" screen.
