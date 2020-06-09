@@ -1001,7 +1001,7 @@ Feature: Message history
     Then Left Drawer is opened
     Then the "testuser2" room is presented in the left drawer
     And tap on the "testuser2" room in the left drawer
-    Then the "atestuser2" direct room is opened
+    Then the "testuser2" direct room is opened
     When long tap on the "write a message" field
     And tap on the Paste button
     When tap on the "Send" button
