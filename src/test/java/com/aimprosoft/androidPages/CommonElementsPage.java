@@ -259,10 +259,13 @@ public class CommonElementsPage extends MobilePageObject {
 
     public void markAllMessagesAsRead() {
         if ($(AndroidLocators.UNREAD_COUNT_ICON).isVisible()) {
-            longTap($(AndroidLocators.UNREAD_COUNT_ICON));
-            withTimeoutOf(25, TimeUnit.SECONDS)
-                    .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(ELEMENT_WITH_TEXT_XPATH.replace("$1", "Mark all as read"))));
-            tap($(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", "Mark all as read")));
+//            longTap($(AndroidButtonsLocators.LOGO_XPATH));
+            longTap($$(getButtonLocator("LOGO")));
+            waitABit(3000);
+//            withTimeoutOf(25, TimeUnit.SECONDS)
+//                    .waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(ELEMENT_WITH_TEXT_XPATH.replace("$1", "Mark all as read"))));
+//            tap($(AndroidLocators.ELEMENT_WITH_TEXT_XPATH.replace("$1", "Mark all as read")));
+            tap(androidElementByText("Mark all as read"));
             waitABit(3000);
         }
     }

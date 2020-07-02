@@ -10,6 +10,7 @@ public interface AndroidButtonsLocators {
     String MORE_OPTION_BTN = "android.widget.ImageView";
     String BACK = "arrow_back";
     String LOGO = "title_button";
+    String LOGO_XPATH = "//android.widget.ImageView[contains(@resource-id, 'title_button')]";
 
     // Room creation
     String CREATE_ROOM = "create_room_btn";
