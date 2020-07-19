@@ -1622,7 +1622,7 @@ Feature: Right drawer
     And wait while results are refreshed
     Then the "General" room is opened
 
-  Scenario: 4.100 Check cancel delete room for public room.
+  Scenario: 4.100 Check cancel delete room for private room.
     Given login using the properties file
     Then the user is logged in
     Then the "General" room is opened
